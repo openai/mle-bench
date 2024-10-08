@@ -1,0 +1,22 @@
+id: cdiscount-image-classification-challenge
+name: Cdiscount’s Image Classification Challenge
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 20000
+  - position: 2
+    value: 10000
+  - position: 3
+    value: 5000
+description: mlebench/competitions/cdiscount-image-classification-challenge/description.md
+
+dataset:
+  answers: cdiscount-image-classification-challenge/prepared/private/answers.csv
+  sample_submission: cdiscount-image-classification-challenge/prepared/public/sample_submission.csv
+
+grader:
+  name: accuracy
+  grade_fn: mlebench.competitions.cdiscount-image-classification-challenge.grade:grade
+
+preparer: mlebench.competitions.cdiscount-image-classification-challenge.prepare:prepare

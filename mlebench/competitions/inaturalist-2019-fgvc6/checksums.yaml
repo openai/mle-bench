@@ -1,0 +1,8 @@
+private:
+  answers.csv: 6a6ca89c88327fe0071c350e846141d3
+public:
+  kaggle_sample_submission.csv: 7cc29744e99a9f5ed8299c5e2979a2cc
+  test2019.json: c572fca9d6b042b49039d0b87e2a4c98
+  train2019.json: 558b56eb13ad126127de75e379e299f6
+  val2019.json: e5a1d2eb4fd50f2d1ae5ef571be96eb3
+zip: 9d8bb906b3e2740c10b9df89e6a234d1

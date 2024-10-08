@@ -1,0 +1,12 @@
+private:
+  test.csv: fa42cdab2f042c5bd0665d7739a715fb
+public:
+  sample_submission.csv: e4fe9463edad278506f9911fd86b17f3
+  test_baseline_helmets.csv: 2981cca0abdb9305780edfea905a7ff4
+  test_player_tracking.csv: dfa825f54143e63aa4b7ccba897e4d3f
+  test_video_metadata.csv: 6978a882a8cf8ec2141e5df6959c2617
+  train_baseline_helmets.csv: 063ba03e0ca7acf3c17bd74d704983f0
+  train_labels.csv: 8721fe87ec4fb244ecf217522045ab8c
+  train_player_tracking.csv: 5f8604c4c541db8d1f0247de34e99cd2
+  train_video_metadata.csv: 5ba91169bc8df45c0334db954c86cbc3
+zip: 9fc02688ee4e93ab144338a90f8d07a8

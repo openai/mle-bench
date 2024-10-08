@@ -1,0 +1,28 @@
+id: google-research-identify-contrails-reduce-global-warming
+name: Google Research - Identify Contrails to Reduce Global Warming
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 15000
+  - position: 2
+    value: 10000
+  - position: 3
+    value: 8000
+  - position: 4
+    value: 7000
+  - position: 5
+    value: 5000
+  - position: 6
+    value: 5000
+description: mlebench/competitions/google-research-identify-contrails-reduce-global-warming/description.md
+
+dataset:
+  answers: google-research-identify-contrails-reduce-global-warming/prepared/private/answers.csv
+  sample_submission: google-research-identify-contrails-reduce-global-warming/prepared/public/sample_submission.csv
+
+grader:
+  name: global-dice
+  grade_fn: mlebench.competitions.google-research-identify-contrails-reduce-global-warming.grade:grade
+
+preparer: mlebench.competitions.google-research-identify-contrails-reduce-global-warming.prepare:prepare

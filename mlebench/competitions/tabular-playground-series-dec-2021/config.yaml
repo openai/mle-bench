@@ -1,0 +1,16 @@
+id: tabular-playground-series-dec-2021
+name: Tabular Playground Series - Dec 2021
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/tabular-playground-series-dec-2021/description.md
+
+dataset:
+  answers: tabular-playground-series-dec-2021/prepared/private/test.csv
+  sample_submission: tabular-playground-series-dec-2021/prepared/public/sample_submission.csv
+
+grader:
+  name: multi-class-classification-accuracy
+  grade_fn: mlebench.competitions.tabular-playground-series-dec-2021.grade:grade
+
+preparer: mlebench.competitions.tabular-playground-series-dec-2021.prepare:prepare

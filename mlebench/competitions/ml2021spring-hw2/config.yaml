@@ -1,0 +1,16 @@
+id: ml2021spring-hw2
+name: ML2021Spring-hw2
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/ml2021spring-hw2/description.md
+
+dataset:
+  answers: ml2021spring-hw2/prepared/private/answers.csv
+  sample_submission: ml2021spring-hw2/prepared/public/sampleSubmission.csv
+
+grader:
+  name: accuracy
+  grade_fn: mlebench.competitions.ml2021spring-hw2.grade:grade
+
+preparer: mlebench.competitions.ml2021spring-hw2.prepare:prepare

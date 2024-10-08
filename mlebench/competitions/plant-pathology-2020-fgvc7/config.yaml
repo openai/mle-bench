@@ -1,0 +1,16 @@
+id: plant-pathology-2020-fgvc7
+name: Plant Pathology 2020 - FGVC7
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/plant-pathology-2020-fgvc7/description.md
+
+dataset:
+  answers: plant-pathology-2020-fgvc7/prepared/private/test.csv
+  sample_submission: plant-pathology-2020-fgvc7/prepared/public/sample_submission.csv
+
+grader:
+  name: mean-column-wise-roc-auc
+  grade_fn: mlebench.competitions.plant-pathology-2020-fgvc7.grade:grade
+
+preparer: mlebench.competitions.plant-pathology-2020-fgvc7.prepare:prepare

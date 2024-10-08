@@ -1,0 +1,24 @@
+id: tensorflow-speech-recognition-challenge
+name: TensorFlow Speech Recognition Challenge
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 8000
+  - position: 2
+    value: 6000
+  - position: 3
+    value: 3000
+  - position: Special TensorFlow Prize
+    value: 8000
+description: mlebench/competitions/tensorflow-speech-recognition-challenge/description.md
+
+dataset:
+  answers: tensorflow-speech-recognition-challenge/prepared/private/test.csv
+  sample_submission: tensorflow-speech-recognition-challenge/prepared/public/sample_submission.csv
+
+grader:
+  name: accuracy
+  grade_fn: mlebench.competitions.tensorflow-speech-recognition-challenge.grade:grade
+
+preparer: mlebench.competitions.tensorflow-speech-recognition-challenge.prepare:prepare

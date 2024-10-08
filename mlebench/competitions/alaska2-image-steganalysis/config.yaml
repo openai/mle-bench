@@ -1,0 +1,22 @@
+id: alaska2-image-steganalysis
+name: ALASKA2 Image Steganalysis
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 12000
+  - position: 2
+    value: 8000
+  - position: 3
+    value: 5000
+description: mlebench/competitions/alaska2-image-steganalysis/description.md
+
+dataset:
+  answers: alaska2-image-steganalysis/prepared/private/test.csv
+  sample_submission: alaska2-image-steganalysis/prepared/public/sample_submission.csv
+
+grader:
+  name: weighted-auroc
+  grade_fn: mlebench.competitions.alaska2-image-steganalysis.grade:grade
+
+preparer: mlebench.competitions.alaska2-image-steganalysis.prepare:prepare

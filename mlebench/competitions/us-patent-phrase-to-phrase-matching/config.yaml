@@ -1,0 +1,22 @@
+id: us-patent-phrase-to-phrase-matching
+name: U.S. Patent Phrase to Phrase Matching
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 1200
+  - position: 2
+    value: 8000
+  - position: 3
+    value: 5000
+description: mlebench/competitions/us-patent-phrase-to-phrase-matching/description.md
+
+dataset:
+  answers: us-patent-phrase-to-phrase-matching/prepared/private/test.csv
+  sample_submission: us-patent-phrase-to-phrase-matching/prepared/public/sample_submission.csv
+
+grader:
+  name: pearson-correlation-coefficient
+  grade_fn: mlebench.competitions.us-patent-phrase-to-phrase-matching.grade:grade
+
+preparer: mlebench.competitions.us-patent-phrase-to-phrase-matching.prepare:prepare

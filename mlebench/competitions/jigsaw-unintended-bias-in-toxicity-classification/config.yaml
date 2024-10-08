@@ -1,0 +1,36 @@
+id: jigsaw-unintended-bias-in-toxicity-classification
+name: Jigsaw Unintended Bias in Toxicity Classification
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 12000
+  - position: 2
+    value: 10000
+  - position: 3
+    value: 8000
+  - position: 4
+    value: 5000
+  - position: 5
+    value: 5000
+  - position: 6
+    value: 5000
+  - position: 7
+    value: 5000
+  - position: 8
+    value: 5000
+  - position: 9
+    value: 5000
+  - position: 10
+    value: 5000
+description: mlebench/competitions/jigsaw-unintended-bias-in-toxicity-classification/description.md
+
+dataset:
+  answers: jigsaw-unintended-bias-in-toxicity-classification/prepared/private/test.csv
+  sample_submission: jigsaw-unintended-bias-in-toxicity-classification/prepared/public/sample_submission.csv
+
+grader:
+  name: jigsaw-unintended-bias-in-toxicity-classification-score
+  grade_fn: mlebench.competitions.jigsaw-unintended-bias-in-toxicity-classification.grade:grade
+
+preparer: mlebench.competitions.jigsaw-unintended-bias-in-toxicity-classification.prepare:prepare

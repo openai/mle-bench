@@ -1,0 +1,22 @@
+id: statoil-iceberg-classifier-challenge
+name: Statoil/C-CORE Iceberg Classifier Challenge
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 25000
+  - position: 2
+    value: 15000
+  - position: 3
+    value: 10000
+description: mlebench/competitions/statoil-iceberg-classifier-challenge/description.md
+
+dataset:
+  answers: statoil-iceberg-classifier-challenge/prepared/private/test.csv
+  sample_submission: statoil-iceberg-classifier-challenge/prepared/private/sample_submission.csv
+
+grader:
+  name: log-loss
+  grade_fn: mlebench.competitions.statoil-iceberg-classifier-challenge.grade:grade
+
+preparer: mlebench.competitions.statoil-iceberg-classifier-challenge.prepare:prepare

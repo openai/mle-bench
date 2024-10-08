@@ -1,0 +1,24 @@
+id: seti-breakthrough-listen
+name: SETI Breakthrough Listen - E.T. Signal Search
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 6000
+  - position: 2
+    value: 5000
+  - position: 3
+    value: 4000
+description: mlebench/competitions/seti-breakthrough-listen/description.md
+
+dataset:
+  answers: seti-breakthrough-listen/prepared/private/test.csv
+  sample_submission: seti-breakthrough-listen/prepared/public/sample_submission.csv
+
+grader:
+  name: auc-roc
+  grade_fn: mlebench.competitions.seti-breakthrough-listen.grade:grade
+
+preparer: mlebench.competitions.seti-breakthrough-listen.prepare:prepare
+
+

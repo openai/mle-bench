@@ -1,0 +1,16 @@
+id: dog-breed-identification
+name: Dog Breed Identification
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/dog-breed-identification/description.md
+
+dataset:
+  answers: dog-breed-identification/prepared/private/test.csv
+  sample_submission: dog-breed-identification/prepared/public/sample_submission.csv
+
+grader:
+  name: multi-class-log-loss
+  grade_fn: mlebench.competitions.dog-breed-identification.grade:grade
+
+preparer: mlebench.competitions.dog-breed-identification.prepare:prepare

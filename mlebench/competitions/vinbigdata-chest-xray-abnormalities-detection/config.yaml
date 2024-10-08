@@ -1,0 +1,25 @@
+id: vinbigdata-chest-xray-abnormalities-detection
+name: VinBigData Chest X-ray Abnormalities Detection
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 20000
+  - position: 2
+    value: 14000
+  - position: 3
+    value: 8000
+  - position: Special Prize
+    value: 8000
+description: mlebench/competitions/vinbigdata-chest-xray-abnormalities-detection/description.md
+
+dataset:
+  answers: vinbigdata-chest-xray-abnormalities-detection/prepared/private/answers.csv
+  gold_submission: vinbigdata-chest-xray-abnormalities-detection/prepared/private/gold_submission.csv
+  sample_submission: vinbigdata-chest-xray-abnormalities-detection/prepared/public/sample_submission.csv
+
+grader:
+  name: mAP-at-IoU>0.4
+  grade_fn: mlebench.competitions.vinbigdata-chest-xray-abnormalities-detection.grade:grade
+
+preparer: mlebench.competitions.vinbigdata-chest-xray-abnormalities-detection.prepare:prepare

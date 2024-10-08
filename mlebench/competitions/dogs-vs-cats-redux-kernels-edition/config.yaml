@@ -1,0 +1,16 @@
+id: dogs-vs-cats-redux-kernels-edition
+name: "Dogs vs. Cats Redux: Kernels Edition"
+competition_type: code
+awards_medals: false
+prizes: null
+description: mlebench/competitions/dogs-vs-cats-redux-kernels-edition/description.md
+
+dataset:
+  answers: dogs-vs-cats-redux-kernels-edition/prepared/private/answers.csv
+  sample_submission: dogs-vs-cats-redux-kernels-edition/prepared/public/sample_submission.csv
+
+grader:
+  name: log-loss
+  grade_fn: mlebench.competitions.dogs-vs-cats-redux-kernels-edition.grade:grade
+
+preparer: mlebench.competitions.dogs-vs-cats-redux-kernels-edition.prepare:prepare

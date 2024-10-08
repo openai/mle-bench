@@ -1,0 +1,16 @@
+id: herbarium-2021-fgvc8
+name: Herbarium 2021 - FGVC8
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/herbarium-2021-fgvc8/description.md
+
+dataset:
+  answers: herbarium-2021-fgvc8/prepared/private/answers.csv
+  sample_submission: herbarium-2021-fgvc8/prepared/public/sample_submission.csv
+
+grader:
+  name: macro-f1-score
+  grade_fn: mlebench.competitions.herbarium-2021-fgvc8.grade:grade
+
+preparer: mlebench.competitions.herbarium-2021-fgvc8.prepare:prepare

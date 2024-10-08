@@ -1,0 +1,8 @@
+private:
+  answers.csv: 9d13e08d12211a39b8c5d2c29a9e7e8f
+public:
+  sample_submission.csv: 2690b6c1b8c2fbc8d090e8fb00c1d79f
+  test.csv: d5c91b7191186743a2aa74b904207931
+  train.csv: 812aecfc08948d621decc684759e243a
+  train_bounding_boxes.csv: d74270bdb517e79f9f2ac6a0f90825fd
+zip: 2b38d6c8f3f357d56a247b09769e862b

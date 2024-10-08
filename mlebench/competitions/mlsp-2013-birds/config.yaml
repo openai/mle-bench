@@ -1,0 +1,22 @@
+id: mlsp-2013-birds
+name: MLSP 2013 Bird Classification Challenge
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 700
+  - position: 2
+    value: 600
+  - position: 3
+    value: 500
+description: mlebench/competitions/mlsp-2013-birds/description.md
+
+dataset:
+  answers: mlsp-2013-birds/prepared/private/answers.csv
+  sample_submission: mlsp-2013-birds/prepared/public/sample_submission.csv
+
+grader:
+  name: auc-roc
+  grade_fn: mlebench.competitions.mlsp-2013-birds.grade:grade
+
+preparer: mlebench.competitions.mlsp-2013-birds.prepare:prepare

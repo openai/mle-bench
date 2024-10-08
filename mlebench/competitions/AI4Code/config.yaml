@@ -1,0 +1,26 @@
+id: AI4Code
+name: Google AI4Code - Understand Code in Python Notebooks
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 50000
+  - position: 2
+    value: 40000
+  - position: 3
+    value: 30000
+  - position: 4
+    value: 20000
+  - position: 5
+    value: 10000
+description: mlebench/competitions/AI4Code/description.md
+
+dataset:
+  answers: AI4Code/prepared/private/test_orders.csv
+  sample_submission: AI4Code/prepared/public/sample_submission.csv
+
+grader:
+  name: kendall-tau
+  grade_fn: mlebench.competitions.AI4Code.grade:grade
+
+preparer: mlebench.competitions.AI4Code.prepare:prepare

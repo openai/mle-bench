@@ -1,0 +1,27 @@
+id: hms-harmful-brain-activity-classification
+name: HMS - Harmful Brain Activity Classification
+competition_type: code
+awards_medals: true
+prizes: 
+  - position: 1
+    value: 20000
+  - position: 2
+    value: 12000
+  - position: 3
+    value: 7000
+  - position: 4
+    value: 6000
+  - position: 5
+    value: 5000
+description: mlebench/competitions/hms-harmful-brain-activity-classification/description.md
+
+dataset:
+  answers: hms-harmful-brain-activity-classification/prepared/private/test.csv
+  gold_submission: hms-harmful-brain-activity-classification/prepared/private/gold_submission.csv
+  sample_submission: hms-harmful-brain-activity-classification/prepared/public/sample_submission.csv
+
+grader:
+  name: KL-divergence
+  grade_fn: mlebench.competitions.hms-harmful-brain-activity-classification.grade:grade
+
+preparer: mlebench.competitions.hms-harmful-brain-activity-classification.prepare:prepare

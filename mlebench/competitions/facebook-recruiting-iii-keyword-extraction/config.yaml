@@ -1,0 +1,16 @@
+id: facebook-recruiting-iii-keyword-extraction
+name: Facebook Recruiting III - Keyword Extraction
+competition_type: simple
+awards_medals: true
+prizes: null
+description: mlebench/competitions/facebook-recruiting-iii-keyword-extraction/description.md
+
+dataset:
+  answers: facebook-recruiting-iii-keyword-extraction/prepared/private/test.csv
+  sample_submission: facebook-recruiting-iii-keyword-extraction/prepared/public/sample_submission.csv
+
+grader:
+  name: micro-f1-score
+  grade_fn: mlebench.competitions.facebook-recruiting-iii-keyword-extraction.grade:grade
+
+preparer: mlebench.competitions.facebook-recruiting-iii-keyword-extraction.prepare:prepare

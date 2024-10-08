@@ -1,0 +1,22 @@
+id: stanford-covid-vaccine
+name: "OpenVaccine: COVID-19 mRNA Vaccine Degradation Prediction"
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 12000
+  - position: 2
+    value: 8000
+  - position: 3
+    value: 5000
+description: mlebench/competitions/stanford-covid-vaccine/description.md
+
+dataset:
+  answers: stanford-covid-vaccine/prepared/private/test.csv
+  sample_submission: stanford-covid-vaccine/prepared/public/sample_submission.csv
+
+grader:
+  name: multi-class-log-loss
+  grade_fn: mlebench.competitions.stanford-covid-vaccine.grade:grade
+
+preparer: mlebench.competitions.stanford-covid-vaccine.prepare:prepare

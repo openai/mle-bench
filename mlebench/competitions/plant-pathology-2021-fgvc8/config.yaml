@@ -1,0 +1,16 @@
+id: plant-pathology-2021-fgvc8
+name: Plant Pathology 2021 - FGVC8
+competition_type: code
+awards_medals: false
+prizes: null
+description: mlebench/competitions/plant-pathology-2021-fgvc8/description.md
+
+dataset:
+  answers: plant-pathology-2021-fgvc8/prepared/private/answers.csv
+  sample_submission: plant-pathology-2021-fgvc8/prepared/public/sample_submission.csv
+
+grader:
+  name: micro-f1-score
+  grade_fn: mlebench.competitions.plant-pathology-2021-fgvc8.grade:grade
+
+preparer: mlebench.competitions.plant-pathology-2021-fgvc8.prepare:prepare

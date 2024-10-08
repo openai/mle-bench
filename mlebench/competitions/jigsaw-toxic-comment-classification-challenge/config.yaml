@@ -1,0 +1,22 @@
+id: jigsaw-toxic-comment-classification-challenge
+name: Toxic Comment Classification Challenge
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 18000
+  - position: 2
+    value: 12000
+  - position: 3
+    value: 5000
+description: mlebench/competitions/jigsaw-toxic-comment-classification-challenge/description.md
+
+dataset:
+  answers: jigsaw-toxic-comment-classification-challenge/prepared/private/test.csv
+  sample_submission: jigsaw-toxic-comment-classification-challenge/prepared/public/sample_submission.csv
+
+grader:
+  name: column-wise ROC AUC
+  grade_fn: mlebench.competitions.jigsaw-toxic-comment-classification-challenge.grade:grade
+
+preparer: mlebench.competitions.jigsaw-toxic-comment-classification-challenge.prepare:prepare

@@ -1,0 +1,16 @@
+id: aerial-cactus-identification
+name: Aerial Cactus Identification
+competition_type: code
+awards_medals: false
+prizes: null
+description: mlebench/competitions/aerial-cactus-identification/description.md
+
+dataset:
+  answers: aerial-cactus-identification/prepared/private/test.csv
+  sample_submission: aerial-cactus-identification/prepared/public/sample_submission.csv
+
+grader:
+  name: auc-roc
+  grade_fn: mlebench.competitions.aerial-cactus-identification.grade:grade
+
+preparer: mlebench.competitions.aerial-cactus-identification.prepare:prepare

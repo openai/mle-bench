@@ -1,0 +1,29 @@
+id: hubmap-kidney-segmentation
+name: HuBMAP - Hacking the Kidney
+competition_type: code
+awards_medals: true
+prizes:
+  - position: Accuracy Prize 1
+    value: 18000
+  - position: Accuracy Prize 2
+    value: 10000
+  - position: Accuracy Prize 3
+    value: 4000
+  - position: Scientific Prize
+    value: 15000
+  - position: Innovation Prize
+    value: 10000
+  - position: Diversity Prize
+    value: 3000
+description: mlebench/competitions/hubmap-kidney-segmentation/description.md
+
+dataset:
+  answers: hubmap-kidney-segmentation/prepared/private/test.csv
+  gold_submission: hubmap-kidney-segmentation/prepared/private/gold_submission.csv
+  sample_submission: hubmap-kidney-segmentation/prepared/public/sample_submission.csv
+
+grader:
+  name: dice-coefficient
+  grade_fn: mlebench.competitions.hubmap-kidney-segmentation.grade:grade
+
+preparer: mlebench.competitions.hubmap-kidney-segmentation.prepare:prepare

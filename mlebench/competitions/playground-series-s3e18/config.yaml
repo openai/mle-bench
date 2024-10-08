@@ -1,0 +1,16 @@
+id: playground-series-s3e18
+name: Explore Multi-Label Classification with an Enzyme Substrate Dataset
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/playground-series-s3e18/description.md
+
+dataset:
+  answers: playground-series-s3e18/prepared/private/test.csv
+  sample_submission: playground-series-s3e18/prepared/public/sample_submission.csv
+
+grader:
+  name: auroc-multi-label
+  grade_fn: mlebench.competitions.playground-series-s3e18.grade:grade
+
+preparer: mlebench.competitions.playground-series-s3e18.prepare:prepare

@@ -1,0 +1,26 @@
+id: champs-scalar-coupling
+name: Predicting Molecular Properties
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 12500
+  - position: 2
+    value: 7500
+  - position: 3
+    value: 5000
+  - position: 4
+    value: 3000
+  - position: 5
+    value: 2000
+description: mlebench/competitions/champs-scalar-coupling/description.md
+
+dataset:
+  answers: champs-scalar-coupling/prepared/private/answers.csv
+  sample_submission: champs-scalar-coupling/prepared/public/sample_submission.csv
+
+grader:
+  name: log-mean-absolute-error
+  grade_fn: mlebench.competitions.champs-scalar-coupling.grade:grade
+
+preparer: mlebench.competitions.champs-scalar-coupling.prepare:prepare

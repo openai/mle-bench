@@ -1,0 +1,20 @@
+id: the-icml-2013-whale-challenge-right-whale-redux
+name: The ICML 2013 Whale Challenge - Right Whale Redux
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 350
+  - position: 2
+    value: 150
+description: mlebench/competitions/the-icml-2013-whale-challenge-right-whale-redux/description.md
+
+dataset:
+  answers: the-icml-2013-whale-challenge-right-whale-redux/prepared/private/test.csv
+  sample_submission: the-icml-2013-whale-challenge-right-whale-redux/prepared/public/sampleSubmission.csv
+
+grader:
+  name: auc-roc
+  grade_fn: mlebench.competitions.the-icml-2013-whale-challenge-right-whale-redux.grade:grade
+
+preparer: mlebench.competitions.the-icml-2013-whale-challenge-right-whale-redux.prepare:prepare

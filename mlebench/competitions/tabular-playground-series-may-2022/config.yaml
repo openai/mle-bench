@@ -1,0 +1,17 @@
+id: tabular-playground-series-may-2022
+name: Tabular Playground Series - May 2022
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/tabular-playground-series-may-2022/description.md
+
+dataset:
+  answers: tabular-playground-series-may-2022/prepared/private/test.csv
+  gold_submission: tabular-playground-series-may-2022/prepared/private/gold_submission.csv
+  sample_submission: tabular-playground-series-may-2022/prepared/public/sample_submission.csv
+
+grader:
+  name: auc-roc
+  grade_fn: mlebench.competitions.tabular-playground-series-may-2022.grade:grade
+
+preparer: mlebench.competitions.tabular-playground-series-may-2022.prepare:prepare

@@ -1,0 +1,37 @@
+id: vesuvius-challenge-ink-detection
+name: Vesuvius Challenge - Ink Detection
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 25000
+  - position: 2
+    value: 20000
+  - position: 3
+    value: 15000
+  - position: 4
+    value: 1000
+  - position: 5
+    value: 5000
+  - position: 6
+    value: 5000
+  - position: 7
+    value: 5000
+  - position: 8
+    value: 5000
+  - position: 9
+    value: 5000
+  - position: 10
+    value: 5000
+description: mlebench/competitions/vesuvius-challenge-ink-detection/description.md
+
+dataset:
+  answers: vesuvius-challenge-ink-detection/prepared/private/inklabels_rle.csv
+  gold_submission: vesuvius-challenge-ink-detection/prepared/private/gold_submission.csv
+  sample_submission: vesuvius-challenge-ink-detection/prepared/public/sample_submission.csv
+
+grader:
+  name: f0.5-score
+  grade_fn: mlebench.competitions.vesuvius-challenge-ink-detection.grade:grade
+
+preparer: mlebench.competitions.vesuvius-challenge-ink-detection.prepare:prepare

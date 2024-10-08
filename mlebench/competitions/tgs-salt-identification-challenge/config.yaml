@@ -1,0 +1,24 @@
+id: tgs-salt-identification-challenge
+name: TGS Salt Identification Challenge
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 50000
+  - position: 2
+    value: 25000
+  - position: 3
+    value: 15000
+  - position: 4
+    value: 10000
+description: mlebench/competitions/tgs-salt-identification-challenge/description.md
+
+dataset:
+  answers: tgs-salt-identification-challenge/prepared/private/test.csv
+  sample_submission: tgs-salt-identification-challenge/prepared/public/sample_submission.csv
+
+grader:
+  name: mean-precision-intersection-over-union-at-different-thresholds
+  grade_fn: mlebench.competitions.tgs-salt-identification-challenge.grade:grade
+
+preparer: mlebench.competitions.tgs-salt-identification-challenge.prepare:prepare

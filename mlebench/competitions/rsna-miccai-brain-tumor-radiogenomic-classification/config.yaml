@@ -1,0 +1,32 @@
+id: rsna-miccai-brain-tumor-radiogenomic-classification
+name: RSNA-MICCAI Brain Tumor Radiogenomic Classification
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 6000
+  - position: 2
+    value: 5000
+  - position: 3
+    value: 4000
+  - position: 4
+    value: 3000
+  - position: 5
+    value: 3000
+  - position: 6
+    value: 3000
+  - position: 7
+    value: 3000
+  - position: 8
+    value: 3000
+description: mlebench/competitions/rsna-miccai-brain-tumor-radiogenomic-classification/description.md
+
+dataset:
+  answers: rsna-miccai-brain-tumor-radiogenomic-classification/prepared/private/test.csv
+  sample_submission: rsna-miccai-brain-tumor-radiogenomic-classification/prepared/public/sample_submission.csv
+
+grader:
+  name: auc-roc
+  grade_fn: mlebench.competitions.rsna-miccai-brain-tumor-radiogenomic-classification.grade:grade
+
+preparer: mlebench.competitions.rsna-miccai-brain-tumor-radiogenomic-classification.prepare:prepare

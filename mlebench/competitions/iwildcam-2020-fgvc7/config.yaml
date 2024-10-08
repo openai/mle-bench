@@ -1,0 +1,16 @@
+id: iwildcam-2020-fgvc7
+name: iWildCam 2020 - FGVC7
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/iwildcam-2020-fgvc7/description.md
+
+dataset:
+  answers: iwildcam-2020-fgvc7/prepared/private/answers.csv
+  sample_submission: iwildcam-2020-fgvc7/prepared/public/sample_submission.csv
+
+grader:
+  name: accuracy
+  grade_fn: mlebench.competitions.iwildcam-2020-fgvc7.grade:grade
+
+preparer: mlebench.competitions.iwildcam-2020-fgvc7.prepare:prepare

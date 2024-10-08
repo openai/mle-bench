@@ -1,0 +1,22 @@
+id: petfinder-pawpularity-score
+name: PetFinder.my - Pawpularity Contest
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 12000
+  - position: 2
+    value: 8000
+  - position: 3
+    value: 5000
+description: mlebench/competitions/petfinder-pawpularity-score/description.md
+
+dataset:
+  answers: petfinder-pawpularity-score/prepared/private/test.csv
+  sample_submission: petfinder-pawpularity-score/prepared/public/sample_submission.csv
+
+grader:
+  name: root-mean-squared-error
+  grade_fn: mlebench.competitions.petfinder-pawpularity-score.grade:grade
+
+preparer: mlebench.competitions.petfinder-pawpularity-score.prepare:prepare

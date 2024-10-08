@@ -1,0 +1,16 @@
+id: hotel-id-2021-fgvc8
+name: Hotel-ID to Combat Human Trafficking 2021 - FGVC8
+competition_type: code
+awards_medals: false
+prizes: null
+description: mlebench/competitions/hotel-id-2021-fgvc8/description.md
+
+dataset:
+  answers: hotel-id-2021-fgvc8/prepared/private/test.csv
+  sample_submission: hotel-id-2021-fgvc8/prepared/public/sample_submission.csv
+
+grader:
+  name: map-at-5
+  grade_fn: mlebench.competitions.hotel-id-2021-fgvc8.grade:grade
+
+preparer: mlebench.competitions.hotel-id-2021-fgvc8.prepare:prepare

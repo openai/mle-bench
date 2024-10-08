@@ -1,0 +1,22 @@
+id: nomad2018-predict-transparent-conductors
+name: Nomad2018 Predicting Transparent Conductors
+competition_type: simple
+awards_medals: false
+prizes:
+  - position: 1
+    value: 2496
+  - position: 2
+    value: 1872
+  - position: 3
+    value: 1248
+description: mlebench/competitions/nomad2018-predict-transparent-conductors/description.md
+
+dataset:
+  answers: nomad2018-predict-transparent-conductors/prepared/private/test.csv
+  sample_submission: nomad2018-predict-transparent-conductors/prepared/public/sample_submission.csv
+
+grader:
+  name: mean-column-wise-rmsle
+  grade_fn: mlebench.competitions.nomad2018-predict-transparent-conductors.grade:grade
+
+preparer: mlebench.competitions.nomad2018-predict-transparent-conductors.prepare:prepare

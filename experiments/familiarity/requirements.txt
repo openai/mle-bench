@@ -1,0 +1,9 @@
+openai==0.28.1
+tiktoken==0.7.0
+tqdm
+numpy
+pandas
+matplotlib
+tenacity
+playwright
+scipy

@@ -1,0 +1,28 @@
+id: multi-modal-gesture-recognition
+name: Multi-modal Gesture Recognition
+competition_type: simple
+awards_medals: false
+prizes:
+  - position: Quantitative 1
+    value: 1500
+  - position: Quantitative 2
+    value: 1000
+  - position: Quantitative 3
+    value: 500
+  - position: Qualitative 1
+    value: 1500
+  - position: Qualitative 2
+    value: 1000
+  - position: Qualitative 3
+    value: 500
+description: mlebench/competitions/multi-modal-gesture-recognition/description.md
+
+dataset:
+  answers: multi-modal-gesture-recognition/prepared/private/test.csv
+  sample_submission: multi-modal-gesture-recognition/prepared/public/randomPredictions.csv
+
+grader:
+  name: levenhstein-distance
+  grade_fn: mlebench.competitions.multi-modal-gesture-recognition.grade:grade
+
+preparer: mlebench.competitions.multi-modal-gesture-recognition.prepare:prepare

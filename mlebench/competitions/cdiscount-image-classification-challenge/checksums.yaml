@@ -1,0 +1,9 @@
+private:
+  answers.csv: 40700f1566c1be9eda129ec310ce6fe8
+public:
+  category_names.csv: f3942c134e6010e531709f56fcf63ce4
+  sample_submission.csv: 386d237e1e17a667040d9a8a8e753371
+  test.bson: b2b39dbcd5e04c1c27aea258e103e1a4
+  train.bson: af1df955ac1abfab0b9c3fa5ad732760
+  train_example.bson: e715bde1bc797b076f21349674898e4d
+zip: dce8429382191257a67421fd3914e257

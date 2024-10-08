@@ -1,0 +1,16 @@
+id: random-acts-of-pizza
+name: Random Acts of Pizza
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/random-acts-of-pizza/description.md
+
+dataset:
+  answers: random-acts-of-pizza/prepared/private/test.csv
+  sample_submission: random-acts-of-pizza/prepared/public/sampleSubmission.csv
+
+grader:
+  name: auc-roc
+  grade_fn: mlebench.competitions.random-acts-of-pizza.grade:grade
+
+preparer: mlebench.competitions.random-acts-of-pizza.prepare:prepare

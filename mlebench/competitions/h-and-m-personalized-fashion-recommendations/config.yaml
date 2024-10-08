@@ -1,0 +1,28 @@
+id: h-and-m-personalized-fashion-recommendations
+name: H&M Personalized Fashion Recommendations
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 15000
+  - position: 2
+    value: 10000
+  - position: 3
+    value: 8000
+  - position: 4
+    value: 7000
+  - position: 5
+    value: 5000
+  - position: 6
+    value: 5000
+description: mlebench/competitions/h-and-m-personalized-fashion-recommendations/description.md
+
+dataset:
+  answers: h-and-m-personalized-fashion-recommendations/prepared/private/answers.csv
+  sample_submission: h-and-m-personalized-fashion-recommendations/prepared/public/sample_submission.csv
+
+grader:
+  name: MAP@12
+  grade_fn: mlebench.competitions.h-and-m-personalized-fashion-recommendations.grade:grade
+
+preparer: mlebench.competitions.h-and-m-personalized-fashion-recommendations.prepare:prepare

@@ -1,0 +1,5 @@
+shreyasajal/birdclef-librosa-audio-feature-extraction
+shreyasajal/audio-albumentations-torchaudio-audiomentations
+sagniksanyal/birdclef-2022-torchaudio-audiomentations-skimpy
+titankinansalaatsa/mlsp-2013-bird-classification-challenge-1301180283
+muhammadzubairkhan92/birdclef-2021-librosa-audio-feature-extraction

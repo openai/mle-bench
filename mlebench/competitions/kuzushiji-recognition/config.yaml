@@ -1,0 +1,27 @@
+id: kuzushiji-recognition
+name: Kuzushiji Recognition
+competition_type: simple
+awards_medals: false
+prizes:
+  - position: 1
+    value: 3000
+  - position: 2
+    value: 3000
+  - position: 3
+    value: 3000
+  - position: 4
+    value: 3000
+  - position: 5
+    value: 3000
+description: mlebench/competitions/kuzushiji-recognition/description.md
+
+dataset:
+  answers: kuzushiji-recognition/prepared/private/test.csv
+  gold_submission: kuzushiji-recognition/prepared/private/gold_submission.csv
+  sample_submission: kuzushiji-recognition/prepared/public/sample_submission.csv
+
+grader:
+  name: f1-score
+  grade_fn: mlebench.competitions.kuzushiji-recognition.grade:grade
+
+preparer: mlebench.competitions.kuzushiji-recognition.prepare:prepare

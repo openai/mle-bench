@@ -1,0 +1,16 @@
+id: paddy-disease-classification
+name: 'Paddy Doctor: Paddy Disease Classification'
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/paddy-disease-classification/description.md
+
+dataset:
+  answers: paddy-disease-classification/prepared/private/test.csv
+  sample_submission: paddy-disease-classification/prepared/public/sample_submission.csv
+
+grader:
+  name: accuracy
+  grade_fn: mlebench.competitions.paddy-disease-classification.grade:grade
+
+preparer: mlebench.competitions.paddy-disease-classification.prepare:prepare
