@@ -31,7 +31,7 @@ docker build --platform=linux/amd64 -t <agent> agents/<agent>/ --build-arg SUBMI
 Our `run_agent.py` script allows you to run agents locally on a given set of competitions. In the `experiments/splits/` directory, we have several files, each containing a set of competition IDs. The `experiments/splits/all.txt` file contains all competitions. The `experiments/splits/spaceship-titanic.txt` split just contains the Spaceship Titanic competition, which is useful for testing. For example, to run the dummy agent on the Spaceship Titanic competition, you can run:
 
 ```console
-python run_agent.py --agent-id dummy --competition-id experiments/splits/spaceship-titanic.txt
+python run_agent.py --agent-id dummy --competition-set experiments/splits/spaceship-titanic.txt
 ```
 
 Running `run_agent.py` will creates a "run group" directory in the `runs/` directory. The run group directory will contain a subdirectory for each competition that the agent was evaluated on, containing the agent's logs, code, and submission. A `metadata.json` file will be created on finish within the run group directory, summarizing the results of the runs. You can then grade this run using the `metadata.json` file. For example, to grade the run group `<run-group>`, you can first use `experiments/make_submission.py` to generate a submission JSONL file:
