@@ -112,3 +112,7 @@ benchmark in the `experiments/` directory:
 ## Dev
 
 Note, when running `pytest` locally, be sure to accept the competition rules otherwise the tests will fail.
+
+## Authors
+
+Chan Jun Shern, Neil Chowdhury, Oliver Jaffe, James Aung, Dane Sherburn, Evan Mays, Giulio Starace, Kevin Liu, Leon Maksin, Tejal Patwardhan, Lilian Weng, Aleksander Madry
