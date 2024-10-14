@@ -119,7 +119,7 @@ Chan Jun Shern, Neil Chowdhury, Oliver Jaffe, James Aung, Dane Sherburn, Evan Ma
 
 ## Citation
 
-Please cite using the following bibtex entry:
+Please cite using the following BibTeX entry:
 ```
 @article{chan2024mle-bench,
   title={MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering},
