@@ -127,6 +127,7 @@ Please cite using the following bibtex entry:
   year={2024},
   eprint={2410.07095},
   archivePrefix={arXiv},
-  primaryClass={cs.CL}
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2410.07095}
 }
 ```
