@@ -109,7 +109,7 @@ This is a single-class classification problems.  Your predictions should be a n
 
 The evaluation metric for this competition is the Area under the Receiver Operating Curve (AUC).   This evaluation metric penalizes wrong predictions made with high probability.  For more about this metric, check out the [AUC](https://www.kaggle.com/wiki/AreaUnderCurve) page on the Kaggle Wiki.
 
-**Please note, winners for the competition will be determined by their performance on an additional verfication set that will be released at the end of the competition.  See Timeline tab for details.**
+**Please note, winners for the competition will be determined by their performance on an additional verification set that will be released at the end of the competition.  See Timeline tab for details.**
 
 ### Timeline
 
