@@ -48,7 +48,7 @@ def download_and_prepare_dataset(
 
     assert is_valid_prepare_fn(
         competition.prepare_fn
-    ), f"Provided `preprer_fn` doesn't take arguments `raw`, `private` and `public`!"
+    ), f"Provided `prepare_fn` doesn't take arguments `raw`, `private` and `public`!"
 
     ensure_leaderboard_exists(competition, force=overwrite_leaderboard)
 
