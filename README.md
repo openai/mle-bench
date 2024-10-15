@@ -115,4 +115,19 @@ Note, when running `pytest` locally, be sure to accept the competition rules oth
 
 ## Authors
 
-Chan Jun Shern, Neil Chowdhury, Oliver Jaffe, James Aung, Dane Sherburn, Evan Mays, Giulio Starace, Kevin Liu, Leon Maksin, Tejal Patwardhan, Lilian Weng, Aleksander Madry
+Chan Jun Shern, Neil Chowdhury, Oliver Jaffe, James Aung, Dane Sherburn, Evan Mays, Giulio Starace, Kevin Liu, Leon Maksin, Tejal Patwardhan, Lilian Weng, Aleksander Mądry
+
+## Citation
+
+Please cite using the following BibTeX entry:
+```
+@article{chan2024mle-bench,
+  title={MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering},
+  author={Jun Shern Chan and Neil Chowdhury and Oliver Jaffe and James Aung and Dane Sherburn and Evan Mays and Giulio Starace and Kevin Liu and Leon Maksin and Tejal Patwardhan and Lilian Weng and Aleksander Mądry},
+  year={2024},
+  eprint={2410.07095},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2410.07095}
+}
+```
