@@ -1,8 +1,8 @@
-# MLE-bench
+# 🧠📊 MLE-bench
 
 Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Learning Engineering"](https://arxiv.org/abs/2410.07095). We have released the code used to construct the dataset, the evaluation logic, as well as the agents we evaluated for this benchmark.
 
-## Setup
+## ⚙️ Setup
 
 Some MLE-bench competition data is stored using [Git-LFS](https://git-lfs.com/).
 Once you have downloaded and installed LFS, run:
@@ -18,7 +18,7 @@ You can install `mlebench` with pip:
 pip install -e .
 ```
 
-### Pre-Commit Hooks (Optional)
+### 🛠️ Pre-Commit Hooks (Optional)
 
 If you're committing code, you can install the pre-commit hooks by running:
 
@@ -26,7 +26,7 @@ If you're committing code, you can install the pre-commit hooks by running:
 pre-commit install
 ```
 
-## Dataset
+## 📁 Dataset
 
 The MLE-bench dataset is a collection of 75 Kaggle competitions which we use to evaluate the ML engineering capabilities of AI systems.
 
@@ -55,9 +55,9 @@ mlebench prepare -c <competition-id>
 
 Run `mlebench prepare --help` to see the list of available competitions.
 
-## Grading Submissions
+## 📝 Grading Submissions
 
-Answers for competitions must be submitted in CSV format; the required format is described in each competition's description, or shown in a competition'ssample submission file. You can grade multiple submissions by using the `mlebench grade` command. Given a JSONL file, where each line corresponds with a submission for one competition, `mlebench grade` will produce a grading report for each competition. The JSONL file must contain the following fields:
+Answers for competitions must be submitted in CSV format; the required format is described in each competition's description, or shown in a competition's sample submission file. You can grade multiple submissions by using the `mlebench grade` command. Given a JSONL file, where each line corresponds with a submission for one competition, `mlebench grade` will produce a grading report for each competition. The JSONL file must contain the following fields:
 - `competition_id`: the ID of the competition in our dataset.
 - `submission_path`: a `.csv` file with the predictions for the specified
   competition.
@@ -72,7 +72,7 @@ mlebench grade-sample <PATH_TO_SUBMISSION> spaceship-titanic
 
 See more information by running `mlebench grade-sample --help`.
 
-## Environment
+## 🐳 Environment
 
 We provide a base Docker image `mlebench-env` which is the base environment for our agents. This base image contains:
 - Conda environment used to execute our agents. We optionally (default true) install Python packages in this environment which are commonly used across our agents. If you don't want to install these packages, set the `INSTALL_HEAVY_DEPENDENCIES` environment variable to `false` when building the image, by adding `--build-arg INSTALL_HEAVY_DEPENDENCIES=false` to the `docker build` command below
@@ -85,22 +85,22 @@ Build this image by running:
 docker build --platform=linux/amd64 -t mlebench-env -f environment/Dockerfile .
 ```
 
-## Agents
+## 🤖 Agents
 
 We purposefully designed our benchmark to not make any assumptions about the agent that produces submissions, so agents can more easily be evaluated on this benchmark. We evaluated three open-source agents; we discuss this procedure in [agents/README.md](agents/README.md).
 
-## Extras
+## ✨ Extras
 
 We include additional features in the MLE-bench repository that may be useful
 for MLE-bench evaluation. These include a rule violation detector and
 a plagiarism detector. We refer readers to
 [extras/README.md](extras/README.md) for more information.
 
-## Examples
+## 💡 Examples
 
 We collect example usage of this library in the `examples/` directory, see [examples/README.md](examples/README.md) for more information.
 
-## Experiments
+## 🔬 Experiments
 
 We place the code specific to the experiments from our publication of the
 benchmark in the `experiments/` directory:
@@ -109,15 +109,15 @@ benchmark in the `experiments/` directory:
 `experiments/make_submission.py` script to compile its submission for grading.
 - We release our methodology for the "familiarity" experiments in `experiments/familiarity/`, see [experiments/familiarity/README.md](experiments/familiarity/README.md) for more information.
 
-## Dev
+## 👩‍💻 Dev
 
 Note, when running `pytest` locally, be sure to accept the competition rules otherwise the tests will fail.
 
-## Authors
+## ✍️ Authors
 
 Chan Jun Shern, Neil Chowdhury, Oliver Jaffe, James Aung, Dane Sherburn, Evan Mays, Giulio Starace, Kevin Liu, Leon Maksin, Tejal Patwardhan, Lilian Weng, Aleksander Mądry
 
-## Citation
+## 📄 Citation
 
 Please cite using the following BibTeX entry:
 ```
