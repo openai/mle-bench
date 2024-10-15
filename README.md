@@ -1,4 +1,4 @@
-# 🧠📊 MLE-bench
+# 🧠 MLE-bench
 
 Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Learning Engineering"](https://arxiv.org/abs/2410.07095). We have released the code used to construct the dataset, the evaluation logic, as well as the agents we evaluated for this benchmark.
 
