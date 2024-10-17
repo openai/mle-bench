@@ -57,7 +57,7 @@ Run `mlebench prepare --help` to see the list of available competitions.
 
 ## Grading Submissions
 
-Answers for competitions must be submitted in CSV format; the required format is described in each competition's description, or shown in a competition'ssample submission file. You can grade multiple submissions by using the `mlebench grade` command. Given a JSONL file, where each line corresponds with a submission for one competition, `mlebench grade` will produce a grading report for each competition. The JSONL file must contain the following fields:
+Answers for competitions must be submitted in CSV format; the required format is described in each competition's description, or shown in a competition's sample submission file. You can grade multiple submissions by using the `mlebench grade` command. Given a JSONL file, where each line corresponds with a submission for one competition, `mlebench grade` will produce a grading report for each competition. The JSONL file must contain the following fields:
 - `competition_id`: the ID of the competition in our dataset.
 - `submission_path`: a `.csv` file with the predictions for the specified
   competition.
