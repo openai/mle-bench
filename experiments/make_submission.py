@@ -18,8 +18,15 @@ def main(
     run_statuses = []
     submission_lines = []
 
-    with open(metadata_path, "r") as f:
-        metadata = json.load(f)
+    try:
+        with open(metadata_path, "r") as f:
+            metadata = json.load(f)
+    except FileNotFoundError:
+        logger.error(f"Metadata file not found: {metadata_path}")
+        return
+    except json.JSONDecodeError:
+        logger.error(f"Error decoding JSON from the metadata file: {metadata_path}")
+        return
 
     for run_id in metadata["runs"]:
         run_dir = metadata_path.parent / run_id
@@ -54,10 +61,13 @@ def main(
     logger.info(f"All runs:\n{status_df.to_string()}")
 
     # Create submission.jsonl
-    with open(output, "w") as f:
-        for line in submission_lines:
-            f.write(f"{json.dumps(line)}\n")
-    logger.info(f"Written sorted submission to {output}")
+    try:
+        with open(output, "w") as f:
+            for line in submission_lines:
+                f.write(f"{json.dumps(line)}\n")
+        logger.info(f"Written sorted submission to {output}")
+    except IOError as e:
+        logger.error(f"Error writing to output file {output}: {e}")
 
 
 if __name__ == "__main__":
