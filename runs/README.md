@@ -16,10 +16,10 @@ scaffolding, you would find all run groups associated with that experiment, read
 the competition scores and aggregate across all the seeds.
 
 In cases where there are more seeds for a competition than reported, this is due
-to other competitions within the experiment having less seeds due to hardware
-issues. In this case and we took the final _N_ seeds for computing the result,
-where _N_ is the number of seeds for the competition with the least number of
-seeds in the experiment.
+to earlier seeds for the competition failing due to hardware issues. In this
+case and we took the final _N_ seeds for computing the result, where _N_ is the
+number of seeds for the competition with the least number of seeds in the
+experiment.
 
 We refer readers to `runs/run_group_experiments.csv` for a mapping from run
 group to experiment id. Experiment id descriptions can be found in the table
