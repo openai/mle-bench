@@ -21,20 +21,19 @@ case and we took the final _N_ seeds for computing the result, where _N_ is the
 number of seeds for the competition with the least number of seeds in the
 experiment.
 
-We refer readers to `runs/run_group_experiments.csv` for a mapping from run
-group to experiment id. Experiment id descriptions can be found in the table
-below.
+We refer readers to `runs/run_group_experiments.csv` for a mapping from
+experiment id to run groups. Experiment id descriptions can be found in the
+table below.
 
 | **experiment_id**                   | **notes**                                                    |
 | ----------------------------------- | ------------------------------------------------------------ |
-| cpu-gpt4o-aide                      | GPT-4o (AIDE), CPU-only (no GPU access).                     |
-| scaffolding-gpt4o-mlab              | GPT-4o on MLAB scaffolding                                   |
-| scaffolding-gpt4o-aide              | GPT-4o on AIDE scaffolding                                   |
-| models-o1-preview-aide              | o1-preview on AIDE scaffolding                               |
-| models-claude35sonnet-aide          | Claude 3.5 Sonnet on AIDE scaffolding                        |
-| scaffolding-gpt4o-opendevin         | GPT-4o on OpenDevin scaffolding                              |
 | biggpu-gpt4o-aide                   | GPT-4o (AIDE), Extra GPU (two 24GB A10 GPUs rather than one) |
-| obfuscation-gpt4o-aide              | GPT-4o (AIDE) with obfuscated descriptions                   |
-| models-llama-3.1-405B-instruct-aide | LLama 3.1 405B Instruct on AIDE scaffolding                  |
+| cpu-gpt4o-aide                      | GPT-4o (AIDE), CPU-only (no GPU access).                     |
 | extratime-gpt4o-aide                | GPT-4o (AIDE) with 100 hours of time (rather than 24)        |
+| models-claude35sonnet-aide          | Claude 3.5 Sonnet on AIDE scaffolding                        |
+| models-llama-3.1-405B-instruct-aide | LLama 3.1 405B Instruct on AIDE scaffolding                  |
 | models-o1-preview-aide              | o1-preview on AIDE scaffolding                               |
+| obfuscation-gpt4o-aide              | GPT-4o (AIDE) with obfuscated descriptions                   |
+| scaffolding-gpt4o-aide              | GPT-4o on AIDE scaffolding                                   |
+| scaffolding-gpt4o-mlab              | GPT-4o on MLAB scaffolding                                   |
+| scaffolding-gpt4o-opendevin         | GPT-4o on OpenDevin scaffolding                              |
