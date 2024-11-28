@@ -10,7 +10,7 @@ from mlebench.utils import get_logger, get_module_dir, get_repo_dir, import_fn, 
 logger = get_logger(__name__)
 
 
-DEFAULT_DATA_DIR = Path(user_cache_dir()) / "mle-bench" / "data"
+DEFAULT_DATA_DIR = (Path(user_cache_dir()) / "mle-bench" / "data").resolve()
 
 
 @dataclass(frozen=True)
@@ -73,7 +73,7 @@ class Competition:
 
 class Registry:
     def __init__(self, data_dir: Path = DEFAULT_DATA_DIR):
-        self._data_dir = data_dir
+        self._data_dir = data_dir.resolve()
 
     def get_competition(self, competition_id: str) -> Competition:
         """Fetch the competition from the registry."""

@@ -43,7 +43,7 @@ def prepare(raw: Path, public: Path, private: Path):
         # Replace index part of filename with new index
         new_sample_name = re.sub(r"TRAIN\d+", f"TRAIN{idx}", sample.name)
         new_sample = public / "train2" / new_sample_name
-        shutil.copy(sample, public / "train2" / new_sample)
+        shutil.copy(sample, new_sample)
 
     answer_rows = []  # While we're at it, collect answers for the new test set
     (public / "test2").mkdir(exist_ok=True, parents=True)
