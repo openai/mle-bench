@@ -1,6 +1,6 @@
 vars:
-  step_count: &step_count 500
-  time_limit: &time_limit 86400 # 24 hrs
+  step_count: &step_count 30
+  time_limit: &time_limit 1000 # 5 min
 
 defaults: &defaults
   start: aide/start.sh
@@ -13,7 +13,6 @@ defaults: &defaults
 kwargs_common: &kwargs_common
   agent.search.max_debug_depth: 20 # debug down a branch for up to 20 steps
   agent.search.debug_prob: 1 # always debug when there's something to debug
-  agent.time_limit: *time_limit
   exec.timeout: 32400 # 9 hours limit _per step_, to match max of kaggle.com
   copy_data: False # use symbolic links
 
@@ -21,23 +20,27 @@ aide:
   <<: *defaults
   kwargs:
     <<: *kwargs_common
-    agent.code.model: gpt-4o-2024-08-06
-    agent.feedback.model: gpt-4o-2024-08-06
+    agent.code.model: ${{ secrets.CHAT_MODEL }} # gpt-4o
+    agent.feedback.model: ${{ secrets.CHAT_MODEL }} # gpt-4o
     agent.steps: *step_count
   env_vars:
     <<: *env_vars
-    OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    AZURE_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+    OPENAI_API_VERSION: ${{ secrets.OPENAI_API_VERSION }} # 2024-05-01-preview
 
 aide/dev:
   <<: *defaults
   kwargs:
     <<: *kwargs_common
-    agent.code.model: gpt-4o-2024-08-06
-    agent.feedback.model: gpt-4o-2024-08-06
+    agent.code.model: ${{ secrets.CHAT_MODEL }} # gpt-4o
+    agent.feedback.model: ${{ secrets.CHAT_MODEL }} # gpt-4o
     agent.steps: 8
   env_vars:
     <<: *env_vars
-    OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    AZURE_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+    OPENAI_API_VERSION: ${{ secrets.OPENAI_API_VERSION }} # 2024-05-01-preview
 
 aide/o1-preview:
   <<: *defaults

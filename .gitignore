@@ -4,6 +4,7 @@ outputs/
 /data/
 /data_privateonly/
 
+runs/
 runs/*/*/
 runs/*/metadata.json
 
@@ -43,6 +44,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+.vscode/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -144,3 +146,18 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# mle_rdagent_logs folder
+mle_rdagent_logs/
+
+git_ignore_folder/
+
+*.jsonl
+show/
+
+grade_graph.ipynb
+grade.sh
+run_project.sh
+launch.json
+node_path.txt

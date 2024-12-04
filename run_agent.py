@@ -192,7 +192,7 @@ if __name__ == "__main__":
         "--n-workers",
         type=int,
         required=False,
-        default=1,
+        default=2,
         help="Number of workers to run in parallel",
     )
     parser.add_argument(

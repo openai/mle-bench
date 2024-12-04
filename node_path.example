@@ -1,0 +1,6 @@
+This is adapted for rerunning the finished aide program.
+Create a file named node_path.txt in the same directory as this file.
+Each line corresponds to the log folder of a previously finished competition. 
+e.g. 
+~/runs/2024-12-02T06-54-14-GMT_run-group_aide/spaceship-titanic_13f2ec49-287e-49f7-93b6-9bca901151f1/logs
+~/runs/2024-12-03T07-30-52-GMT_run-group_aide/tabular-playground-series-dec-2021_a370c01b-49af-431d-8dec-735c7617b00b/logs
