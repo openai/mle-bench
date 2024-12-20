@@ -79,6 +79,34 @@ We also provide a lite version of the MLE-bench dataset, which contains all the 
 mlebench prepare --lite
 ```
 
+The Lite dataset contains the following competitions:
+
+|Competition ID|Category                                       |Dataset Size (GB)     |
+|--------------|-----------------------------------------------|--------------------|
+|aerial-cactus-identification|Image Classification                           |0.0254              |
+|aptos2019-blindness-detection|Image Classification                           |10.22               |
+|denoising-dirty-documents|Image To Image                                 |0.06                |
+|detecting-insults-in-social-commentary|Text Classification                            |0.002               |
+|dog-breed-identification|Image Classification                           |0.75                |
+|dogs-vs-cats-redux-kernels-edition|Image Classification                           |0.85                |
+|histopathologic-cancer-detection|Image Regression                               |7.76                |
+|jigsaw-toxic-comment-classification-challenge|Text Classification                            |0.06                |
+|leaf-classification|Image Classification                           |0.036               |
+|mlsp-2013-birds|Audio Classification                           |0.5851              |
+|new-york-city-taxi-fare-prediction|Tabular                                        |5.7                 |
+|nomad2018-predict-transparent-conductors|Tabular                                        |0.00624             |
+|plant-pathology-2020-fgvc7|Image Classification                           |0.8                 |
+|random-acts-of-pizza|Text Classification                            |0.003               |
+|ranzcr-clip-catheter-line-classification|Image Classification                           |13.13               |
+|siim-isic-melanoma-classification|Image Classification                           |116.16              |
+|spooky-author-identification|Text Classification                            |0.0019              |
+|tabular-playground-series-dec-2021|Tabular                                        |0.7                 |
+|tabular-playground-series-may-2022|Tabular                                        |0.57                |
+|text-normalization-challenge-english-language|Seq->Seq                                       |0.01                |
+|text-normalization-challenge-russian-language|Seq->Seq                                       |0.01                |
+|the-icml-2013-whale-challenge-right-whale-redux|Audio Classification                           |0.29314             |
+
+
 ## Grading Submissions
 
 Answers for competitions must be submitted in CSV format; the required format is described in each competition's description, or shown in a competition's sample submission file. You can grade multiple submissions by using the `mlebench grade` command. Given a JSONL file, where each line corresponds with a submission for one competition, `mlebench grade` will produce a grading report for each competition. The JSONL file must contain the following fields:
