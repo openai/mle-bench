@@ -55,6 +55,14 @@ mlebench prepare -c <competition-id>
 
 Run `mlebench prepare --help` to see the list of available competitions.
 
+### MLE-bench Lite
+
+We also provide a lite version of the MLE-bench dataset, which contains all the 22 competitions from the Low complexity category. To prepare the lite dataset, run:
+
+```console
+mlebench prepare --lite
+```
+
 ## Grading Submissions
 
 Answers for competitions must be submitted in CSV format; the required format is described in each competition's description, or shown in a competition's sample submission file. You can grade multiple submissions by using the `mlebench grade` command. Given a JSONL file, where each line corresponds with a submission for one competition, `mlebench grade` will produce a grading report for each competition. The JSONL file must contain the following fields:
