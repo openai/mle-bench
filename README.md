@@ -2,6 +2,22 @@
 
 Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Learning Engineering"](https://arxiv.org/abs/2410.07095). We have released the code used to construct the dataset, the evaluation logic, as well as the agents we evaluated for this benchmark.
 
+## Results
+
+The table below shows the scores from the paper of models on MLE-Bench Lite and MLE-Bench, on the headline metric of 'percentage of submissions where the model achieved any medal'.
+
+| Model                      | MLE-Bench Lite (%) | MLE-Bench (%) |
+| -------------------------- | -----------------: | ------------: |
+| **AIDE**                   |                    |               |
+| o1-preview                 |         34.3 ± 2.4 |    16.9 ± 1.1 |
+| gpt-4o-2024-08-06          |         19.0 ± 1.3 |     8.6 ± 0.5 |
+| llama-3.1-405b-instruct    |          8.3 ± 2.6 |     3.1 ± 0.9 |
+| claude-3-5-sonnet-20240620 |         19.4 ± 4.9 |     7.5 ± 1.8 |
+| **MLAB**                   |                    |               |
+| gpt-4o-2024-08-06          |          4.2 ± 1.5 |     1.3 ± 0.5 |
+| **OpenHands**              |                    |               |
+| gpt-4o-2024-08-06          |         11.5 ± 3.4 |     5.1 ± 1.3 |
+
 ## Setup
 
 Some MLE-bench competition data is stored using [Git-LFS](https://git-lfs.com/).
