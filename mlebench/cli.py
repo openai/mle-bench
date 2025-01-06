@@ -33,6 +33,12 @@ def main():
         action="store_true",
     )
     parser_prepare.add_argument(
+        "--lite",
+        help="Prepare all the low complexity competitions (MLE-bench Lite).",
+        action="store_true",
+        required=False,
+    )
+    parser_prepare.add_argument(
         "-l",
         "--list",
         help="Prepare a list of competitions specified line by line in a text file.",
@@ -152,7 +158,12 @@ def main():
     if args.command == "prepare":
         new_registry = registry.set_data_dir(Path(args.data_dir))
 
-        if args.all:
+        if args.lite:
+            competitions = [
+                new_registry.get_competition(competition_id)
+                for competition_id in new_registry.get_lite_competition_ids()
+            ]
+        elif args.all:
             competitions = [
                 new_registry.get_competition(competition_id)
                 for competition_id in registry.list_competition_ids()
@@ -164,6 +175,10 @@ def main():
                 new_registry.get_competition(competition_id) for competition_id in competition_ids
             ]
         else:
+            if not args.competition_id:
+                parser_prepare.error(
+                    "One of --lite, --all, --list, or --competition-id must be specified."
+                )
             competitions = [new_registry.get_competition(args.competition_id)]
 
         for competition in competitions:

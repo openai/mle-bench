@@ -2,6 +2,59 @@
 
 Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Learning Engineering"](https://arxiv.org/abs/2410.07095). We have released the code used to construct the dataset, the evaluation logic, as well as the agents we evaluated for this benchmark.
 
+## Benchmarking
+
+This section describes a canonical setup for comparing scores on MLE-bench. We recommend the following:
+- Repeat each evaluation with at least 3 seeds and report the Any Medal (%) score as the mean ± one standard error of the mean. The evaluation (task and grading) itself is deterministic, but agents/LLMs can be quite high-variance!
+- Agent resources - not a strict requirement of the benchmark but please report if you stray from these defaults!
+  - Runtime: 24 hours
+  - Compute: 36 vCPUs with 440GB RAM and one 24GB A10 GPU
+- Include a breakdown of your scores across Low, Medium, High, and All complexity [splits](experiments/splits) (see *Lite evaluation* below for why this is useful).
+
+We demonstrate how this looks in practice by reporting the main results from [our paper (Table 2)](https://arxiv.org/abs/2410.07095) in the table below:
+
+| Agent | Low == Lite (%) | Medium (%) | High (%) | All (%) |
+|---------|--------|-----------|---------|----------|
+| AIDE o1-preview | 34.3 ± 2.4 | 8.8 ± 1.1 | 10.0 ± 1.9 | 16.9 ± 1.1 |
+| AIDE gpt-4o-2024-08-06 | 19.0 ± 1.3 | 3.2 ± 0.5 | 5.6 ± 1.0 | 8.6 ± 0.5 |
+| AIDE claude-3-5-sonnet-20240620 | 19.4 ± 4.9 | 2.6 ± 1.5 | 2.3 ± 2.3 | 7.5 ± 1.8 |
+| OpenHands gpt-4o-2024-08-06 | 11.5 ± 3.4 | 2.2 ± 1.3 | 1.9 ± 1.9 | 5.1 ± 1.3 |
+| AIDE llama-3.1-405b-instruct | 8.3 ± 2.6 | 1.2 ± 0.8 | 0.0 ± 0.0 | 3.1 ± 0.9 |
+| MLAB gpt-4o-2024-08-06 | 4.2 ± 1.5 | 0.0 ± 0.0 | 0.0 ± 0.0 | 1.3 ± 0.5 |
+
+### Lite Evaluation
+
+Evaluating agents with the above settings on the full 75 competitions of MLE-bench can be expensive. For users preferring a "lite" version of the benchmark, we recommend using the [Low complexity split](https://github.com/openai/mle-bench/blob/main/experiments/splits/low.txt) of our dataset, which consists of only 22 competitions. This reduces the number of runs substantially, while still allowing fair comparison along one column of the table above.
+
+Furthermore, the Low complexity competitions tend to be significantly more lightweight (158GB total dataset size compared to 3.3TB for the full set), so users may additionally consider reducing the runtime or compute resources available to the agents for further cost reduction. However, note that doing so risks degrading the performance of your agent. For example, see [Section 3.3 and 3.4 of our paper](https://arxiv.org/abs/2410.07095) where we have experimented with varying resources on the full competition set.
+
+The Lite dataset contains the following competitions:
+
+| Competition ID                              | Category                   | Dataset Size (GB) |
+|---------------------------------------------|----------------------------|--------------------|
+| aerial-cactus-identification                | Image Classification       | 0.0254            |
+| aptos2019-blindness-detection               | Image Classification       | 10.22             |
+| denoising-dirty-documents                   | Image To Image             | 0.06              |
+| detecting-insults-in-social-commentary      | Text Classification        | 0.002             |
+| dog-breed-identification                    | Image Classification       | 0.75              |
+| dogs-vs-cats-redux-kernels-edition          | Image Classification       | 0.85              |
+| histopathologic-cancer-detection            | Image Regression           | 7.76              |
+| jigsaw-toxic-comment-classification-challenge | Text Classification        | 0.06              |
+| leaf-classification                         | Image Classification       | 0.036             |
+| mlsp-2013-birds                             | Audio Classification       | 0.5851            |
+| new-york-city-taxi-fare-prediction          | Tabular                   | 5.7               |
+| nomad2018-predict-transparent-conductors    | Tabular                   | 0.00624           |
+| plant-pathology-2020-fgvc7                  | Image Classification       | 0.8               |
+| random-acts-of-pizza                        | Text Classification        | 0.003             |
+| ranzcr-clip-catheter-line-classification    | Image Classification       | 13.13             |
+| siim-isic-melanoma-classification           | Image Classification       | 116.16            |
+| spooky-author-identification                | Text Classification        | 0.0019            |
+| tabular-playground-series-dec-2021          | Tabular                   | 0.7               |
+| tabular-playground-series-may-2022          | Tabular                   | 0.57              |
+| text-normalization-challenge-english-language | Seq->Seq                 | 0.01              |
+| text-normalization-challenge-russian-language | Seq->Seq                 | 0.01              |
+| the-icml-2013-whale-challenge-right-whale-redux | Audio Classification     | 0.29314           |
+
 ## Setup
 
 Some MLE-bench competition data is stored using [Git-LFS](https://git-lfs.com/).
@@ -46,6 +99,12 @@ location where the Kaggle API looks for your credentials). To download and prepa
 mlebench prepare --all
 ```
 
+To prepare the lite dataset, run:
+
+```console
+mlebench prepare --lite
+```
+
 Alternatively, you can prepare the dataset for a specific competition by
 running:
 
@@ -54,6 +113,8 @@ mlebench prepare -c <competition-id>
 ```
 
 Run `mlebench prepare --help` to see the list of available competitions.
+
+
 
 ## Grading Submissions
 

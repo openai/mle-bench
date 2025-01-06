@@ -120,6 +120,19 @@ class Registry:
 
         return get_module_dir() / "competitions"
 
+    def get_splits_dir(self) -> Path:
+        """Retrieves the splits directory within the repository."""
+
+        return get_repo_dir() / "experiments" / "splits"
+
+    def get_lite_competition_ids(self) -> list[str]:
+        """List all competition IDs for the lite version (low complexity competitions)."""
+
+        lite_competitions_file = self.get_splits_dir() / "low.txt"
+        with open(lite_competitions_file, "r") as f:
+            competition_ids = f.read().splitlines()
+        return competition_ids
+
     def get_data_dir(self) -> Path:
         """Retrieves the data directory within the registry."""
 
