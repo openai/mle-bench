@@ -188,7 +188,7 @@ def is_dataset_prepared(competition: Competition, grading_only: bool = False) ->
 
 def is_api_exception(exception: Exception) -> bool:
     # only import when necessary; otherwise kaggle asks for API key on import
-    from kaggle.rest import ApiException
+    from kaggle.cli import ApiException
 
     return isinstance(exception, ApiException)
 
@@ -215,7 +215,7 @@ def download_dataset(
     api = authenticate_kaggle_api()
 
     # only import when necessary; otherwise kaggle asks for API key on import
-    from kaggle.rest import ApiException
+    from kaggle.cli import ApiException
 
     try:
         api.competition_download_files(
