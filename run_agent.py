@@ -110,7 +110,6 @@ async def main(args):
         competition_ids = [line.strip() for line in f.read().splitlines() if line.strip()]
     for competition_id in competition_ids:
         competition = registry.get_competition(competition_id)
-        assert False
         if not is_dataset_prepared(competition):
             raise ValueError(
                 f"Dataset for competition `{competition.id}` is not prepared! "

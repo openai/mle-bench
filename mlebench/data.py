@@ -26,7 +26,8 @@ from mlebench.utils import (
 )
 
 logger = get_logger(__name__)
-cache = dc.Cache("cache", size_limit=2**26)  # 64 MB
+# cache = dc.Cache("cache", size_limit=2**26)  # 64 MB
+cache = {}
 
 
 def create_prepared_dir(competition: Competition) -> None:
