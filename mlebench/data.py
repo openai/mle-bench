@@ -211,6 +211,12 @@ def download_dataset(
     if not download_dir.exists():
         download_dir.mkdir(parents=True)
 
+    zip_files = list(download_dir.glob("*.zip"))
+
+    if zip_files and not force:
+        logger.info("Zip file already exists. Skipping download.")
+        return zip_files[0]  # Return the first .zip file found
+
     logger.info(f"Downloading the dataset for `{competition_id}` to `{download_dir}`...")
 
     api = authenticate_kaggle_api()
