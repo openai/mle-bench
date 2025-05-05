@@ -59,7 +59,9 @@ ENV PATH="/opt/conda/bin:${PATH}"
 
 # Install stuff for the grading server: mlebench and flask
 COPY . /mlebench
-RUN pip install flask && pip install -e /mlebench
+RUN /opt/conda/bin/conda create -n mleb python=3.11 -y
+RUN /opt/conda/bin/conda run -n mleb pip install flask && \
+    /opt/conda/bin/conda run -n mleb pip install -e /mlebench
 
 # Reset DEBIAN_FRONTEND
 ENV DEBIAN_FRONTEND=
