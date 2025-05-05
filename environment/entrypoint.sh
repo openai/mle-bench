@@ -15,5 +15,5 @@ set -x
   ls -l /home
 
   # Launch grading server, stays alive throughout container lifetime to service agent requests.
-  /opt/conda/bin/python /private/grading_server.py
+  /opt/conda/bin/conda run -n mleb python /private/grading_server.py
 } 2>&1 | tee $LOGS_DIR/entrypoint.log
