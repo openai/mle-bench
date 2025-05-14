@@ -25,15 +25,16 @@ We refer readers to `runs/run_group_experiments.csv` for a mapping from
 experiment id to run groups. Experiment id descriptions can be found in the
 table below.
 
-| **experiment_id**                   | **notes**                                                    |
-| ----------------------------------- | ------------------------------------------------------------ |
-| biggpu-gpt4o-aide                   | GPT-4o (AIDE), Extra GPU (two 24GB A10 GPUs rather than one) |
-| cpu-gpt4o-aide                      | GPT-4o (AIDE), CPU-only (no GPU access).                     |
-| extratime-gpt4o-aide                | GPT-4o (AIDE) with 100 hours of time (rather than 24)        |
-| models-claude35sonnet-aide          | Claude 3.5 Sonnet on AIDE scaffolding                        |
-| models-llama-3.1-405B-instruct-aide | LLama 3.1 405B Instruct on AIDE scaffolding                  |
-| models-o1-preview-aide              | o1-preview on AIDE scaffolding                               |
-| obfuscation-gpt4o-aide              | GPT-4o (AIDE) with obfuscated descriptions                   |
-| scaffolding-gpt4o-aide              | GPT-4o on AIDE scaffolding                                   |
-| scaffolding-gpt4o-mlab              | GPT-4o on MLAB scaffolding                                   |
-| scaffolding-gpt4o-opendevin         | GPT-4o on OpenDevin scaffolding                              |
+| **experiment_id**                   | **notes**                                                                  |
+| ----------------------------------- | ---------------------------------------------------------------------------|
+| biggpu-gpt4o-aide                   | GPT-4o (AIDE), Extra GPU (two 24GB A10 GPUs rather than one)               |
+| cpu-gpt4o-aide                      | GPT-4o (AIDE), CPU-only (no GPU access).                                   |
+| extratime-gpt4o-aide                | GPT-4o (AIDE) with 100 hours of time (rather than 24)                      |
+| models-claude35sonnet-aide          | Claude 3.5 Sonnet on AIDE scaffolding                                      |
+| models-llama-3.1-405B-instruct-aide | LLama 3.1 405B Instruct on AIDE scaffolding                                |
+| models-o1-preview-aide              | o1-preview on AIDE scaffolding                                             |
+| obfuscation-gpt4o-aide              | GPT-4o (AIDE) with obfuscated descriptions                                 |
+| scaffolding-gpt4o-aide              | GPT-4o on AIDE scaffolding                                                 |
+| scaffolding-gpt4o-mlab              | GPT-4o on MLAB scaffolding                                                 |
+| scaffolding-gpt4o-opendevin         | GPT-4o on OpenDevin scaffolding                                            |
+| o1-preview-RD-Agent                 | o1-preview on RD-Agent scaffolding, 12 vCPUs, 220GB of RAM, and 1 V100 GPU |
