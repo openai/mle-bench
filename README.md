@@ -4,7 +4,7 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 
 ## Leaderboard
 
-| Agent | Low == Lite (%) | Medium (%) | High (%) | All (%) | Date | Grading Reports |
+| Agent | Low == Lite (%) | Medium (%) | High (%) | All (%) | Date | Grading Reports Available |
 |---------|--------|-----------|---------|----------|--------|------|
 | [RD-Agent](https://github.com/microsoft/RD-Agent) o1-preview | 48.18 ± 2.49 | 8.95 ± 2.36 | 18.67 ± 2.98 | 22.4 ± 1.1 | 2025-05 | ✓ |
 | AIDE o1-preview | 34.3 ± 2.4 | 8.8 ± 1.1 | 10.0 ± 1.9 | 16.9 ± 1.1 | 2024-10 | ✓ |
