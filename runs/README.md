@@ -38,3 +38,4 @@ table below.
 | scaffolding-gpt4o-mlab              | GPT-4o on MLAB scaffolding                                                 |
 | scaffolding-gpt4o-opendevin         | GPT-4o on OpenDevin scaffolding                                            |
 | o1-preview-RD-Agent                 | o1-preview on RD-Agent scaffolding, 12 vCPUs, 220GB of RAM, and 1 V100 GPU |
+| deepseek-r1-ML-Master               | Deepseek-R1 on ML-Master scaffolding, 12 hours, 36 vCPUs, 512GB of RAM, and 1 A100 GPU|
