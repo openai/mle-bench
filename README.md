@@ -1,6 +1,31 @@
-# MLE-bench
+# ResearchBench
 
-Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Learning Engineering"](https://arxiv.org/abs/2410.07095). We have released the code used to construct the dataset, the evaluation logic, as well as the agents we evaluated for this benchmark.
+ResearchBench is a comprehensive platform for evaluating AI systems on a wide range of research tasks. It evolved from MLE-bench, which focused specifically on Machine Learning Engineering tasks.
+
+## Overview
+
+ResearchBench provides a framework for:
+
+1. **Diverse Research Tasks**: Supports various research methodologies including literature reviews, data analysis, experimental design, and more.
+2. **ML Engineering**: Includes the original MLE-bench capabilities for evaluating ML engineering skills.
+3. **Standardized Evaluation**: Offers consistent metrics and evaluation protocols across different research domains.
+4. **Agent Benchmarking**: Allows benchmarking of AI agents on their ability to conduct research tasks.
+
+## Research Task Categories
+
+ResearchBench supports the following research task categories:
+
+- **Literature Review**: Comprehensive analysis of existing research on a topic
+- **Data Analysis**: Statistical analysis and interpretation of datasets
+- **Hypothesis Testing**: Formulation and testing of research hypotheses
+- **Survey Design**: Creation of effective surveys for data collection
+- **Qualitative Research**: Analysis of non-numerical data
+- **Meta-Analysis**: Statistical analysis combining results from multiple studies
+- **Experimental Design**: Planning controlled experiments
+- **Natural Language Processing**: Text analysis and language modeling
+- **Computer Vision**: Image and video analysis
+- **Reinforcement Learning**: Training agents through reward-based learning
+- **Domain-Specific Research**: Tasks in social science, economics, psychology, biology, physics, chemistry, medicine, and environmental science
 
 ## Leaderboard
 
@@ -67,7 +92,7 @@ git lfs fetch --all
 git lfs pull
 ```
 
-You can install `mlebench` with pip:
+You can install `researchbench` with pip:
 
 ```console
 pip install -e .
@@ -81,9 +106,9 @@ If you're committing code, you can install the pre-commit hooks by running:
 pre-commit install
 ```
 
-## Dataset
+## ML Dataset
 
-The MLE-bench dataset is a collection of 75 Kaggle competitions which we use to evaluate the ML engineering capabilities of AI systems.
+The ML dataset in ResearchBench is a collection of 75 Kaggle competitions which we use to evaluate the ML engineering capabilities of AI systems.
 
 Since Kaggle does not provide the held-out test set for each competition, we
 provide preparation scripts that split the publicly available training set into
@@ -98,46 +123,72 @@ raw datasets. Ensure that you have downloaded your Kaggle credentials
 location where the Kaggle API looks for your credentials). To download and prepare the MLE-bench dataset, run the following, which will download and prepare the dataset in your system's default cache directory. Note, we've found this to take two days when running from scratch:
 
 ```console
-mlebench prepare --all
+researchbench prepare --all
 ```
 
 To prepare the lite dataset, run:
 
 ```console
-mlebench prepare --lite
+researchbench prepare --lite
 ```
 
 Alternatively, you can prepare the dataset for a specific competition by
 running:
 
 ```console
-mlebench prepare -c <competition-id>
+researchbench prepare -c <competition-id>
 ```
 
-Run `mlebench prepare --help` to see the list of available competitions.
+Run `researchbench prepare --help` to see the list of available competitions.
+
+## Research Tasks
+
+ResearchBench includes a variety of research tasks beyond ML engineering. You can list available research tasks with:
+
+```console
+researchbench research list
+```
+
+To filter tasks by category:
+
+```console
+researchbench research list --category literature-review
+```
+
+To prepare a specific research task:
+
+```console
+researchbench research prepare <task-id>
+```
+
+To run a research task:
+
+```console
+researchbench research run <task-id> --params '{"param1": "value1", "param2": "value2"}'
+```
 
 
 
-## Grading Submissions
+## Grading ML Submissions
 
-Answers for competitions must be submitted in CSV format; the required format is described in each competition's description, or shown in a competition's sample submission file. You can grade multiple submissions by using the `mlebench grade` command. Given a JSONL file, where each line corresponds with a submission for one competition, `mlebench grade` will produce a grading report for each competition. The JSONL file must contain the following fields:
+Answers for ML competitions must be submitted in CSV format; the required format is described in each competition's description, or shown in a competition's sample submission file. You can grade multiple submissions by using the `researchbench grade` command. Given a JSONL file, where each line corresponds with a submission for one competition, `researchbench grade` will produce a grading report for each competition. The JSONL file must contain the following fields:
 - `competition_id`: the ID of the competition in our dataset.
 - `submission_path`: a `.csv` file with the predictions for the specified
   competition.
 
-See more information by running `mlebench grade --help`.
+See more information by running `researchbench grade --help`.
 
-You can also grade individual submissions using the `mlebench grade-sample` command. For example, to grade a submission for the Spaceship Titanic competition, you can run:
+You can also grade individual submissions using the `researchbench grade-sample` command. For example, to grade a submission for the Spaceship Titanic competition, you can run:
 
 ```console
-mlebench grade-sample <PATH_TO_SUBMISSION> spaceship-titanic
+researchbench grade-sample <PATH_TO_SUBMISSION> spaceship-titanic
 ```
 
-See more information by running `mlebench grade-sample --help`.
+See more information by running `researchbench grade-sample --help`.
 
 ## Environment
 
-We provide a base Docker image `mlebench-env` which is the base environment for our agents. This base image contains:
+We provide a base Docker image `researchbench-env` which is the base environment for our agents. This base image contains:
 - Conda environment used to execute our agents. We optionally (default true) install Python packages in this environment which are commonly used across our agents. If you don't want to install these packages, set the `INSTALL_HEAVY_DEPENDENCIES` environment variable to `false` when building the image, by adding `--build-arg INSTALL_HEAVY_DEPENDENCIES=false` to the `docker build` command below
 - Instructions for agents to follow when creating their submission
 - Grading server for agents to use when checking that the structure of their submission is correct
@@ -145,7 +196,7 @@ We provide a base Docker image `mlebench-env` which is the base environment for 
 Build this image by running:
 
 ```bash
-docker build --platform=linux/amd64 -t mlebench-env -f environment/Dockerfile .
+docker build --platform=linux/amd64 -t researchbench-env -f environment/Dockerfile .
 ```
 
 ## Agents
@@ -154,8 +205,8 @@ We purposefully designed our benchmark to not make any assumptions about the age
 
 ## Extras
 
-We include additional features in the MLE-bench repository that may be useful
-for MLE-bench evaluation. These include a rule violation detector and
+We include additional features in the ResearchBench repository that may be useful
+for evaluation. These include a rule violation detector and
 a plagiarism detector. We refer readers to
 [extras/README.md](extras/README.md) for more information.
 

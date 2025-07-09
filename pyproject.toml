@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = 'mlebench'
+name = 'researchbench'
 readme = "README.md"
 requires-python = ">=3.11"
 version = "1.0.0"
@@ -31,20 +31,32 @@ dependencies = [
   "diskcache>=5.6.3",
   "pyquaternion>=0.9.9",
   "shapely>=2.0.5",
+  "nltk>=3.8.1",
+  "transformers>=4.38.0",
+  "beautifulsoup4>=4.12.2",
+  "requests>=2.31.0",
+  "spacy>=3.7.2",
+  "gensim>=4.3.2",
+  "networkx>=3.2.1",
+  "matplotlib>=3.8.2",
+  "seaborn>=0.13.0",
+  "plotly>=5.18.0",
+  "dash>=2.14.2",
+  "huggingface-hub>=0.19.4",
 ]
 
 [tool.setuptools]
-packages = { find = { include = ["mlebench", "mlebench.*"] } }
+packages = { find = { include = ["researchbench", "researchbench.*"] } }
 
 [project.scripts]
-mlebench = "mlebench.cli:main"
+researchbench = "researchbench.cli:main"
 
 [project.optional-dependencies]
 formatters = ["black>=23.3", "isort>=5.13"]
 dev = ["pytest>=8.2", "mypy>=1.10", "pre-commit>=3.7"]
 
 [tool.setuptools.package-data]
-mlebench = ["competitions/**/*"]
+researchbench = ["competitions/**/*", "research_tasks/**/*"]
 
 [tool.black]
 line-length = 100 # match the precommit
