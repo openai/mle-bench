@@ -178,6 +178,31 @@ benchmark in the `experiments/` directory:
 
 Note, when running `pytest` locally, be sure to accept the competition rules otherwise the tests will fail.
 
+## Known Issues
+
+There are some known issues with certain MLE-bench competitions. Since we have
+already received leaderboard submissions, we are postponing fixes to avoid
+invalidating the leaderboard. Instead, we plan to release batched fixes in the
+upcoming V2 release of MLE-bench on the
+[openai/preparedness](https://github.com/openai/preparedness) repo, which will
+include a version column in the leaderboard. The known issues are catalogued
+below:
+
+- **tensorflow-speech-recognition-challenge**: The prepare.py script incorrectly
+  prepares the test set such that there is a much larger range of test labels
+  than there should be. [#63](https://github.com/openai/mle-bench/issues/63)
+- **tensorflow-speech-recognition-challenge**: The prepare.py script does not
+  properly create a test set where the speaker IDs are disjoint from those in
+  train/val.
+- **icecube-neutrinos-in-deep-ice**: Checksums are mismatching.
+  [#58](https://github.com/openai/mle-bench/issues/58)
+- **ranzcr-clip-catheter-line-classification**: The prepare.py script results
+  in missing columns in the sample submission.
+  [#30](https://github.com/openai/mle-bench/issues/30)
+- **tabular-playground-series-dec-2021**: The leaderboard is crowded.
+- **tabular-playground-series-may-2022**: The leaderboard is crowded.
+- **jigsaw-toxic-comment-classification-challenge**: The leaderboard is crowded.
+
 ## Authors
 
 Chan Jun Shern, Neil Chowdhury, Oliver Jaffe, James Aung, Dane Sherburn, Evan Mays, Giulio Starace, Kevin Liu, Leon Maksin, Tejal Patwardhan, Lilian Weng, Aleksander Mądry
