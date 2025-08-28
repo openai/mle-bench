@@ -185,8 +185,9 @@ already received leaderboard submissions, we are postponing fixes to avoid
 invalidating the leaderboard. Instead, we plan to release batched fixes in the
 upcoming V2 release of MLE-bench on the
 [openai/preparedness](https://github.com/openai/preparedness) repo, which will
-include a version column in the leaderboard. The known issues are catalogued
-below:
+include a version column in the leaderboard. If you wish to make a submission
+to V1 in the meantime, please still include these competitions in your overall
+scores. The known issues are catalogued below:
 
 - **tensorflow-speech-recognition-challenge**: The prepare.py script incorrectly
   prepares the test set such that there is a much larger range of test labels
