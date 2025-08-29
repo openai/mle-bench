@@ -178,6 +178,36 @@ benchmark in the `experiments/` directory:
 
 Note, when running `pytest` locally, be sure to accept the competition rules otherwise the tests will fail.
 
+## Known Issues
+
+There are some known issues with certain MLE-bench competitions. Since we have
+already received leaderboard submissions, we are postponing fixes to avoid
+invalidating the leaderboard. Instead, we plan to release batched fixes in the
+upcoming v2 release of MLE-bench on the
+[openai/preparedness](https://github.com/openai/preparedness) repo, which will
+include a version column in the leaderboard to distinguish between v1 and v2 results.
+If you wish to make a submission to v1 in the meantime, please still include
+the following competitions in your overall scores. The known issues are
+catalogued below:
+
+- **tensorflow-speech-recognition-challenge**:
+  - The prepare.py script incorrectly prepares the test set such that there is a
+    much larger range of test labels than there should be.
+    [#63](https://github.com/openai/mle-bench/issues/63)
+  - The prepare.py script does not properly create a test set where the speaker
+    IDs are disjoint from those in train/val.
+- **icecube-neutrinos-in-deep-ice**: Checksums are mismatch.
+  [#58](https://github.com/openai/mle-bench/issues/58)
+- **ranzcr-clip-catheter-line-classification**: The prepare.py script results in
+  missing columns in the sample submission.
+  [#30](https://github.com/openai/mle-bench/issues/30)
+- **tabular-playground-series-dec-2021**: The leaderboard is crowded -- very
+  little difference between the top score and the median score.
+- **tabular-playground-series-may-2022**: The leaderboard is crowded -- very
+  little difference between the top score and the median score.
+- **jigsaw-toxic-comment-classification-challenge**: The leaderboard is crowded -- very
+  little difference between the top score and the median score.
+
 ## Authors
 
 Chan Jun Shern, Neil Chowdhury, Oliver Jaffe, James Aung, Dane Sherburn, Evan Mays, Giulio Starace, Kevin Liu, Leon Maksin, Tejal Patwardhan, Lilian Weng, Aleksander Mądry
