@@ -24,7 +24,9 @@ def prepare(raw: Path, public: Path, private: Path):
 
     # Molecule structure data in CSV format
     structures = read_csv(raw / "structures.csv")
-    structures = structures[structures["molecule_name"].isin(new_train["molecule_name"])]
+    # Keep structures for both train AND test molecules (not just train)
+    all_molecules = set(new_train["molecule_name"]) | set(new_test["molecule_name"])
+    structures = structures[structures["molecule_name"].isin(all_molecules)]
 
     # Additional data CSVs
     dipole_moments = read_csv(raw / "dipole_moments.csv")
@@ -54,17 +56,21 @@ def prepare(raw: Path, public: Path, private: Path):
 
     # Checks before writing
     data_csvs = {
-        "structures": structures,
         "dipole_moments": dipole_moments,
         "magnetic_shielding_tensors": magnetic_shielding_tensors,
         "mulliken_charges": mulliken_charges,
         "potential_energy": potential_energy,
         "scalar_coupling_contributions": scalar_coupling_contributions,
     }
+    # These auxiliary data files should only have train molecules
     for name, dataset in data_csvs.items():
         assert set(dataset["molecule_name"]) == set(
             new_train["molecule_name"]
         ), f"Filtered {name} should exactly match the molecule names present in the new_train set."
+    
+    # But structures should have both train AND test molecules
+    assert set(structures["molecule_name"]) == all_molecules, \
+        "Structures should contain both train and test molecules"
 
     assert set(new_train["molecule_name"]).isdisjoint(
         set(new_test["molecule_name"])
@@ -88,9 +94,10 @@ def prepare(raw: Path, public: Path, private: Path):
 
     assert new_train.shape[1] == 6, f"new_train should have 6 columns, but has {new_train.shape[1]}"
 
-    # Copy over molecule structure data individual files
+    # Copy over molecule structure data individual files (for both train and test)
+    all_molecules_list = list(all_molecules)
     for molecule_name in tqdm(
-        new_train["molecule_name"].unique(), desc="Copying molecule structure files"
+        all_molecules_list, desc="Copying molecule structure files"
     ):
         src_file = raw / "structures" / f"{molecule_name}.xyz"
         dst_file = public / "structures" / f"{molecule_name}.xyz"
@@ -112,5 +119,5 @@ def prepare(raw: Path, public: Path, private: Path):
 
     # Checks after writing
     assert len(list((public / "structures").glob("*.xyz"))) == len(
-        new_train["molecule_name"].unique()
-    ), "The number of files in public/structures should match the number of unique molecule names in the train set."
+        all_molecules
+    ), "The number of files in public/structures should match the number of unique molecule names in train+test sets."

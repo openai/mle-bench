@@ -7,7 +7,7 @@ public:
   potential_energy.csv: b30f3b3b2889e433487c3abdab6b6814
   sample_submission.csv: fbb4313c3052857027152c871900a0c4
   scalar_coupling_contributions.csv: 233037169b2a8f8ee1519c19c6eb7b6e
-  structures.csv: 6082e6a941b90bcabb7325f3bee64622
+  structures.csv: 4b8864143e5251cc9793e84cb62b12d1
   test.csv: 2c8b2fd3060697f3be78489290f40768
   train.csv: bc4222feab583532854367a124d93aaa
 zip: 2e7bb40d8e2b3488250f15430b8cf947
