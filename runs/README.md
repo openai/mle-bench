@@ -37,8 +37,9 @@ table below.
 | scaffolding-gpt4o-aide              | GPT-4o on AIDE scaffolding                                                 |
 | scaffolding-gpt4o-mlab              | GPT-4o on MLAB scaffolding                                                 |
 | scaffolding-gpt4o-opendevin         | GPT-4o on OpenDevin scaffolding                                            |
-| o1-preview-R&D-Agent                 | o1-preview on R&D-Agent scaffolding, 12 vCPUs, 220GB of RAM, and 1 V100 GPU |
+| o1-preview-R&D-Agent                | o1-preview on R&D-Agent scaffolding, 12 vCPUs, 220GB of RAM, and 1 V100 GPU |
 | deepseek-r1-ML-Master               | Deepseek-R1 on ML-Master scaffolding, 12 hours, 36 vCPUs, 512GB of RAM, and 1 A100 GPU|
 | multi-agent-Neo                     | Multi-Agent Ensemble of LLMs (GPT 4.1 and Claude Sonnet 4.0) on NEO scaffolding, 36 hours, 24 vCPUs, 144GB of RAM, and 1 A100 GPU|
-| o3-gpt-4.1-R&D-Agent                 | O3 as researcher and gpt-4.1 as developer on R&D-Agent scaffolding, 12 vCPUs, 220GB of RAM, and 1 V100 GPU |
-| deepseek-r1-InternAgent              | Deepseek-R1 on InternAgent scaffolding, 12 hours, 32 vCPUs, 230GB of RAM, and 1 A800 GPU|
+| o3-gpt-4.1-R&D-Agent                | O3 as researcher and gpt-4.1 as developer on R&D-Agent scaffolding, 12 vCPUs, 220GB of RAM, and 1 V100 GPU |
+| deepseek-r1-InternAgent             | Deepseek-R1 on InternAgent scaffolding, 12 hours, 32 vCPUs, 230GB of RAM, and 1 A800 GPU|
+| gpt-5-R&D-Agent                     | gpt-5 on R&D-Agent scaffolding, 12 hours, 12 vCPUs, 220GB of RAM, and 1 V100 GPU |
