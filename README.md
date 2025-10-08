@@ -209,6 +209,8 @@ catalogued below:
   little difference between the top score and the median score.
 - **champs-scalar-coupling**: test molecules are missing in structures.csv.
   [#70](https://github.com/openai/mle-bench/pull/70)
+- **multi-modal-gesture-recognition**: public test `.mat` files leak test labels.
+  [#77](https://github.com/openai/mle-bench/issues/77)
 
 ## Authors
 
