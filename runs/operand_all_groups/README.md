@@ -1,7 +1,7 @@
-# Operand Ensemble: All MLE-Benchmark Runs
+# Operand: All MLE-Benchmark Runs
 Date Submitted: 10-06-2025
 
-All Operand Ensemble runs (including logs, generated code, and grading reports) for every seed can be found in this public GitHub repository: https://github.com/ramgorthi04/OperandLinear-MLE-Bench
+All Operand runs (including logs, generated code, and grading reports) for every seed can be found in this public GitHub repository: https://github.com/ramgorthi04/OperandLinear-MLE-Bench
 
 The README.md file from that repository is included below for reference.
 
@@ -90,7 +90,7 @@ PDF covering key architecture specifications, MLE Benchmark compliance.
 `full_history.json` contains the turn-by-turn log of the Operand Quant. All .ipynb files have been persisted and included for reproducibility.
 
 ## Notes
-Due to infrastructure limitations and compute costs, we were unable to evaluate the agent on a small number of problems in the hard subset. Nevertheless, for fairness, our reported scores are calculated across the full set of 75 problems. As we had already achieved state-of-the-art results without these few, we did not further optimize our infrastructure to support the remaining evaluations.
+Due to infrastructure limitations and compute costs, we were unable to evaluate the agent on a number of problems in the hard subset. Nevertheless, for fairness, our reported scores are calculated across the full set of 75 problems. As we had already achieved state-of-the-art results without these few, we did not further optimize our infrastructure to support the remaining evaluations.
 
 ## SEM Calculation
 Following leaderboard convention, the reported “Any Medal (%) ± SEM” values use a binomial standard error model that treats each seed run as an independent Bernoulli trial. This corresponds to the standard error of a binomial proportion over all seeds (225 total for the full benchmark).
