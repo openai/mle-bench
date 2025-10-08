@@ -184,7 +184,7 @@ There are some known issues with certain MLE-bench competitions. Since we have
 already received leaderboard submissions, we are postponing fixes to avoid
 invalidating the leaderboard. Instead, we plan to release batched fixes in the
 upcoming v2 release of MLE-bench on the
-[openai/preparedness](https://github.com/openai/preparedness) repo, which will
+[openai/frontier-evals](https://github.com/openai/frontier-evals) repo, which will
 include a version column in the leaderboard to distinguish between v1 and v2 results.
 If you wish to make a submission to v1 in the meantime, please still include
 the following competitions in your overall scores. The known issues are
