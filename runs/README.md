@@ -43,3 +43,4 @@ table below.
 | o3-gpt-4.1-R&D-Agent                | O3 as researcher and gpt-4.1 as developer on R&D-Agent scaffolding, 12 vCPUs, 220GB of RAM, and 1 V100 GPU |
 | deepseek-r1-InternAgent             | Deepseek-R1 on InternAgent scaffolding, 12 hours, 32 vCPUs, 230GB of RAM, and 1 A800 GPU|
 | gpt-5-R&D-Agent                     | gpt-5 on R&D-Agent scaffolding, 12 hours, 12 vCPUs, 220GB of RAM, and 1 V100 GPU |
+| operand-ensemble                    | Operand Ensemble, 24 hours, 36 vCPUs, 440GB of RAM, and 1 A10 GPU          |
