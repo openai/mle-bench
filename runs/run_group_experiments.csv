@@ -1,3 +1,73 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7757d55dcab77ae2ff8cd8c9c16420873d2759d210c1de29da52b752eaa7cd3f
-size 3735
+experiment_id,run_group
+biggpu-gpt4o-aide,2024-10-04T22-44-59-GMT_run-group_aide
+biggpu-gpt4o-aide,2024-09-25T04-42-50-GMT_run-group_aide
+biggpu-gpt4o-aide,2024-09-24T01-12-14-GMT_run-group_aide
+biggpu-gpt4o-aide,2024-09-22T16-12-47-GMT_run-group_aide
+biggpu-gpt4o-aide,2024-09-21T00-10-41-GMT_run-group_aide
+cpu-gpt4o-aide,2024-09-06T18-25-55-UTC_run-group_aide
+cpu-gpt4o-aide,2024-09-27T17-34-13-GMT_run-group_aide
+cpu-gpt4o-aide,2024-10-05T00-01-03-GMT_run-group_aide
+extratime-gpt4o-aide,2024-09-23T14-55-33-GMT_run-group_aide
+extratime-gpt4o-aide,2024-10-03T22-46-46-GMT_run-group_aide
+models-claude35sonnet-aide,2024-10-04T22-58-46-GMT_run-group_aide
+models-claude35sonnet-aide,2024-09-22T17-15-19-GMT_run-group_aide
+models-claude35sonnet-aide,2024-09-08T08-00-07-UTC_run-group_aide
+models-llama-3.1-405B-instruct-aide,2024-10-04T22-59-24-GMT_run-group_aide
+models-llama-3.1-405B-instruct-aide,2024-09-21T00-10-06-GMT_run-group_aide
+models-o1-preview-aide,2024-09-19T23-54-38-GMT_run-group_aide
+models-o1-preview-aide,2024-09-19T04-36-44-GMT_run-group_aide
+models-o1-preview-aide,2024-09-18T18-21-42-GMT_run-group_aide
+models-o1-preview-aide,2024-09-08T07-58-11-UTC_run-group_aide
+models-o1-preview-aide,2024-10-04T19-08-06-GMT_run-group_aide
+obfuscation-gpt4o-aide,2024-09-25T04-20-19-GMT_run-group_aide
+obfuscation-gpt4o-aide,2024-10-04T22-37-05-GMT_run-group_aide
+obfuscation-gpt4o-aide,2024-09-20T23-52-25-GMT_run-group_aide
+obfuscation-gpt4o-aide,2024-09-24T22-00-20-GMT_run-group_aide
+scaffolding-gpt4o-aide,2024-09-07T22-34-42-UTC_run-group_aide
+scaffolding-gpt4o-aide,2024-10-04T17-35-20-GMT_run-group_aide
+scaffolding-gpt4o-aide,2024-09-09T16-13-51-UTC_run-group_aide
+scaffolding-gpt4o-aide,2024-09-11T09-34-00-UTC_run-group_aide
+scaffolding-gpt4o-aide,2024-09-09T17-26-54-UTC_run-group_aide
+scaffolding-gpt4o-aide,2024-09-11T21-57-50-UTC_run-group_aide
+scaffolding-gpt4o-aide,2024-09-12T12-30-57-UTC_run-group_aide
+scaffolding-gpt4o-aide,2024-09-12T21-14-22-UTC_run-group_aide
+scaffolding-gpt4o-aide,2024-09-09T21-21-33-UTC_run-group_aide
+scaffolding-gpt4o-aide,2024-09-14T11-15-57-UTC_run-group_aide
+scaffolding-gpt4o-aide,2024-09-13T13-45-35-UTC_run-group_aide
+scaffolding-gpt4o-aide,2024-09-19T21-48-46-GMT_run-group_aide
+scaffolding-gpt4o-aide,2024-09-16T14-45-05-UTC_run-group_aide
+scaffolding-gpt4o-aide,2024-09-21T19-39-16-GMT_run-group_aide
+scaffolding-gpt4o-mlab,2024-09-16T19-44-41-UTC_run-group_mlagentbench
+scaffolding-gpt4o-mlab,2024-09-12T13-52-30-UTC_run-group_mlagentbench
+scaffolding-gpt4o-mlab,2024-10-04T22-43-43-GMT_run-group_mlagentbench
+scaffolding-gpt4o-mlab,2024-09-07T22-33-09-UTC_run-group_mlagentbench
+scaffolding-gpt4o-opendevin,2024-09-16T16-59-30-UTC_run-group_opendevin
+scaffolding-gpt4o-opendevin,2024-09-18T20-49-38-UTC_run-group_opendevin
+scaffolding-gpt4o-opendevin,2024-09-23T15-10-54-GMT_run-group_opendevin
+scaffolding-gpt4o-opendevin,2024-10-04T22-43-53-GMT_run-group_opendevin
+o1-preview-R&D-Agent,rdagent_group1
+o1-preview-R&D-Agent,rdagent_group2
+o1-preview-R&D-Agent,rdagent_group3
+o1-preview-R&D-Agent,rdagent_group4
+o1-preview-R&D-Agent,rdagent_group5
+deepseek-r1-ML-Master,mlmaster_group1
+deepseek-r1-ML-Master,mlmaster_group2
+deepseek-r1-ML-Master,mlmaster_group3
+multi-agent-Neo,neo_group1
+multi-agent-Neo,neo_group2
+multi-agent-Neo,neo_group3
+o3-gpt-4.1-R&D-Agent,rdagent_group6
+o3-gpt-4.1-R&D-Agent,rdagent_group7
+o3-gpt-4.1-R&D-Agent,rdagent_group8
+deepseek-r1-InternAgent,internagent_group1
+deepseek-r1-InternAgent,internagent_group2
+deepseek-r1-InternAgent,internagent_group3
+gpt-5-R&D-Agent,rdagent_group9
+gpt-5-R&D-Agent,rdagent_group10
+gpt-5-R&D-Agent,rdagent_group11
+operand-ensemble,operand_group1
+operand-ensemble,operand_group2
+operand-ensemble,operand_group3
+FM Agent,fmagent_group1
+FM Agent,fmagent_group2
+FM Agent,fmagent_group3
