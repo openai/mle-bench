@@ -68,7 +68,8 @@ class Registry:
 
         agents_dir = self.get_agents_dir()
 
-        for fpath in agents_dir.glob("**/config.yaml"):
+        # Manually add co-datascientist symlink to search path
+        for fpath in list(agents_dir.glob("**/config.yaml")) + [agents_dir/"co-datascientist/config.yaml"] :
             with open(fpath, "r") as f:
                 contents = yaml.safe_load(f)
 
