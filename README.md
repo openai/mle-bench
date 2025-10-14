@@ -6,7 +6,7 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 
 | Agent | LLM(s) used | Low == Lite (%) | Medium (%) | High (%) | All (%) | Running Time (hours) | Date | Grading Reports Available | Source Code Available |
 |-------|-------------|-----------------|------------|----------|---------|----------------------|------|---------------------------|----------------------|
-| [Operand](https://operand.com) ensemble | gpt-5 (low verbosity/effort) | 63.64 ± 5.92 | 33.33 ± 4.42 | 20.00 ± 5.96 | 39.56 ± 3.26 | 24 | 2025-10-06 | ✓ | X |
+| [Operand](https://operand.com) ensemble | gpt-5 (low verbosity/effort)[^1] | 63.64 ± 5.92 | 33.33 ± 4.42 | 20.00 ± 5.96 | 39.56 ± 3.26 | 24 | 2025-10-06 | ✓ | X |
 | [InternAgent](https://github.com/Alpha-Innovator/InternAgent/) | deepseek-r1 | 62.12 ± 3.03 | 26.32 ± 2.63 | 24.44 ± 2.22| 36.44 ± 1.18 | 12 | 2025-09-12 | ✓ | X |
 | [R&D-Agent](https://github.com/microsoft/RD-Agent) | gpt-5 | 68.18 ± 2.62 | 21.05 ± 1.52 | 22.22 ± 2.22 | 35.11 ± 0.44 | 12 | 2025-09-26 | ✓ | ✓ |
 | [Neo](https://heyneo.so/) multi-agent | undisclosed | 48.48 ± 1.52 | 29.82 ± 2.32 | 24.44 ± 2.22 | 34.22 ± 0.89 | 36 | 2025-07-28 | ✓ | X |
@@ -19,6 +19,9 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 | OpenHands | gpt-4o-2024-08-06 | 11.5 ± 3.4 | 2.2 ± 1.3 | 1.9 ± 1.9 | 5.1 ± 1.3 | 24 | 2024-10-08 | ✓ | ✓ |
 | AIDE | llama-3.1-405b-instruct | 8.3 ± 2.6 | 1.2 ± 0.8 | 0.0 ± 0.0 | 3.1 ± 0.9 | 24 | 2024-10-08 | ✓ | ✓ |
 | MLAB | gpt-4o-2024-08-06 | 4.2 ± 1.5 | 0.0 ± 0.0 | 0.0 ± 0.0 | 1.3 ± 0.5 |  24 | 2024-10-08 | ✓ | ✓ |
+
+[^1]: With some light assistance from an ensemble of models including
+    Gemini-2.5-Pro, Grok-4, and Claude 4.1 Opus, distilled by Gemini-2.5-Pro.
 
 ## Benchmarking
 
