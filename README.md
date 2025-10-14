@@ -4,7 +4,7 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 
 ## Leaderboard
 
-| Agent | LLM(s) used | Low == Lite (%) | Medium (%) | High (%) | All (%) | Running Time (hours) | Date | Grading Reports Available | Source Code Available|
+| Agent | LLM(s) used | Low == Lite (%) | Medium (%) | High (%) | All (%) | Running Time (hours) | Date | Grading Reports Available | Source Code Available |
 |-------|-------------|-----------------|------------|----------|---------|----------------------|------|---------------------------|----------------------|
 | [Operand](https://operand.com) ensemble | gpt-5 (low verbosity/effort) | 63.64 ± 5.92 | 33.33 ± 4.42 | 20.00 ± 5.96 | 39.56 ± 3.26 | 24 | 2025-10-06 | ✓ | X |
 | [InternAgent](https://github.com/Alpha-Innovator/InternAgent/) | deepseek-r1 | 62.12 ± 3.03 | 26.32 ± 2.63 | 24.44 ± 2.22| 36.44 ± 1.18 | 12 | 2025-09-12 | ✓ | X |
