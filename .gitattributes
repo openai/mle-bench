@@ -2,7 +2,3 @@
 mlebench/competitions/*/top_solutions/** filter=lfs diff=lfs merge=lfs -text
 runs/**/*.json filter=lfs diff=lfs merge=lfs -text
 runs/**/*.jsonl filter=lfs diff=lfs merge=lfs -text
-/Users/gzl/code/workspace/new_ws/mlebench/mle-bench/runs/fmagent_group1/grading_report_group_1.json filter=lfs diff=lfs merge=lfs -text
-/Users/gzl/code/workspace/new_ws/mlebench/mle-bench/runs/fmagent_group2/grading_report_group_2.json filter=lfs diff=lfs merge=lfs -text
-/Users/gzl/code/workspace/new_ws/mlebench/mle-bench/runs/fmagent_group3/grading_report_group_3.json filter=lfs diff=lfs merge=lfs -text
-/Users/gzl/code/workspace/new_ws/mlebench/mle-bench/runs/run_group_experiments.csv filter=lfs diff=lfs merge=lfs -text
