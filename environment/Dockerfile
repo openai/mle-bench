@@ -35,16 +35,18 @@ RUN pip install virtualenv \
     && rm /tmp/miniconda.sh \
     && /opt/conda/bin/conda init
 
-ARG CONDA_ENV_NAME=agent
+ARG CONDA_ENV_NAME=mleb
 ARG PYTHON_VERSION=3.11
 ARG REQUIREMENTS=/tmp/requirements.txt
 
 COPY environment/requirements.txt ${REQUIREMENTS}
-
-# create conda environment and optionally install the requirements to it
+# Accept Terms of Service for required channels
+RUN /opt/conda/bin/conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main && \
+    /opt/conda/bin/conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
 RUN /opt/conda/bin/conda create -n ${CONDA_ENV_NAME} python=${PYTHON_VERSION} -y
-ARG INSTALL_HEAVY_DEPENDENCIES=true
-ENV INSTALL_HEAVY_DEPENDENCIES=${INSTALL_HEAVY_DEPENDENCIES}
+
+# Create Conda environment non-interactively
+
 
 # The rest of your Dockerfile
 RUN if [ "$INSTALL_HEAVY_DEPENDENCIES" = "true" ]; then \
@@ -59,7 +61,6 @@ ENV PATH="/opt/conda/bin:${PATH}"
 
 # Install stuff for the grading server: mlebench and flask
 COPY . /mlebench
-RUN /opt/conda/bin/conda create -n mleb python=3.11 -y
 RUN /opt/conda/bin/conda run -n mleb pip install flask && \
     /opt/conda/bin/conda run -n mleb pip install -e /mlebench
 

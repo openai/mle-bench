@@ -139,7 +139,7 @@ def run_in_container(
         time_start = time.monotonic()
         container.start()
         exit_code, _ = container.exec_run(
-            'timeout 60s sh -c "while ! curl -s http://localhost:5000/health > /dev/null; do sleep 1; done"'
+            'timeout 180s sh -c "while ! curl -s http://localhost:5000/health > /dev/null; do sleep 1; done"'
         )
         if exit_code != 0:
             raise RuntimeError(

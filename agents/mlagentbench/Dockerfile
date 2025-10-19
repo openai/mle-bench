@@ -1,41 +1,29 @@
+# Base image - use the mlebench environment
 FROM mlebench-env
 
-# where to put submission.csv, will be extracted
-ARG SUBMISSION_DIR
-ENV SUBMISSION_DIR=${SUBMISSION_DIR}
-# where to put any logs, will be extracted
-ARG LOGS_DIR
-ENV LOGS_DIR=${LOGS_DIR}
-# where to put any code, will be extracted
-ARG CODE_DIR
-ENV CODE_DIR=${CODE_DIR}
-# where to put any other agent-specific files, will not be necessarily extracted
-ARG AGENT_DIR
-ENV AGENT_DIR=${AGENT_DIR}
+# Agent-specific environment name (already created in base, but we'll use it)
+ARG CONDA_ENV_NAME=mleb
+ARG AGENT_DIR=/home/agent
+ENV AGENT_DIR=/home/agent
 
-RUN mkdir ${LOGS_DIR} ${CODE_DIR} ${AGENT_DIR}
+RUN mkdir -p /home/code /home/submission /home/logs
 
-ARG CONDA_ENV_NAME=agent
-
-# copy just the requirements file, so that we can cache conda separately from the agent files
+# Copy only requirements first (for caching)
 COPY requirements.txt ${AGENT_DIR}/requirements.txt
 
-# Requirements for opencv
-RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
+# Install Python dependencies in the conda environment
+RUN /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} pip install --no-cache-dir -r ${AGENT_DIR}/requirements.txt && \
+    /opt/conda/bin/conda clean -afy
 
-# create conda environment and install the requirements to it
-RUN conda run -n ${CONDA_ENV_NAME} pip install -r ${AGENT_DIR}/requirements.txt && \
-    conda clean -afy
-
-# clone git directory to the agent directory
+# Clone MLAgentBench repo
 RUN git clone https://github.com/JunShern/MLAgentBench.git ${AGENT_DIR}/MLAgentBench && \
     cd ${AGENT_DIR}/MLAgentBench && \
     git checkout 328c713c02ea43e63f2d11cd7fd1293acb58f09f
+
+# Copy benchmark and additional files
 COPY ./benchmark_dir ${AGENT_DIR}/MLAgentBench/MLAgentBench/benchmarks/mlebench
-
-# put remaining necessary agent files in the expected location
 COPY additional_notes.txt /home/additional_notes.txt
-COPY start.sh ${AGENT_DIR}
+COPY start.sh ${AGENT_DIR}/start.sh
 
-# set working directory to MLAgentBench
+# Set working directory
 WORKDIR ${AGENT_DIR}/MLAgentBench

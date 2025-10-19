@@ -1,6 +1,6 @@
 vars:
-  time_limit: &time_limit 86400 # 3600 * 24 hours
-  step_count: &step_count 2000 # empirically, we find that the agent does 500 steps in ~6 hours, so 2000 steps should be about right for 24 hours
+  time_limit: &time_limit 10800 # 3600 * 24 hours
+  step_count: &step_count 300 # empirically, we find that the agent does 500 steps in ~6 hours, so 2000 steps should be about right for 24 hours
 
 mlagentbench:
   start: mlagentbench/start.sh

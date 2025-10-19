@@ -5,9 +5,13 @@ set -x # Print commands and their arguments as they are executed
 INSTRUCTIONS_FILE="/home/instructions.txt"
 VALIDATION_SCRIPT="/home/validate_submission.sh"
 DATA_DIR="/home/data"
+AGENT_DIR="/home/agent"
+SUBMISSION_DIR="/home/submission"
+LOGS_DIR="/home/logs"              
+CODE_DIR="/home/code"
 
 eval "$(conda shell.bash hook)" # make conda available to the shell
-conda activate agent
+conda activate mleb
 
 # --------- Prep some variables
 
@@ -46,8 +50,8 @@ bash /home/validate_submission.sh /home/data/sample_submission.csv  # Expect "Su
 
 # --------- Check that we can use the GPU in PyTorch and TensorFlow
 
-python -c "import torch; print(torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'WARNING: No GPU')"
-python -c "import tensorflow as tf; print('GPUs Available: ', tf.config.list_physical_devices('GPU'))"
+python -c "import torch; print(torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'WARNING: No GPU')" || echo "PyTorch not available"
+python -c "import tensorflow as tf; print('GPUs Available: ', tf.config.list_physical_devices('GPU'))" || echo "TensorFlow not available"
 
 # --------- Construct instructions for agent (this is the MLAB "research problem")
 
@@ -65,6 +69,9 @@ mlab_env_dir="$AGENT_DIR/MLAgentBench/MLAgentBench/benchmarks/$task/env"  # Ever
 workdir="workdir"  # contents of $mlab_env_dir later get copied by MLAB into this workdir where the agent operates
 logdir="$AGENT_DIR/logs" && mkdir -p $logdir
 
+# Create mlab_env_dir if it doesn't exist
+mkdir -p $mlab_env_dir
+
 # Agent will write submissions to $mlab_env_dir/submission, we will extract and grade from $SUBMISSION_DIR
 ln -s $SUBMISSION_DIR $mlab_env_dir/submission
 # Agent will generate a bunch of files under $logdir, we only want $logdir/agent_log so we link that to $LOGS_DIR which is what gets exported
@@ -72,6 +79,7 @@ ln -s $LOGS_DIR $logdir/agent_log
 # DATA_DIR is a mounted volume prepared with the data, agent will interact with it at $mlab_env_dir/data
 ln -s $DATA_DIR $mlab_env_dir/data
 # Populate research_problem.txt with the updated instructions.txt, this is given to the agent via a prompt
+mkdir -p $AGENT_DIR/MLAgentBench/MLAgentBench/benchmarks/$task/scripts
 cp $INSTRUCTIONS_FILE $AGENT_DIR/MLAgentBench/MLAgentBench/benchmarks/$task/scripts/research_problem.txt
 # Agent will receive instructions via the `research_problem.txt` prompt, but we also make a copy available to the agent
 cp $INSTRUCTIONS_FILE $mlab_env_dir/instructions.txt

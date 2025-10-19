@@ -65,7 +65,7 @@ networkx
 
 
 #others
-cchardet
+charset-normalizer
 pytest
 dacite
 tenacity
