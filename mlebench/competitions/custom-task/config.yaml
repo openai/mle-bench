@@ -1,0 +1,16 @@
+id: custom-task
+name: Custom task
+competition_type: simple
+awards_medals: false
+prizes: null
+description: /home/harry/custom-task/description.md
+
+dataset:
+  answers: /home/harry/custom-task/answers.csv
+  sample_submission: /home/harry/custom-task/sample.csv
+
+grader:
+  name: accuracy
+  grade_fn: mlebench.competitions.custom-task.prepare:grade
+
+preparer: mlebench.competitions.custom-task.prepare:prepare
