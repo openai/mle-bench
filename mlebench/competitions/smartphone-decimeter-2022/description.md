@@ -30,7 +30,7 @@ Submissions are scored on the mean of the 50th and 95th percentile distance erro
 
 ### Submission File
 
-For each `phone` and `UnixTimeMillis` in the sample submission, you must predict the latitude and longitude. The sample submission typically requires a prediction once per second but may include larger gaps if there were too few valid GNSS signals. The submission file should contain a header and have the following format:
+For each `tripId` and `UnixTimeMillis` in the sample submission, you must predict the latitude and longitude. The sample submission typically requires a prediction once per second but may include larger gaps if there were too few valid GNSS signals. The submission file should contain a header and have the following format:
 
 ```
 tripId,UnixTimeMillis,LatitudeDegrees,LongitudeDegrees
