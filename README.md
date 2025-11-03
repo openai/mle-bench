@@ -8,6 +8,7 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 |-------|-------------|-----------------|------------|----------|---------|----------------------|------|---------------------------|----------------------|
 | FM Agent | Gemini-2.5-Pro | 62.12 ± 3.03 | 36.84 ± 2.63 | 33.33 ± 0 | 43.56 ± 1.78 | 24 | 2025-10-10 | ✓ | X |
 | [Operand](https://operand.com) ensemble | gpt-5 (low verbosity/effort)[^1] | 63.64 ± 5.92 | 33.33 ± 4.42 | 20.00 ± 5.96 | 39.56 ± 3.26 | 24 | 2025-10-06 | ✓ | X |
+| [CAIR](https://research.google/teams/cloud-ai-research/) MLE-STAR-Pro | Gemini-2.5-Pro | 66.67 ± 1.52  | 25.44  ±  0.88 | 31.11 ± 2.22  | 38.67 ± 0.77 | 12 | 2025-11-03 | ✓ | X |
 | [InternAgent](https://github.com/Alpha-Innovator/InternAgent/) | deepseek-r1 | 62.12 ± 3.03 | 26.32 ± 2.63 | 24.44 ± 2.22| 36.44 ± 1.18 | 12 | 2025-09-12 | ✓ | X |
 | [R&D-Agent](https://github.com/microsoft/RD-Agent) | gpt-5 | 68.18 ± 2.62 | 21.05 ± 1.52 | 22.22 ± 2.22 | 35.11 ± 0.44 | 12 | 2025-09-26 | ✓ | ✓ |
 | [Neo](https://heyneo.so/) multi-agent | undisclosed | 48.48 ± 1.52 | 29.82 ± 2.32 | 24.44 ± 2.22 | 34.22 ± 0.89 | 36 | 2025-07-28 | ✓ | X |
