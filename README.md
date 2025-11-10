@@ -220,6 +220,9 @@ catalogued below:
   [#70](https://github.com/openai/mle-bench/pull/70)
 - **multi-modal-gesture-recognition**: public test `.mat` files leak test labels.
   [#77](https://github.com/openai/mle-bench/issues/77)
+- **smartphone-decimeter-2022**: The public test `span_log.nmea` files leak
+  information that makes achieving a perfect score trivial.
+  [#93](https://github.com/openai/mle-bench/issues/93)
 
 ## Authors
 
