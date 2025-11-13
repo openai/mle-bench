@@ -224,6 +224,9 @@ catalogued below:
 - **smartphone-decimeter-2022**: The public test `span_log.nmea` files leak
   information that makes achieving a perfect score trivial.
   [#93](https://github.com/openai/mle-bench/issues/93)
+- **hubmap-kidney-segmentation**: The public test `{image_id}.json` files leak
+  information that makes achieving a close-to-perfect score trivial. They should
+  be removed.
 
 ## Authors
 
