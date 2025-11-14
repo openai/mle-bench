@@ -4,8 +4,9 @@ from pathlib import Path
 
 from mlebench.data import download_and_prepare_dataset, ensure_leaderboard_exists
 from mlebench.grade import grade_csv, grade_jsonl
+from mlebench.rank import collect_rankings
 from mlebench.registry import registry
-from mlebench.utils import get_logger
+from mlebench.utils import get_logger, get_repo_dir
 
 logger = get_logger(__name__)
 
@@ -126,6 +127,66 @@ def main():
         default=registry.get_data_dir(),
     )
 
+    parser_rank = subparsers.add_parser(
+        name="rank",
+        help="Collect aggregated rankings across runs for configured splits and competition categories.",
+    )
+    repo_dir = get_repo_dir()
+    parser_rank.add_argument(
+        "--run-group-experiments",
+        type=str,
+        help="Path to run_group_experiments.csv file",
+        default=str(repo_dir / "runs" / "run_group_experiments.csv"),
+    )
+    parser_rank.add_argument(
+        "--runs-dir",
+        type=str,
+        help="Path to runs directory",
+        default=str(repo_dir / "runs"),
+    )
+    parser_rank.add_argument(
+        "--splits-dir",
+        type=str,
+        help="Path to experiments splits directory",
+        default=str(repo_dir / "experiments" / "splits"),
+    )
+    parser_rank.add_argument(
+        "--competition-categories",
+        type=str,
+        help="Path to competition_categories.csv file",
+        default=str(repo_dir / "experiments" / "competition_categories.csv"),
+    )
+    parser_rank.add_argument(
+        "--split-type",
+        type=str,
+        help="Competition split to evaluate (e.g., low, medium, high)",
+        default="low",
+    )
+    parser_rank.add_argument(
+        "--competition-category",
+        type=str,
+        help="Competition category to filter (e.g., Tabular)",
+        default="Tabular",
+    )
+    parser_rank.add_argument(
+        "--experiment-agents",
+        type=str,
+        help="Path to experiment_agents.csv file",
+        default=str(repo_dir / "runs" / "experiment_agents.csv"),
+    )
+    parser_rank.add_argument(
+        "--output-dir",
+        type=str,
+        help="Path to output directory",
+        default=str(repo_dir / "rankings"),
+    )
+    parser_rank.add_argument(
+        "--sample-report-path",
+        type=str,
+        help="Path to sample submissions grading report JSON file",
+        default=str(repo_dir / "runs" / "sample-submissions" / "grading_report.json"),
+    )
+
     # Dev tools sub-parser
     parser_dev = subparsers.add_parser("dev", help="Developer tools for extending MLE-bench.")
     dev_subparsers = parser_dev.add_subparsers(dest="dev_command", help="Developer command to run.")
@@ -138,7 +199,10 @@ def main():
     parser_download_leaderboard.add_argument(
         "-c",
         "--competition-id",
-        help=f"Name of the competition to download the leaderboard for. Valid options: {registry.list_competition_ids()}",
+        help=(
+            f"Name of the competition to download the leaderboard for. "
+            f"Valid options: {registry.list_competition_ids()}"
+        ),
         type=str,
         required=False,
     )
@@ -214,6 +278,25 @@ def main():
                 parser_download_leaderboard.error(
                     "Either --all or --competition-id must be specified."
                 )
+    if args.command == "rank":
+        competition_categories_path = Path(args.competition_categories)
+        run_group_experiments_path = Path(args.run_group_experiments)
+        runs_dir_path = Path(args.runs_dir)
+        splits_dir_path = Path(args.splits_dir)
+        experiment_agents_path = Path(args.experiment_agents)
+        output_dir_path = Path(args.output_dir)
+        sample_report_path = Path(args.sample_report_path)
+        collect_rankings(
+            run_group_experiments_path=run_group_experiments_path,
+            runs_dir=runs_dir_path,
+            splits_dir=splits_dir_path,
+            competition_categories_path=competition_categories_path,
+            split_type=args.split_type,
+            competition_category=args.competition_category,
+            experiment_agents_path=experiment_agents_path,
+            output_dir=output_dir_path,
+            sample_report_path=sample_report_path,
+        )
 
 
 if __name__ == "__main__":
