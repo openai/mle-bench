@@ -48,3 +48,5 @@ table below.
 | MLE-STAR-Pro                    | CAIR MLE-STAR-Pro, 12 hours, 24 vCPUs, 220GB of RAM, and 1 V100 GPU          |
 | AIRA-dojo | o3 on on AIRA-DOJO Greedy scaffolding , 24 hours, 24 vCPUs, 120GB of RAM and 1 H200 GPU |
 | thesis | gpt-5-codex yc sprint on custom scaffolding , 24 hours, 24 vCPUs, 170GB of RAM and 1 H100 GPU |
+| o3-mini-MLZero | o3-mini on MLZero (AutoGluon Assistant), 2 hours, 32 vCPUs, 128GB of RAM |
+| o3-mini-Upgini-MLZero | o3-mini on MLZero (AutoGluon Assistant) with Upgini feature enrichment,  2 hours, 32 vCPUs, 128GB of RAM |
