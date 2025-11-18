@@ -182,6 +182,8 @@ def score_competition_results(
         n_runs=("score", "count"),
         mean_normalized_score=("normalized_score", "mean"),
         std_normalized_score=("normalized_score", "std"),
+        mean_any_medal=("any_medal", "mean"),
+        std_any_medal=("any_medal", "std"),
     )
     stats_df = stats_df.reset_index()
 
@@ -192,12 +194,12 @@ def score_competition_results(
     return stats_df
 
 
-def aggregate_scores(rank_series_list: list[pd.Series]) -> pd.DataFrame | None:
+def aggregate_scores(rank_series_list: list[pd.Series], name: str) -> pd.DataFrame | None:
     if len(rank_series_list) == 0:
         return None
     rank_df = pd.concat(rank_series_list, axis=1).fillna(0)
     rank_df = rank_df.agg(["mean", "std"], axis=1)
-    rank_df.columns = ["mean_normalized_score", "std_normalized_score"]
+    rank_df.columns = [f"mean_{name}", f"std_{name}"]
     return rank_df
 
 
@@ -248,6 +250,7 @@ def collect_rankings(
 
     # Collect results for each tabular competition
     rank_series_list: list[pd.Series] = []
+    medal_series_list: list[pd.Series] = []
 
     for competition_id in competitions:
         logger.info(f"Processing competition: {competition_id}")
@@ -275,15 +278,19 @@ def collect_rankings(
         rank_series_list.append(
             stats_df.set_index("experiment_id")["mean_normalized_score"].rename(competition_id)
         )
+        medal_series_list.append(
+            stats_df.set_index("experiment_id")["mean_any_medal"].rename(competition_id)
+        )
 
     # Create overall score DataFrame
-    rank_df = aggregate_scores(rank_series_list)
+    rank_df = aggregate_scores(rank_series_list, "normalized_score")
+    medal_df = aggregate_scores(medal_series_list, "any_medal")
     if rank_df is None:
         logger.error("No scores collected for any competition!")
         return
 
     # Create final results DataFrame
-    final_results = rank_df.reset_index()
+    final_results = pd.concat([rank_df, medal_df], axis=1).reset_index()
     final_results = final_results.merge(experiment_agents, on="experiment_id", how="left")
 
     # Sort by mean_rank
