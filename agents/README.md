@@ -28,7 +28,7 @@ docker build --platform=linux/amd64 -t <agent> agents/<agent>/ --build-arg SUBMI
 
 ## Running agents
 
-Our `run_agent.py` script allows you to run agents locally on a given set of competitions. In the `experiments/splits/` directory, we have several files, each containing a set of competition IDs. The `experiments/splits/all.txt` file contains all competitions. The `experiments/splits/spaceship-titanic.txt` split just contains the Spaceship Titanic competition, which is useful for testing. For example, to run the dummy agent on the Spaceship Titanic competition, you can run:
+Our `run_agent.py` script allows you to run agents locally on a given set of competitions. In the `experiments/splits/` directory, we have several files, each containing a set of competition IDs. The `experiments/splits/split75.txt` file contains all competitions. The `experiments/splits/spaceship-titanic.txt` split just contains the Spaceship Titanic competition, which is useful for testing. For example, to run the dummy agent on the Spaceship Titanic competition, you can run:
 
 ```console
 python run_agent.py --agent-id dummy --competition-set experiments/splits/spaceship-titanic.txt
