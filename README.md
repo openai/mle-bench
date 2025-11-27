@@ -14,19 +14,39 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 | [InternAgent](https://github.com/Alpha-Innovator/InternAgent/) | deepseek-r1 | 62.12 ± 3.03 | 26.32 ± 2.63 | 24.44 ± 2.22| 36.44 ± 1.18 | 12 | 2025-09-12 | ✓ | X |
 | [R&D-Agent](https://github.com/microsoft/RD-Agent) | gpt-5 | 68.18 ± 2.62 | 21.05 ± 1.52 | 22.22 ± 2.22 | 35.11 ± 0.44 | 12 | 2025-09-26 | ✓ | ✓ |
 | [Neo](https://heyneo.so/) multi-agent | undisclosed | 48.48 ± 1.52 | 29.82 ± 2.32 | 24.44 ± 2.22 | 34.22 ± 0.89 | 36 | 2025-07-28 | ✓ | X |
-| [AIRA-dojo](https://github.com/facebookresearch/aira-dojo/) | o3 | 55.0 ± 1.5 | 22.0 ± 1.2 | 21.7 ± 1.1 | 31.6 ± 0.8 | 24 | 2025-05-15 | ✓ | ✓ |
-| [R&D-Agent](https://github.com/microsoft/RD-Agent) | o3 + GPT-4.1 | 51.52 ± 4 | 19.3 ± 3.16 | 26.67 ± 0 | 30.22 ± 0.89 | 24 | 2025-08-15 | ✓ | ✓ |
-| [ML-Master](https://github.com/zeroxleo/ML-Master) | deepseek-r1 | 48.5 ± 1.5 | 20.2 ± 2.3 | 24.4 ± 2.2| 29.3 ± 0.8 | 12 | 2025-06-17 | ✓ | ✓ |
-| [R&D-Agent](https://github.com/microsoft/RD-Agent) | o1-preview | 48.18 ± 1.1 | 8.95 ± 1.05 | 18.67 ± 1.33 | 22.4 ± 0.5 | 24 | 2025-05-14 | ✓ | ✓ |
-| [AIDE](https://github.com/wecoai/aideml) | o1-preview | 34.3 ± 2.4 | 8.8 ± 1.1 | 10.0 ± 1.9 | 16.9 ± 1.1 | 24 | 2024-10-08 | ✓ | ✓ |
-| [AIDE](https://github.com/wecoai/aideml) | gpt-4o-2024-08-06 | 19.0 ± 1.3 | 3.2 ± 0.5 | 5.6 ± 1.0 | 8.6 ± 0.5 | 24 | 2024-10-08 | ✓ | ✓ |
-| [AIDE](https://github.com/wecoai/aideml) | claude-3-5-sonnet-20240620 | 19.4 ± 4.9 | 2.6 ± 1.5 | 2.3 ± 2.3 | 7.5 ± 1.8 | 24 | 2024-10-08 | ✓ | ✓ |
-| OpenHands | gpt-4o-2024-08-06 | 11.5 ± 3.4 | 2.2 ± 1.3 | 1.9 ± 1.9 | 5.1 ± 1.3 | 24 | 2024-10-08 | ✓ | ✓ |
-| [AIDE](https://github.com/wecoai/aideml) | llama-3.1-405b-instruct | 8.3 ± 2.6 | 1.2 ± 0.8 | 0.0 ± 0.0 | 3.1 ± 0.9 | 24 | 2024-10-08 | ✓ | ✓ |
-| MLAB | gpt-4o-2024-08-06 | 4.2 ± 1.5 | 0.0 ± 0.0 | 0.0 ± 0.0 | 1.3 ± 0.5 |  24 | 2024-10-08 | ✓ | ✓ |
+| [AIRA-dojo](https://github.com/facebookresearch/aira-dojo/) | o3 | 55.00 ± 1.47 | 21.97 ± 1.17 | 21.67 ± 1.07 | 31.60 ± 0.82 | 24 | 2025-05-15 | ✓ | ✓ |
+| [R&D-Agent](https://github.com/microsoft/RD-Agent) | o3 + GPT-4.1 | 51.52 ± 4.01 | 19.30 ± 3.16 | 26.67 ± 0.00 | 30.22 ± 0.89 | 24 | 2025-08-15 | ✓ | ✓ |
+| [ML-Master](https://github.com/zeroxleo/ML-Master) | deepseek-r1 | 48.48 ± 1.52 | 20.18 ± 2.32 | 24.44 ± 2.22 | 29.33 ± 0.77 | 12 | 2025-06-17 | ✓ | ✓ |
+| [R&D-Agent](https://github.com/microsoft/RD-Agent) | o1-preview | 48.18 ± 1.11 | 8.95 ± 1.05 | 18.67 ± 1.33 | 22.40 ± 0.50 | 24 | 2025-05-14 | ✓ | ✓ |
+| [AIDE](https://github.com/wecoai/aideml) | o1-preview | 35.91 ± 1.86 | 8.45 ± 0.43 | 11.67 ± 1.27 | 17.12 ± 0.61 | 24 | 2024-10-08 | ✓ | ✓ |
+| [AIDE](https://github.com/wecoai/aideml) | gpt-4o-2024-08-06 | 18.55 ± 1.26 | 3.06 ± 0.33 | 8.15 ± 0.84 | 8.63 ± 0.54 | 24 | 2024-10-08 | ✓ | ✓ |
+| [AIDE](https://github.com/wecoai/aideml) | claude-3-5-sonnet-20240620 | 19.70 ± 1.52 | 2.63 ± 1.52 | 2.22 ± 2.22 | 7.56 ± 1.60 | 24 | 2024-10-08 | ✓ | ✓ |
+| OpenHands | gpt-4o-2024-08-06 | 12.12 ± 1.52 | 1.75 ± 0.88 | 2.22 ± 2.22 | 4.89 ± 0.44 | 24 | 2024-10-08 | ✓ | ✓ |
+| [AIDE](https://github.com/wecoai/aideml) | llama-3.1-405b-instruct | 10.23 ± 1.14 | 0.66 ± 0.66 | 0.00 ± 0.00 | 3.33 ± 0.38 | 24 | 2024-10-08 | ✓ | ✓ |
+| MLAB | gpt-4o-2024-08-06 | 4.55 ± 0.86 | 0.00 ± 0.00 | 0.00 ± 0.00 | 1.60 ± 0.27 | 24 | 2024-10-08 | ✓ | ✓ |
 
 [^1]: With some light assistance from an ensemble of models including
     Gemini-2.5-Pro, Grok-4, and Claude 4.1 Opus, distilled by Gemini-2.5-Pro.
+[^2]: Operand medium/high/all computed by padding incomplete seeds with failing
+    scores.
+
+### Producing Scores for the Leaderboard
+
+To produce the scores for the leaderboard, please organize your grading reports
+in the `runs/` folder organized by run groups, with one grading report per run
+group. Identify the run groups for your submission in
+`runs/run_group_experiments.csv` with an experiment id. Then run
+
+```bash
+uv run python experiments/aggregate_grading_reports.py --experiment-id <exp_id> --split low
+uv run python experiments/aggregate_grading_reports.py --experiment-id <exp_id> --split medium
+uv run python experiments/aggregate_grading_reports.py --experiment-id <exp_id> --split high
+uv run python experiments/aggregate_grading_reports.py --experiment-id <exp_id> --split split75
+```
+
+Report the mean and standard error of the mean (SEM) for each of the splits on
+the reported `any_medal_percentage` metric. The `--split75` flag corresponds to
+the `All (%)` column.
 
 ## Benchmarking
 
