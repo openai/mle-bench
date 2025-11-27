@@ -5,6 +5,8 @@ outputs/
 /data_privateonly/
 
 runs/*/*/
+!runs/*/hourly
+!runs/*/hourly/**
 runs/*/metadata.json
 
 # Re-include metadata.json, dolos, and grading reports
