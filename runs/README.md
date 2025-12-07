@@ -49,3 +49,4 @@ table below.
 | MLE-STAR-Pro-1.5                    | CAIR MLE-STAR-Pro-1.5, 24 hours, 24 vCPUs, 220GB of RAM, and 2 × A100-40GB GPUs       |
 | AIRA-dojo | o3 on on AIRA-DOJO Greedy scaffolding , 24 hours, 24 vCPUs, 120GB of RAM and 1 H200 GPU |
 | thesis | gpt-5-codex yc sprint on custom scaffolding , 24 hours, 24 vCPUs, 170GB of RAM and 1 H100 GPU |
+| Leeroo | Ensemble (Gemini-3-Pro-Preview, GPT-5, GPT-5-mini) 24 hours, 24 vCPUs, 150GB of RAM and 1 H100 GPU |

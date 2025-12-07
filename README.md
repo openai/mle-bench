@@ -6,6 +6,7 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 
 | Agent | LLM(s) used | Low == Lite (%) | Medium (%) | High (%) | All (%) | Running Time (hours) | Date | Grading Reports Available | Source Code Available |
 |-------|-------------|-----------------|------------|----------|---------|----------------------|------|---------------------------|----------------------|
+| [Leeroo](https://leeroo.com/) | Gemini-3-Pro-Preview | 68.18 ± 2.62 | 44.74 ± 1.52 | 40.00 ± 0.00 | 50.67 ± 1.33 | 24 | 2025-12-07 | ✓ | X |
 | [Thesis](https://thesislabs.ai) | gpt-5-codex | 65.15 ± 1.52 | 45.61 ± 7.18 | 31.11 ± 2.22 | 48.44 ± 3.64 | 24 | 2025-11-10 | ✓ | X |
 | [CAIR](https://research.google/teams/cloud-ai-research/) MLE-STAR-Pro-1.5 | Gemini-2.5-Pro | 68.18 ± 2.62 | 34.21 ± 1.52  |  33.33 ±  0.00 |  44.00 ± 1.33 | 24 | 2025-11-25 | ✓ | X |
 | [FM Agent](https://github.com/baidubce/FM-Agent) | Gemini-2.5-Pro | 62.12 ± 1.52 | 36.84 ± 1.52 | 33.33 ± 0.00 | 43.56 ± 0.89 | 24 | 2025-10-10 | ✓ | X |
