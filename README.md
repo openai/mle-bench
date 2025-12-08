@@ -6,6 +6,7 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 
 | Agent | LLM(s) used | Low == Lite (%) | Medium (%) | High (%) | All (%) | Running Time (hours) | Date | Grading Reports Available | Source Code Available |
 |-------|-------------|-----------------|------------|----------|---------|----------------------|------|---------------------------|----------------------|
+| [Leeroo](https://leeroo.com/) | Gemini-3-Pro-Preview[^3] | 68.18 ± 2.62[^2] | 44.74 ± 1.52[^2] | 40.00 ± 0.00[^2] | 50.67 ± 1.33[^2] | 24 | 2025-12-07 | ✓ | X |
 | [Thesis](https://thesislabs.ai) | gpt-5-codex | 65.15 ± 1.52 | 45.61 ± 7.18 | 31.11 ± 2.22 | 48.44 ± 3.64 | 24 | 2025-11-10 | ✓ | X |
 | [CAIR](https://research.google/teams/cloud-ai-research/) MLE-STAR-Pro-1.5 | Gemini-2.5-Pro | 68.18 ± 2.62 | 34.21 ± 1.52  |  33.33 ±  0.00 |  44.00 ± 1.33 | 24 | 2025-11-25 | ✓ | X |
 | [FM Agent](https://github.com/baidubce/FM-Agent) | Gemini-2.5-Pro | 62.12 ± 1.52 | 36.84 ± 1.52 | 33.33 ± 0.00 | 43.56 ± 0.89 | 24 | 2025-10-10 | ✓ | X |
@@ -27,9 +28,8 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 
 [^1]: With some light assistance from an ensemble of models including
     Gemini-2.5-Pro, Grok-4, and Claude 4.1 Opus, distilled by Gemini-2.5-Pro.
-[^2]: Operand medium/high/all computed by padding incomplete seeds with failing
-    scores.
-
+[^2]: Computed by padding incomplete seeds with failing scores.
+[^3]: The architecture is primarily driven by Gemini-3-Pro-Preview, with a subset of modules utilizing GPT-5 and GPT-5-mini.
 ### Producing Scores for the Leaderboard
 
 To produce the scores for the leaderboard, please organize your grading reports
