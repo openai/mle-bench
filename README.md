@@ -29,7 +29,7 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 [^1]: With some light assistance from an ensemble of models including
     Gemini-2.5-Pro, Grok-4, and Claude 4.1 Opus, distilled by Gemini-2.5-Pro.
 [^2]: Computed by padding incomplete seeds with failing scores.
-[^3]: Employed Gemini-3-Pro-Preview as the primary model, with additional input from GPT-5 and GPT-5-mini.
+[^3]: The architecture is primarily driven by Gemini-3-Pro-Preview, with a subset of modules utilizing GPT-5 and GPT-5-mini.
 ### Producing Scores for the Leaderboard
 
 To produce the scores for the leaderboard, please organize your grading reports
