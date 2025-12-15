@@ -248,6 +248,9 @@ catalogued below:
 - **hubmap-kidney-segmentation**: The public test `{image_id}.json` files leak
   information that makes achieving a close-to-perfect score trivial. They should
   be removed.
+- **random-acts-of-pizza**: The field `giver_username_if_known` leaks the outcome,
+  enabling trivial perfect prediction. This competition should be dropped.
+  [#108](https://github.com/openai/mle-bench/issues/108)
 
 ## Authors
 
