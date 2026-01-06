@@ -6,9 +6,9 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 
 | Agent | LLM(s) used | Low == Lite (%) | Medium (%) | High (%) | All (%) | Running Time (hours) | Date | Grading Reports Available | Source Code Available |
 |-------|-------------|-----------------|------------|----------|---------|----------------------|------|---------------------------|----------------------|
-|[PiEvolve](https://github.com/FractalAIResearchLabs/PiEvolve)|Gemini-3-Pro-Preview[^3]|80.30 ± 1.52[^2]|58.77 ± 0.88[^2]|40.0 ± 0.00[^2]|61.33 ± 0.77[^2]|24|2026-01-05|✓|X|
+|[PiEvolve](https://github.com/FractalAIResearchLabs/PiEvolve)<br>(Fractal AI Research)|Gemini-3-Pro-Preview[^3]|80.30 ± 1.52[^2]|58.77 ± 0.88[^2]|40.0 ± 0.00[^2]|61.33 ± 0.77[^2]|24|2026-01-05|✓|X|
 | [ML-Master 2.0](https://github.com/sjtu-sai-agents/ML-Master) | Deepseek-V3.2-Speciale | 75.76 ± 1.51 | 50.88 ± 3.51 | 42.22 ± 2.22 | 56.44 ± 2.47 | 24 | 2025-12-16 | ✓ | X |
-|[PiEvolve](https://github.com/FractalAIResearchLabs/PiEvolve)|Gemini-3-Pro-Preview[^3]|77.27 ± 0.00[^2]|43.86 ± 1.75[^2] |37.78 ± 2.22[^2]|52.44 ± 1.18 [^2]|12|2026-01-05|✓|X|
+|[PiEvolve](https://github.com/FractalAIResearchLabs/PiEvolve)<br>(Fractal AI Research)|Gemini-3-Pro-Preview[^3]|77.27 ± 0.00[^2]|43.86 ± 1.75[^2] |37.78 ± 2.22[^2]|52.44 ± 1.18 [^2]|12|2026-01-05|✓|X|
 | [Leeroo](https://leeroo.com/) | Gemini-3-Pro-Preview[^3] | 68.18 ± 2.62[^2] | 44.74 ± 1.52[^2] | 40.00 ± 0.00[^2] | 50.67 ± 1.33[^2] | 24 | 2025-12-07 | ✓ | X |
 | [Thesis](https://thesislabs.ai) | gpt-5-codex | 65.15 ± 1.52 | 45.61 ± 7.18 | 31.11 ± 2.22 | 48.44 ± 3.64 | 24 | 2025-11-10 | ✓ | X |
 | [CAIR](https://research.google/teams/cloud-ai-research/) MLE-STAR-Pro-1.5 | Gemini-2.5-Pro | 68.18 ± 2.62 | 34.21 ± 1.52  |  33.33 ±  0.00 |  44.00 ± 1.33 | 24 | 2025-11-25 | ✓ | X |
