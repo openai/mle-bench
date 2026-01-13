@@ -6,7 +6,7 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 
 | Agent | LLM(s) used | Low == Lite (%) | Medium (%) | High (%) | All (%) | Running Time (hours) | Date | Grading Reports Available | Source Code Available |
 |-------|-------------|-----------------|------------|----------|---------|----------------------|------|---------------------------|----------------------|
-| [Famou-Agent 2.0](https://github.com/baidubce/FM-Agent) | Gemini-2.5-Pro | 75.76 ± 1.51 | 57.89 ± 2.63 | 40.00 ± 0.00 | 59.56 ± 1.78 | 24 | 2025-12-27 | ✓ | X |
+| [Famou-Agent 2.0](https://github.com/baidubce/FM-Agent) | Gemini-2.5-Pro | 75.76 ± 1.52 | 57.89 ± 1.52 | 40.00 ± 0.00 | 59.56 ± 0.89 | 24 | 2025-12-27 | ✓ | X |
 | [ML-Master 2.0](https://github.com/sjtu-sai-agents/ML-Master) | Deepseek-V3.2-Speciale | 75.76 ± 1.51 | 50.88 ± 3.51 | 42.22 ± 2.22 | 56.44 ± 2.47 | 24 | 2025-12-16 | ✓ | X |
 | [Leeroo](https://leeroo.com/) | Gemini-3-Pro-Preview[^3] | 68.18 ± 2.62[^2] | 44.74 ± 1.52[^2] | 40.00 ± 0.00[^2] | 50.67 ± 1.33[^2] | 24 | 2025-12-07 | ✓ | X |
 | [Thesis](https://thesislabs.ai) | gpt-5-codex | 65.15 ± 1.52 | 45.61 ± 7.18 | 31.11 ± 2.22 | 48.44 ± 3.64 | 24 | 2025-11-10 | ✓ | X |
