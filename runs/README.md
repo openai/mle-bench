@@ -44,10 +44,11 @@ table below.
 | deepseek-r1-InternAgent             | Deepseek-R1 on InternAgent scaffolding, 12 hours, 32 vCPUs, 230GB of RAM, and 1 A800 GPU|
 | gpt-5-R&D-Agent                     | gpt-5 on R&D-Agent scaffolding, 12 hours, 12 vCPUs, 220GB of RAM, and 1 V100 GPU |
 | operand-ensemble                    | Operand Ensemble, 24 hours, 36 vCPUs, 440GB of RAM, and 1 A10 GPU          |
-| FM Agent                    | FM Agent, 24 hours, 64 vCPUs, 500GB of RAM, and 1 A800 GPU          |
+| Famou-Agent                    | Gemini-2.5-Pro, 24 hours, 64 vCPUs, 500GB of RAM, and 1 A800 GPU          |
 | MLE-STAR-Pro-1.0                    | CAIR MLE-STAR-Pro-1.0, 12 hours, 24 vCPUs, 220GB of RAM, and 1 V100 GPU          |
 | MLE-STAR-Pro-1.5                    | CAIR MLE-STAR-Pro-1.5, 24 hours, 24 vCPUs, 220GB of RAM, and 2 × A100-40GB GPUs       |
 | AIRA-dojo | o3 on on AIRA-DOJO Greedy scaffolding , 24 hours, 24 vCPUs, 120GB of RAM and 1 H200 GPU |
 | thesis | gpt-5-codex yc sprint on custom scaffolding , 24 hours, 24 vCPUs, 170GB of RAM and 1 H100 GPU |
 | Leeroo | Ensemble (Gemini-3-Pro-Preview, GPT-5, GPT-5-mini) 24 hours, 24 vCPUs, 150GB of RAM and 1 H100 GPU |
 | ML-Master-2.0                       | Deepseek-V3.2-Speciale on ML-Master-2.0 scaffolding, 24 hours, 36 vCPUs, 252GB of RAM and 2 x 4090-24GB GPU|
+| Famou-Agent-2.0                       | Gemini-2.5-Pro, 24 hours, 64 vCPUs, 500GB of RAM, and 1 A800 GPU |
