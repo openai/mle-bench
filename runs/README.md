@@ -52,3 +52,5 @@ table below.
 | Leeroo | Ensemble (Gemini-3-Pro-Preview, GPT-5, GPT-5-mini) 24 hours, 24 vCPUs, 150GB of RAM and 1 H100 GPU |
 | ML-Master-2.0                       | Deepseek-V3.2-Speciale on ML-Master-2.0 scaffolding, 24 hours, 36 vCPUs, 252GB of RAM and 2 x 4090-24GB GPU|
 | Famou-Agent-2.0                       | Gemini-2.5-Pro, 24 hours, 64 vCPUs, 500GB of RAM, and 1 A800 GPU |
+| PiEvolve_24hrs                      | Gemini-3-Pro-preview, 24 hours, 40 vCPUs, 240 GB RAM, and 1 H100 GPU |
+| PiEvolve_12hrs                      | Gemini-3-Pro-preview, 12 hours, 40 vCPUs, 240 GB RAM, and 1 H100 GPU |
