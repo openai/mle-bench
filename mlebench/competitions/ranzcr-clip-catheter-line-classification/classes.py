@@ -8,4 +8,6 @@ CLASSES = [
     "NGT - Normal",
     "CVC - Abnormal",
     "CVC - Borderline",
+    "CVC - Normal",
+    "Swan Ganz Catheter Present",
 ]

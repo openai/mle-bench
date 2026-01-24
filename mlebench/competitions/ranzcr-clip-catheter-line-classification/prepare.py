@@ -43,8 +43,10 @@ def prepare(raw: Path, public: Path, private: Path):
     ), f"Expected {len(new_test)} files in public test, got {len(list(public.glob('test/*.jpg')))}"
 
     # Create a sample submission file
-    submission_df = new_test[["StudyInstanceUID"] + CLASSES]
-    submission_df[CLASSES] = 0
+    # Start with StudyInstanceUID from new_test, then add all CLASSES columns
+    submission_df = new_test[["StudyInstanceUID"]].copy()
+    for class_name in CLASSES:
+        submission_df[class_name] = 0
 
     # Copy over files
     new_train.to_csv(public / "train.csv", index=False)
