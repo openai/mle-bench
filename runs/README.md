@@ -55,3 +55,4 @@ table below.
 | PiEvolve_24hrs                      | Gemini-3-Pro-preview, 24 hours, 40 vCPUs, 240 GB RAM, and 1 H100 GPU |
 | PiEvolve_12hrs                      | Gemini-3-Pro-preview, 12 hours, 40 vCPUs, 240 GB RAM, and 1 H100 GPU |
 | LoongFlow                           | Gemini-3-Flash-preview, 24 hours, 36 vCPUs, 440 GB RAM, and 2 x A10 GPU or 2 x H20 GPU (depending on running nodes)               |
+| Disarray                            | Ensemble (Claude-Opus-4.5, Claude-Sonnet-4.5, GPT-5.2-Codex, Gemini-3-Pro-Preview), 24 hours, 24 vCPUs, 220GB of RAM and 1 A100 GPU |
