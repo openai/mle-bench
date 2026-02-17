@@ -57,3 +57,5 @@ table below.
 | LoongFlow                           | Gemini-3-Flash-preview, 24 hours, 36 vCPUs, 440 GB RAM, and 2 x A10 GPU or 2 x H20 GPU (depending on running nodes)               |
 | Disarray                            | Ensemble (Claude-Opus-4.5, Claude-Sonnet-4.5, GPT-5.2-Codex, Gemini-3-Pro-Preview), 24 hours, 24 vCPUs, 220GB of RAM and 1 A100 GPU |
 | MLEvolve                            | Gemini-3-Pro-preview, 12 hours, 21 vCPUs, 234GB of RAM, and 1 H200 GPU |
+| MARS                    | CAIR MARS, 24 hours, 12 vCPUs, 220GB of RAM, and 1 A100-40GB GPU          |
+| MARS+                    | CAIR MARS+, 24 hours, 48 vCPUs, 220GB of RAM, and 2 × H100 GPUs       |
