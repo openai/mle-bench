@@ -6,6 +6,7 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 
 | Agent | LLM(s) used | Low == Lite (%) | Medium (%) | High (%) | All (%) | Running Time (hours) | Date | Grading Reports Available | Source Code Available |
 |-------|-------------|-----------------|------------|----------|---------|----------------------|------|---------------------------|----------------------|
+| [Disarray](https://disarray.ai)                                  |Ensemble (Claude-Opus-4.5, Claude-Sonnet-4.5, GPT-5.2-Codex, Gemini-3-Pro-Preview)| 90.91 ± 0.00     | 72.81 ± 0.88      | 71.11 ± 2.22     | 77.78 ± 0.44   |24| 2026-02-03 |✓|X|
 | [LoongFlow](https://github.com/baidu-baige/LoongFlow) | Gemini-3-Flash-Preview          | 77.27 ± 0.0[^2]  | 63.15 ± 1.51[^2]  |40.0 ± 0.00[^2]| 62.66 ± 0.76[^2] |24| 2026-02-09 |✓|✓|
 |[PiEvolve](https://github.com/FractalAIResearchLabs/PiEvolve)<br>(Fractal AI Research)|Gemini-3-Pro-Preview[^3]|80.30 ± 1.52[^2]|58.77 ± 0.88[^2]|40.0 ± 0.00[^2]|61.33 ± 0.77[^2]|24|2026-01-05|✓|X|
 | [Famou-Agent 2.0](https://github.com/baidubce/FM-Agent) | Gemini-2.5-Pro | 75.76 ± 1.52 | 57.89 ± 1.52 | 40.00 ± 0.00 | 59.56 ± 0.89 | 24 | 2025-12-27 | ✓ | X |
