@@ -6,9 +6,10 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 
 | Agent | LLM(s) used | Low == Lite (%) | Medium (%) | High (%) | All (%) | Running Time (hours) | Test Set Blind[^1] | Date | Source Code Available | Grading Reports Available |
 |-------|-------------|-----------------|------------|----------|---------|----------------------|----------------|------|----------------------|---------------------------|
-| [LoongFlow](https://github.com/baidu-baige/LoongFlow) | Gemini-3-Flash-Preview          | 77.27 ± 0.0[^2]  | 63.15 ± 1.51[^2]  |40.0 ± 0.00[^2]| 62.66 ± 0.76[^2] |24|✗| 2026-02-09 |✓|✓|
-|[MLEvolve](https://github.com/InternScience/MLEvolve)|Gemini-3-Pro-Preview|80.30 ± 1.52|57.89 ± 1.52|42.22 ± 2.22|61.33 ± 1.33|12|✓|2026-02-14|✓|✓|
-|[PiEvolve](https://github.com/FractalAIResearchLabs/PiEvolve)<br>(Fractal AI Research)|Gemini-3-Pro-Preview[^3]|80.30 ± 1.52[^2]|58.77 ± 0.88[^2]|40.0 ± 0.00[^2]|61.33 ± 0.77[^2]|24|✓|2026-01-05|X|✓|
+| [Disarray](https://disarray.ai) | Ensemble (Claude-Opus-4.5, Claude-Sonnet-4.5, GPT-5.2-Codex, Gemini-3-Pro-Preview) | 90.91 ± 0.00 | 72.81 ± 0.88 | 71.11 ± 2.22 | 77.78 ± 0.44 | 24 | ✗ | 2026-02-03 | X | ✓ |
+| [LoongFlow](https://github.com/baidu-baige/LoongFlow) | Gemini-3-Flash-Preview | 77.27 ± 0.0[^2] | 63.15 ± 1.51[^2] | 40.0 ± 0.00[^2] | 62.66 ± 0.76[^2] | 24 | ✗ | 2026-02-09 | ✓ | ✓ |
+| [MLEvolve](https://github.com/InternScience/MLEvolve) | Gemini-3-Pro-Preview | 80.30 ± 1.52 | 57.89 ± 1.52 | 42.22 ± 2.22 | 61.33 ± 1.33 | 12 | ✓ | 2026-02-14 | ✓ | ✓ |
+| [PiEvolve](https://github.com/FractalAIResearchLabs/PiEvolve)<br>(Fractal AI Research) | Gemini-3-Pro-Preview[^3] | 80.30 ± 1.52[^2] | 58.77 ± 0.88[^2] | 40.0 ± 0.00[^2] | 61.33 ± 0.77[^2] | 24 | ✓ | 2026-01-05 | X | ✓ |
 | [Famou-Agent 2.0](https://github.com/baidubce/FM-Agent) | Gemini-2.5-Pro | 75.76 ± 1.52 | 57.89 ± 1.52 | 40.00 ± 0.00 | 59.56 ± 0.89 | 24 | ✓ | 2025-12-27 | X | ✓ |
 | [ML-Master 2.0](https://github.com/sjtu-sai-agents/ML-Master) | Deepseek-V3.2-Speciale | 75.76 ± 1.51 | 50.88 ± 3.51 | 42.22 ± 2.22 | 56.44 ± 2.47 | 24 | ✓ | 2025-12-16 | X | ✓ |
 |[PiEvolve](https://github.com/FractalAIResearchLabs/PiEvolve)<br>(Fractal AI Research)|Gemini-3-Pro-Preview[^3]|74.24 ± 3.03[^2]|45.61 ±  0.88[^2] | 35.55 ± 2.22[^2]|52.0 ±  0.77[^2]|12|✓|2026-01-05|X|✓|
