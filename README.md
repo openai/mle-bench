@@ -4,23 +4,24 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 
 ## Leaderboard
 
-| Agent | LLM(s) used | Low == Lite (%) | Medium (%) | High (%) | All (%) | Running Time (hours) | Date | Known Leakage[^1] | Grading Reports Available | Source Code Available |
-|-------|-------------|-----------------|------------|----------|---------|----------------------|------|---------------|---------------------------|----------------------|
-| [Disarray](https://disarray.ai)                                  |Ensemble (Claude-Opus-4.5, Claude-Sonnet-4.5, GPT-5.2-Codex, Gemini-3-Pro-Preview)| 90.91 ± 0.00     | 72.81 ± 0.88      | 71.11 ± 2.22     | 77.78 ± 0.44   |24| 2026-02-03 | [✓](https://github.com/openai/mle-bench/pull/118) |✓|X|
-| [LoongFlow](https://github.com/baidu-baige/LoongFlow) | Gemini-3-Flash-Preview          | 77.27 ± 0.0[^3]  | 63.15 ± 1.51[^3]  |40.0 ± 0.00[^3]| 62.66 ± 0.76[^3] |24| 2026-02-09 | - |✓|✓|
-|[PiEvolve](https://github.com/FractalAIResearchLabs/PiEvolve)<br>(Fractal AI Research)|Gemini-3-Pro-Preview[^4]|80.30 ± 1.52[^3]|58.77 ± 0.88[^3]|40.0 ± 0.00[^3]|61.33 ± 0.77[^3]|24|2026-01-05| - |✓|X|
-| [Famou-Agent 2.0](https://github.com/baidubce/FM-Agent) | Gemini-2.5-Pro | 75.76 ± 1.52 | 57.89 ± 1.52 | 40.00 ± 0.00 | 59.56 ± 0.89 | 24 | 2025-12-27 | - | ✓ | X |
-| [ML-Master 2.0](https://github.com/sjtu-sai-agents/ML-Master) | Deepseek-V3.2-Speciale | 75.76 ± 1.51 | 50.88 ± 3.51 | 42.22 ± 2.22 | 56.44 ± 2.47 | 24 | 2025-12-16 | - | ✓ | X |
-|[PiEvolve](https://github.com/FractalAIResearchLabs/PiEvolve)<br>(Fractal AI Research)|Gemini-3-Pro-Preview[^4]|74.24 ± 3.03[^3]|45.61 ±  0.88[^3] | 35.55 ± 2.22[^3]|52.0 ±  0.77[^3]|12|2026-01-05| - |✓|X|
+| Agent | LLM(s) used | Low == Lite (%) | Medium (%) | High (%) | All (%) | Running Time (hours) | Date | Known Leakage[^1] | Source Code Available | Grading Reports Available |
+|-------|-------------|-----------------|------------|----------|---------|----------------------|------|---------------|----------------------|---------------------------|
+| [Disarray](https://disarray.ai)                                  |Ensemble (Claude-Opus-4.5, Claude-Sonnet-4.5, GPT-5.2-Codex, Gemini-3-Pro-Preview)| 90.91 ± 0.00     | 72.81 ± 0.88      | 71.11 ± 2.22     | 77.78 ± 0.44   |24| 2026-02-03 | [✓](https://github.com/openai/mle-bench/pull/118) |X|✓|
+| [LoongFlow](https://github.com/baidu-baige/LoongFlow) | Gemini-3-Flash-Preview          | 77.27 ± 0.0[^3]  | 63.15 ± 1.51[^3]  |40.0 ± 0.00[^3]| 62.66 ± 0.76[^3] |24| 2026-02-09 | [✓](https://github.com/openai/mle-bench/pull/119) |✓|✓|
+| [MLEvolve](https://github.com/InternScience/MLEvolve) | Gemini-3-Pro-Preview | 80.30 ± 1.52 | 57.89 ± 1.52 | 42.22 ± 2.22 | 61.33 ± 1.33 | 12 | 2026-02-14 | - | ✓ | ✓ |
+|[PiEvolve](https://github.com/FractalAIResearchLabs/PiEvolve)<br>(Fractal AI Research)|Gemini-3-Pro-Preview[^4]|80.30 ± 1.52[^3]|58.77 ± 0.88[^3]|40.0 ± 0.00[^3]|61.33 ± 0.77[^3]|24|2026-01-05| - |X|✓|
+| [Famou-Agent 2.0](https://github.com/baidubce/FM-Agent) | Gemini-2.5-Pro | 75.76 ± 1.52 | 57.89 ± 1.52 | 40.00 ± 0.00 | 59.56 ± 0.89 | 24 | 2025-12-27 | - | X | ✓ |
+| [ML-Master 2.0](https://github.com/sjtu-sai-agents/ML-Master) | Deepseek-V3.2-Speciale | 75.76 ± 1.51 | 50.88 ± 3.51 | 42.22 ± 2.22 | 56.44 ± 2.47 | 24 | 2025-12-16 | - | X | ✓ |
+|[PiEvolve](https://github.com/FractalAIResearchLabs/PiEvolve)<br>(Fractal AI Research)|Gemini-3-Pro-Preview[^4]|74.24 ± 3.03[^3]|45.61 ±  0.88[^3] | 35.55 ± 2.22[^3]|52.0 ±  0.77[^3]|12|2026-01-05| - |X|✓|
 | [Leeroo](https://github.com/Leeroo-AI/kapso) | Gemini-3-Pro-Preview[^4] | 68.18 ± 2.62[^3] | 44.74 ± 1.52[^3] | 40.00 ± 0.00[^3] | 50.67 ± 1.33[^3] | 24 | 2025-12-07 | - | ✓ | ✓ |
-| [Thesis](https://thesislabs.ai) | gpt-5-codex | 65.15 ± 1.52 | 45.61 ± 7.18 | 31.11 ± 2.22 | 48.44 ± 3.64 | 24 | 2025-11-10 | - | ✓ | X |
-| [CAIR](https://research.google/teams/cloud-ai-research/) MLE-STAR-Pro-1.5 | Gemini-2.5-Pro | 68.18 ± 2.62 | 34.21 ± 1.52  |  33.33 ±  0.00 |  44.00 ± 1.33 | 24 | 2025-11-25 | - | ✓ | X |
-| [Famou-Agent](https://github.com/baidubce/FM-Agent) | Gemini-2.5-Pro | 62.12 ± 1.52 | 36.84 ± 1.52 | 33.33 ± 0.00 | 43.56 ± 0.89 | 24 | 2025-10-10 | - | ✓ | X |
-| [Operand](https://operand.com) ensemble | gpt-5 (low verbosity/effort)[^2] | 63.64 ± 0.00 | 33.33 ± 0.88[^3] | 20.00 ± 0.00[^3] | 39.56 ± 0.44[^3] | 24 | 2025-10-06 | - | ✓ | X |
-| [CAIR](https://research.google/teams/cloud-ai-research/) MLE-STAR-Pro-1.0 | Gemini-2.5-Pro | 66.67 ± 1.52  | 25.44  ±  0.88 | 31.11 ± 2.22  | 38.67 ± 0.77 | 12 | 2025-11-03 | - | ✓ | X |
-| [InternAgent](https://github.com/Alpha-Innovator/InternAgent/) | deepseek-r1 | 62.12 ± 3.03 | 26.32 ± 2.63 | 24.44 ± 2.22| 36.44 ± 1.18 | 12 | 2025-09-12 | - | ✓ | X |
+| [Thesis](https://thesislabs.ai) | gpt-5-codex | 65.15 ± 1.52 | 45.61 ± 7.18 | 31.11 ± 2.22 | 48.44 ± 3.64 | 24 | 2025-11-10 | - | X | ✓ |
+| [CAIR](https://research.google/teams/cloud-ai-research/) MLE-STAR-Pro-1.5 | Gemini-2.5-Pro | 68.18 ± 2.62 | 34.21 ± 1.52  |  33.33 ±  0.00 |  44.00 ± 1.33 | 24 | 2025-11-25 | - | X | ✓ |
+| [Famou-Agent](https://github.com/baidubce/FM-Agent) | Gemini-2.5-Pro | 62.12 ± 1.52 | 36.84 ± 1.52 | 33.33 ± 0.00 | 43.56 ± 0.89 | 24 | 2025-10-10 | - | X | ✓ |
+| [Operand](https://operand.com) ensemble | gpt-5 (low verbosity/effort)[^2] | 63.64 ± 0.00 | 33.33 ± 0.88[^3] | 20.00 ± 0.00[^3] | 39.56 ± 0.44[^3] | 24 | 2025-10-06 | - | X | ✓ |
+| [CAIR](https://research.google/teams/cloud-ai-research/) MLE-STAR-Pro-1.0 | Gemini-2.5-Pro | 66.67 ± 1.52  | 25.44  ±  0.88 | 31.11 ± 2.22  | 38.67 ± 0.77 | 12 | 2025-11-03 | - | X | ✓ |
+| [InternAgent](https://github.com/Alpha-Innovator/InternAgent/) | deepseek-r1 | 62.12 ± 3.03 | 26.32 ± 2.63 | 24.44 ± 2.22| 36.44 ± 1.18 | 12 | 2025-09-12 | - | X | ✓ |
 | [R&D-Agent](https://github.com/microsoft/RD-Agent) | gpt-5 | 68.18 ± 2.62 | 21.05 ± 1.52 | 22.22 ± 2.22 | 35.11 ± 0.44 | 12 | 2025-09-26 | - | ✓ | ✓ |
-| [Neo](https://heyneo.so/) multi-agent | undisclosed | 48.48 ± 1.52 | 29.82 ± 2.32 | 24.44 ± 2.22 | 34.22 ± 0.89 | 36 | 2025-07-28 | - | ✓ | X |
+| [Neo](https://heyneo.so/) multi-agent | undisclosed | 48.48 ± 1.52 | 29.82 ± 2.32 | 24.44 ± 2.22 | 34.22 ± 0.89 | 36 | 2025-07-28 | - | X | ✓ |
 | [AIRA-dojo](https://github.com/facebookresearch/aira-dojo/) | o3 | 55.00 ± 1.47 | 21.97 ± 1.17 | 21.67 ± 1.07 | 31.60 ± 0.82 | 24 | 2025-05-15 | - | ✓ | ✓ |
 | [R&D-Agent](https://github.com/microsoft/RD-Agent) | o3 + GPT-4.1 | 51.52 ± 4.01 | 19.30 ± 3.16 | 26.67 ± 0.00 | 30.22 ± 0.89 | 24 | 2025-08-15 | - | ✓ | ✓ |
 | [ML-Master](https://github.com/zeroxleo/ML-Master) | deepseek-r1 | 48.48 ± 1.52 | 20.18 ± 2.32 | 24.44 ± 2.22 | 29.33 ± 0.77 | 12 | 2025-06-17 | - | ✓ | ✓ |
