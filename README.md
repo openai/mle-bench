@@ -7,11 +7,13 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 | Agent | LLM(s) used | Low == Lite (%) | Medium (%) | High (%) | All (%) | Running Time (hours) | Date | Known Leakage[^1] | Source Code Available | Grading Reports Available |
 |-------|-------------|-----------------|------------|----------|---------|----------------------|------|---------------|----------------------|---------------------------|
 | [Disarray](https://disarray.ai)                                  |Ensemble (Claude-Opus-4.5, Claude-Sonnet-4.5, GPT-5.2-Codex, Gemini-3-Pro-Preview)| 90.91 ± 0.00     | 72.81 ± 0.88      | 71.11 ± 2.22     | 77.78 ± 0.44   |24| 2026-02-03 | [✓](https://github.com/openai/mle-bench/pull/118) |X|✓|
+| [CAIR](https://research.google/teams/cloud-ai-research/) [MARS+](https://arxiv.org/pdf/2602.02660) | Gemini-3-Pro-Preview | 78.79 ± 1.52 | 60.53 ± 1.52 | 44.44 ± 2.22 | 62.67 ± 0.77 | 24 | 2026-02-17 | - | X | ✓ |
 | [LoongFlow](https://github.com/baidu-baige/LoongFlow) | Gemini-3-Flash-Preview          | 77.27 ± 0.0[^3]  | 63.15 ± 1.51[^3]  |40.0 ± 0.00[^3]| 62.66 ± 0.76[^3] |24| 2026-02-09 | [✓](https://github.com/openai/mle-bench/pull/119) |✓|✓|
 | [MLEvolve](https://github.com/InternScience/MLEvolve) | Gemini-3-Pro-Preview | 80.30 ± 1.52 | 57.89 ± 1.52 | 42.22 ± 2.22 | 61.33 ± 1.33 | 12 | 2026-02-14 | - | ✓ | ✓ |
 |[PiEvolve](https://github.com/FractalAIResearchLabs/PiEvolve)<br>(Fractal AI Research)|Gemini-3-Pro-Preview[^4]|80.30 ± 1.52[^3]|58.77 ± 0.88[^3]|40.0 ± 0.00[^3]|61.33 ± 0.77[^3]|24|2026-01-05| - |X|✓|
 | [Famou-Agent 2.0](https://github.com/baidubce/FM-Agent) | Gemini-2.5-Pro | 75.76 ± 1.52 | 57.89 ± 1.52 | 40.00 ± 0.00 | 59.56 ± 0.89 | 24 | 2025-12-27 | - | X | ✓ |
 | [ML-Master 2.0](https://github.com/sjtu-sai-agents/ML-Master) | Deepseek-V3.2-Speciale | 75.76 ± 1.51 | 50.88 ± 3.51 | 42.22 ± 2.22 | 56.44 ± 2.47 | 24 | 2025-12-16 | - | X | ✓ |
+| [CAIR](https://research.google/teams/cloud-ai-research/) [MARS](https://arxiv.org/pdf/2602.02660) | Gemini-3-Pro-Preview | 74.24 ± 1.52  | 52.63  ±  3.04 | 37.78 ± 2.22  | 56.0 ± 1.54 | 24 | 2026-01-25 | - | X | ✓ |
 |[PiEvolve](https://github.com/FractalAIResearchLabs/PiEvolve)<br>(Fractal AI Research)|Gemini-3-Pro-Preview[^4]|74.24 ± 3.03[^3]|45.61 ±  0.88[^3] | 35.55 ± 2.22[^3]|52.0 ±  0.77[^3]|12|2026-01-05| - |X|✓|
 | [Leeroo](https://github.com/Leeroo-AI/kapso) | Gemini-3-Pro-Preview[^4] | 68.18 ± 2.62[^3] | 44.74 ± 1.52[^3] | 40.00 ± 0.00[^3] | 50.67 ± 1.33[^3] | 24 | 2025-12-07 | - | ✓ | ✓ |
 | [Thesis](https://thesislabs.ai) | gpt-5-codex | 65.15 ± 1.52 | 45.61 ± 7.18 | 31.11 ± 2.22 | 48.44 ± 3.64 | 24 | 2025-11-10 | - | X | ✓ |
