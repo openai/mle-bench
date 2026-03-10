@@ -26,7 +26,15 @@ from mlebench.utils import (
 )
 
 logger = get_logger(__name__)
-cache = dc.Cache("cache", size_limit=2**26)  # 64 MB
+_cache = None
+
+
+def _get_cache():
+    """Lazily initialize the diskcache to avoid creating a 'cache' directory on import."""
+    global _cache
+    if _cache is None:
+        _cache = dc.Cache("cache", size_limit=2**26)  # 64 MB
+    return _cache
 
 
 def create_prepared_dir(competition: Competition) -> None:
@@ -331,13 +339,14 @@ def file_cache(fn: Callable) -> Callable:
     # side effect of invalidating the cache when the file is modified.
     @functools.wraps(fn)
     def wrapper(fpath: Path) -> Any:
+        c = _get_cache()
         last_modified = get_last_modified(fpath)
         key = (fn.__name__, str(fpath), last_modified)
 
-        if key not in cache:
-            cache[key] = fn(fpath)
+        if key not in c:
+            c[key] = fn(fpath)
 
-        return cache[key]
+        return c[key]
 
     return wrapper
 
