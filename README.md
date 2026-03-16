@@ -33,7 +33,7 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 
 ### Additional Leaderboard Submissions
 
-Submissions listed here are disclosed by their authors as using the MLE-bench test set in some way. They are excluded from the standard leaderboard.
+Additional submissions that are not directly comparable to the main leaderboard (see `Notes` column).
 
 | Agent | LLM(s) used | Low == Lite (%) | Medium (%) | High (%) | All (%) | Running Time (hours) | Date | Notes | Source Code Available | Grading Reports Available |
 |-------|-------------|-----------------|------------|----------|---------|----------------------|------|-------|----------------------|---------------------------|
@@ -62,11 +62,6 @@ uv run python experiments/aggregate_grading_reports.py --experiment-id <exp_id> 
 Report the mean and standard error of the mean (SEM) for each of the splits on
 the reported `any_medal_percentage` metric. The `--split75` flag corresponds to
 the `All (%)` column.
-
-If you are opening a leaderboard PR, fill out the PR template and disclose
-whether the submission uses the MLE-bench test set in any way or otherwise
-relies on known leakage. Disclosed submissions are listed in `Uses Test Set /
-Known Leakage`, not the standard leaderboard.
 
 ## Benchmarking
 
