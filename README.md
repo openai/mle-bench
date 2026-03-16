@@ -247,6 +247,10 @@ catalogued below:
 - **ranzcr-clip-catheter-line-classification**: The prepare.py script results in
   missing columns in the sample submission.
   [#30](https://github.com/openai/mle-bench/issues/30)
+- **invasive-species-monitoring**: The prepare.py script archives the prepared
+  `train/` and `test/` directories incorrectly, so `train.7z` and `test.7z`
+  can be missing their image contents in the prepared public dataset.
+  [#122](https://github.com/openai/mle-bench/issues/122)
 - **tabular-playground-series-dec-2021**: The leaderboard is crowded -- very
   little difference between the top score and the median score.
 - **tabular-playground-series-may-2022**: The leaderboard is crowded -- very
