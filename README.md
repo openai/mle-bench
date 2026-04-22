@@ -43,6 +43,7 @@ Additional submissions that are not directly comparable to the main leaderboard 
 | Agent | LLM(s) used | Low == Lite (%) | Medium (%) | High (%) | All (%) | Running Time (hours) | Date | Notes | Source Code Available | Grading Reports Available |
 |-------|-------------|-----------------|------------|----------|---------|----------------------|------|-------|----------------------|---------------------------|
 | [Disarray](https://disarray.ai) | Ensemble (Claude-Opus-4.5, Claude-Sonnet-4.5, GPT-5.2-Codex, Gemini-3-Pro-Preview) | 90.91 ± 0.00 | 72.81 ± 0.88 | 71.11 ± 2.22 | 77.78 ± 0.44 | 24 | 2026-02-03 | [Test-set feedback](https://github.com/openai/mle-bench/pull/118) | X | ✓ |
+| [AiScientist](https://github.com/AweAI-Team/AiScientist)<br>(AweAI Team) | GLM-5 | 81.82 ± 0.00 | N/A | N/A | N/A | 24 | 2026-04-15 | Lite only (22-task low split); no held-out test-set feedback | ✓ | ✓ |
 | [LoongFlow](https://github.com/baidu-baige/LoongFlow) | Gemini-3-Flash-Preview | 77.27 ± 0.0[^3] | 63.15 ± 1.51[^3] | 40.0 ± 0.00[^3] | 62.66 ± 0.76[^3] | 24 | 2026-02-09 | [Test-set feedback](https://github.com/openai/mle-bench/pull/119) | ✓ | ✓ |
 
 [^2]: With some light assistance from an ensemble of models including
