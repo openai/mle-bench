@@ -3,6 +3,8 @@
 Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Learning Engineering"](https://arxiv.org/abs/2410.07095). We have released the code used to construct the dataset, the evaluation logic, as well as the agents we evaluated for this benchmark.
 
 ## Leaderboard
+*Update* (04-24-2026): We are currently not taking any new submissions to the leaderboard while we develop an improved process for ensuring submissions are fair and comparable. We will share updates on this process in the future.
+
 | Agent | LLM(s) used | Low == Lite (%) | Medium (%) | High (%) | All (%) | Running Time (hours) | Date | Source Code Available | Grading Reports Available |
 |-------|-------------|-----------------|------------|----------|---------|----------------------|------|----------------------|---------------------------|
 | [Famou-Agent 2.0](https://github.com/baidubce/FM-Agent) | Gemini-3-Pro-Preview | 80.3 ± 1.52 | 64.04 ± 2.32 | 42.22 ± 2.22 | 64.44 ± 1.18 | 24 | 2026-02-23 | X | ✓ |
