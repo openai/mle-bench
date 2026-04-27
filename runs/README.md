@@ -61,3 +61,4 @@ table below.
 | MARS                    | CAIR MARS, 24 hours, 12 vCPUs, 220GB of RAM, and 1 A100-40GB GPU          |
 | MARS+                    | CAIR MARS+, 24 hours, 48 vCPUs, 220GB of RAM, and 2 × H100 GPUs       |
 | AIBuildAI                            | Claude-Opus-4.6, 24 hours, 24 vCPUs, 256GB of RAM, and 1 A100 GPU |
+| CobraAgent                          | Ensemble (Gemini-3.1-Pro-Preview, Gemini-3-Flash-Preview), 24 hours, (16 vCPUs, 32 GB RAM, and 1 RTX 4060 GPU / 11 vCPUS, 128 GB RAM, and 1 A100 GPU) |
