@@ -7,6 +7,7 @@ Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Le
 
 | Agent | LLM(s) used | Low == Lite (%) | Medium (%) | High (%) | All (%) | Running Time (hours) | Date | Source Code Available | Grading Reports Available |
 |-------|-------------|-----------------|------------|----------|---------|----------------------|------|----------------------|---------------------------|
+| [Orze](https://pypi.org/project/orze/) | Claude Opus 4 + Moonshot v1 | 90.91 | N/A | N/A | N/A | 24 | 2026-05-14 | ✓ | ✓ |
 | [Famou-Agent 2.0](https://github.com/baidubce/FM-Agent) | Gemini-3-Pro-Preview | 80.3 ± 1.52 | 64.04 ± 2.32 | 42.22 ± 2.22 | 64.44 ± 1.18 | 24 | 2026-02-23 | X | ✓ |
 | [AIBuildAI](https://github.com/aibuildai/AI-Build-AI) | Claude-Opus-4.6 |  77.27 ± 0.00 |  61.40 ± 0.88 |  46.67 ± 0.00 | 63.11 ± 0.44 | 24 | 2026-03-06 | X | ✓ |
 | [CAIR](https://research.google/teams/cloud-ai-research/) [MARS+](https://arxiv.org/pdf/2602.02660) | Gemini-3-Pro-Preview | 78.79 ± 1.52 | 60.53 ± 1.52 | 44.44 ± 2.22 | 62.67 ± 0.77 | 24 | 2026-02-17 | X | ✓ |
