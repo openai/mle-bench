@@ -1,0 +1,22 @@
+id: text-normalization-challenge-english-language
+name: Text Normalization Challenge - English Language
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 12000
+  - position: 2
+    value: 8000
+  - position: 3
+    value: 5000
+description: mlebench/competitions/text-normalization-challenge-english-language/description.md
+
+dataset:
+  answers: text-normalization-challenge-english-language/prepared/private/answers.csv
+  sample_submission: text-normalization-challenge-english-language/prepared/private/sample_submission.csv
+
+grader:
+  name: accuracy
+  grade_fn: mlebench.competitions.text-normalization-challenge-english-language.grade:grade
+
+preparer: mlebench.competitions.text-normalization-challenge-english-language.prepare:prepare

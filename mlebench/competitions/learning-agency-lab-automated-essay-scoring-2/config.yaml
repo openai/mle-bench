@@ -1,0 +1,28 @@
+id: learning-agency-lab-automated-essay-scoring-2
+name: Learning Agency Lab - Automated Essay Scoring 2.0
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 12000
+  - position: 2
+    value: 8000
+  - position: 3
+    value: 5000
+  - position: Efficency Prize 1
+    value: 12000
+  - position: Efficency Prize 2
+    value: 8000
+  - position: Efficency Prize 3
+    value: 5000
+description: mlebench/competitions/learning-agency-lab-automated-essay-scoring-2/description.md
+
+dataset:
+  answers: learning-agency-lab-automated-essay-scoring-2/prepared/private/answers.csv
+  sample_submission: learning-agency-lab-automated-essay-scoring-2/prepared/public/sample_submission.csv
+
+grader:
+  name: quadratic-weighted-kappa
+  grade_fn: mlebench.competitions.learning-agency-lab-automated-essay-scoring-2.grade:grade
+
+preparer: mlebench.competitions.learning-agency-lab-automated-essay-scoring-2.prepare:prepare

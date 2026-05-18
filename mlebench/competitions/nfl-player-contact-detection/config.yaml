@@ -1,0 +1,26 @@
+id: nfl-player-contact-detection
+name: 1st and Future - Player Contact Detection
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 50000
+  - position: 2
+    value: 25000
+  - position: 3
+    value: 13000
+  - position: 4
+    value: 7000
+  - position: 5
+    value: 5000
+description: mlebench/competitions/nfl-player-contact-detection/description.md
+
+dataset:
+  answers: nfl-player-contact-detection/prepared/private/test.csv
+  sample_submission: nfl-player-contact-detection/prepared/public/sample_submission.csv
+
+grader:
+  name: matthews-correlation-coefficient
+  grade_fn: mlebench.competitions.nfl-player-contact-detection.grade:grade
+
+preparer: mlebench.competitions.nfl-player-contact-detection.prepare:prepare

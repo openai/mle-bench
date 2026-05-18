@@ -1,0 +1,16 @@
+id: predict-volcanic-eruptions-ingv-oe
+name: INGV - Volcanic Eruption Prediction
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/predict-volcanic-eruptions-ingv-oe/description.md
+
+dataset:
+  answers: predict-volcanic-eruptions-ingv-oe/prepared/private/test.csv
+  sample_submission: predict-volcanic-eruptions-ingv-oe/prepared/public/sample_submission.csv
+
+grader:
+  name: mean-absolute-error
+  grade_fn: mlebench.competitions.predict-volcanic-eruptions-ingv-oe.grade:grade
+
+preparer: mlebench.competitions.predict-volcanic-eruptions-ingv-oe.prepare:prepare

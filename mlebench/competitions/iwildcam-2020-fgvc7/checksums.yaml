@@ -1,0 +1,8 @@
+private:
+  answers.csv: 88adac005790552cbd7530e14c88525a
+public:
+  iwildcam2020_megadetector_results.json: 1b9ece07ab63b920bf8a9ae8f05bd38c
+  iwildcam2020_test_information.json: 88143d613e565e6ce875c222b9d49ebc
+  iwildcam2020_train_annotations.json: d67abd02833d86fcf7f08e5655c34cae
+  sample_submission.csv: 0b664574b369e81790f7f092fbb8ae11
+zip: 904c5f3195cc47eae83d4334ad9c20e6

@@ -1,0 +1,32 @@
+id: rsna-2022-cervical-spine-fracture-detection
+name: RSNA 2022 Cervical Spine Fracture Detection
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 6000
+  - position: 2
+    value: 5000
+  - position: 3
+    value: 4000
+  - position: 4
+    value: 3000
+  - position: 5
+    value: 3000
+  - position: 6
+    value: 3000
+  - position: 7
+    value: 3000
+  - position: 8
+    value: 3000
+description: mlebench/competitions/rsna-2022-cervical-spine-fracture-detection/description.md
+
+dataset:
+  answers: rsna-2022-cervical-spine-fracture-detection/prepared/private/answers.csv
+  sample_submission: rsna-2022-cervical-spine-fracture-detection/prepared/public/sample_submission.csv
+
+grader:
+  name: weighted-multi-label-log-loss
+  grade_fn: mlebench.competitions.rsna-2022-cervical-spine-fracture-detection.grade:grade
+
+preparer: mlebench.competitions.rsna-2022-cervical-spine-fracture-detection.prepare:prepare

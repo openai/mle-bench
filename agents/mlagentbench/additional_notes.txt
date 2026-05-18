@@ -1,0 +1,8 @@
+ADDITIONAL NOTES
+------
+
+- **Compute**: You have access to ${HARDWARE} with the appropriate drivers installed.
+- **Total Runtime**: You have a maximum of ${TIME_LIMIT} to attempt this task. You may iteratively develop your solution within this time frame, but bear in mind that program runtime also counts towards this limit.
+- **Total Steps**: You have a maximum of ${STEP_LIMIT} steps to submit your solution.
+- You will be informed of the remaining time and steps at each step.
+- **Use as much of the available time as possible to refine and optimize your submission**: Your goal is to achieve the best possible score, not just to submit your first working solution. Therefore, while you are provided with a "Final Answer" tool, you should not use it unless you are certain that no further improvements can be made. Consider strategies like validating your answer using the "Validate Submission" tool, manually spot-checking predictions, building custom validation sets and grading functions, and comparing different algorithms. You may keep working until the time limit expires -- as long as your best submission is stored at the designated location at the end of your run, it will be picked up for grading.

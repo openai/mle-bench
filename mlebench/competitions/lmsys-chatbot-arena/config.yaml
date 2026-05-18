@@ -1,0 +1,26 @@
+id: lmsys-chatbot-arena
+name: LMSYS - Chatbot Arena Human Preference Predictions
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 25000
+  - position: 2
+    value: 20000
+  - position: 3
+    value: 20000
+  - position: 4
+    value: 20000
+  - position: 5
+    value: 15000
+description: mlebench/competitions/lmsys-chatbot-arena/description.md
+
+dataset:
+  answers: lmsys-chatbot-arena/prepared/private/answers.csv
+  sample_submission: lmsys-chatbot-arena/prepared/public/sample_submission.csv
+
+grader:
+  name: multi-class-log-loss
+  grade_fn: mlebench.competitions.lmsys-chatbot-arena.grade:grade
+
+preparer: mlebench.competitions.lmsys-chatbot-arena.prepare:prepare

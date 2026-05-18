@@ -1,0 +1,1 @@
+CLASSES = ["EAP", "HPL", "MWS"]

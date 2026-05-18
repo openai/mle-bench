@@ -1,0 +1,24 @@
+id: freesound-audio-tagging-2019
+name: Freesound Audio Tagging 2019
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 2200
+  - position: 2
+    value: 1200
+  - position: 3
+    value: 800
+  - position: Judges' Award Prize
+    value: 800
+description: mlebench/competitions/freesound-audio-tagging-2019/description.md
+
+dataset:
+  answers: freesound-audio-tagging-2019/prepared/private/test.csv
+  sample_submission: freesound-audio-tagging-2019/prepared/public/sample_submission.csv
+
+grader:
+  name: label-ranking-average-precision
+  grade_fn: mlebench.competitions.freesound-audio-tagging-2019.grade:grade
+
+preparer: mlebench.competitions.freesound-audio-tagging-2019.prepare:prepare

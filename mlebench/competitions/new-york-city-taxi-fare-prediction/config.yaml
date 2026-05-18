@@ -1,0 +1,17 @@
+id: new-york-city-taxi-fare-prediction
+name: New York City Taxi Fare Prediction
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/new-york-city-taxi-fare-prediction/description.md
+
+dataset:
+  answers: new-york-city-taxi-fare-prediction/prepared/private/test.csv
+  sample_submission: new-york-city-taxi-fare-prediction/prepared/public/sample_submission.csv
+
+grader:
+  name: root-mean-squared-error
+  grade_fn: mlebench.competitions.new-york-city-taxi-fare-prediction.grade:grade
+
+preparer: mlebench.competitions.new-york-city-taxi-fare-prediction.prepare:prepare
+

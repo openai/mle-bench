@@ -1,0 +1,28 @@
+id: cassava-leaf-disease-classification
+name: Cassava Leaf Disease Classification
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 8000
+  - position: 2
+    value: 4000
+  - position: 3
+    value: 3000
+  - position: TPU Star 1
+    value: 1000
+  - position: TPU Star 2
+    value: 1000
+  - position: TPU Star 3
+    value: 1000
+description: mlebench/competitions/cassava-leaf-disease-classification/description.md
+
+dataset:
+  answers: cassava-leaf-disease-classification/prepared/private/test.csv
+  sample_submission: cassava-leaf-disease-classification/prepared/public/sample_submission.csv
+
+grader:
+  name: accuracy
+  grade_fn: mlebench.competitions.cassava-leaf-disease-classification.grade:grade
+
+preparer: mlebench.competitions.cassava-leaf-disease-classification.prepare:prepare

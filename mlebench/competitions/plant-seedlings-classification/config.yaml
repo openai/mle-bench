@@ -1,0 +1,16 @@
+id: plant-seedlings-classification
+name: Plant Seedlings Classification
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/plant-seedlings-classification/description.md
+
+dataset:
+  answers: plant-seedlings-classification/prepared/private/answers.csv
+  sample_submission: plant-seedlings-classification/prepared/public/sample_submission.csv
+
+grader:
+  name: micro-f1-score
+  grade_fn: mlebench.competitions.plant-seedlings-classification.grade:grade
+
+preparer: mlebench.competitions.plant-seedlings-classification.prepare:prepare

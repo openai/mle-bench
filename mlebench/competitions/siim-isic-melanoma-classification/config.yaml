@@ -1,0 +1,26 @@
+id: siim-isic-melanoma-classification
+name: SIIM-ISIC Melanoma Classification
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 10000
+  - position: 2
+    value: 6000
+  - position: 3
+    value: 4000
+  - position: With Context Special Prize
+    value: 5000
+  - position: Without Context Special Prize
+    value: 5000
+description: mlebench/competitions/siim-isic-melanoma-classification/description.md
+
+dataset:
+  answers: siim-isic-melanoma-classification/prepared/private/test.csv
+  sample_submission: siim-isic-melanoma-classification/prepared/public/sample_submission.csv
+
+grader:
+  name: auc-roc
+  grade_fn: mlebench.competitions.siim-isic-melanoma-classification.grade:grade
+
+preparer: mlebench.competitions.siim-isic-melanoma-classification.prepare:prepare

@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 22.8.0
+    hooks:
+      - id: black
+        args: [--line-length=100, --exclude=""]
+
+  # this is not technically always safe but usually is
+  # use comments `# isort: off` and `# isort: on` to disable/re-enable isort
+  - repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        args: [--line-length=100, --profile=black]

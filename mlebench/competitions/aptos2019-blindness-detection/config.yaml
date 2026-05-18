@@ -1,0 +1,24 @@
+id: aptos2019-blindness-detection
+name: APTOS 2019 Blindness Detection
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 25000
+  - position: 2
+    value: 12000
+  - position: 3
+    value: 8000
+  - position: 4
+    value: 5000
+description: mlebench/competitions/aptos2019-blindness-detection/description.md
+
+dataset:
+  answers: aptos2019-blindness-detection/prepared/private/test.csv
+  sample_submission: aptos2019-blindness-detection/prepared/public/sample_submission.csv
+
+grader:
+  name: quadratic-weighted-kappa
+  grade_fn: mlebench.competitions.aptos2019-blindness-detection.grade:grade
+
+preparer: mlebench.competitions.aptos2019-blindness-detection.prepare:prepare

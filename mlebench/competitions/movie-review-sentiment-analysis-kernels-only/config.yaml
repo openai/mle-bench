@@ -1,0 +1,16 @@
+id: movie-review-sentiment-analysis-kernels-only
+name: Movie Review Sentiment Analysis (Kernels Only)
+competition_type: code
+awards_medals: false
+prizes: null
+description: mlebench/competitions/movie-review-sentiment-analysis-kernels-only/description.md
+
+dataset:
+  answers: movie-review-sentiment-analysis-kernels-only/prepared/private/answers.csv
+  sample_submission: movie-review-sentiment-analysis-kernels-only/prepared/public/sampleSubmission.csv
+
+grader:
+  name: accuracy
+  grade_fn: mlebench.competitions.movie-review-sentiment-analysis-kernels-only.grade:grade
+
+preparer: mlebench.competitions.movie-review-sentiment-analysis-kernels-only.prepare:prepare

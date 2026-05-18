@@ -1,0 +1,16 @@
+id: billion-word-imputation
+name: Billion Word Imputation
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/billion-word-imputation/description.md
+
+dataset:
+  answers: billion-word-imputation/prepared/private/test.csv
+  sample_submission: billion-word-imputation/prepared/private/sample_submission.csv
+
+grader:
+  name: levenshtein-distance
+  grade_fn: mlebench.competitions.billion-word-imputation.grade:grade
+
+preparer: mlebench.competitions.billion-word-imputation.prepare:prepare

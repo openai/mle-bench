@@ -1,0 +1,16 @@
+id: leaf-classification
+name: Leaf Classification
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/leaf-classification/description.md
+
+dataset:
+  answers: leaf-classification/prepared/private/test.csv
+  sample_submission: leaf-classification/prepared/public/sample_submission.csv
+
+grader:
+  name: multi-class-log-loss
+  grade_fn: mlebench.competitions.leaf-classification.grade:grade
+
+preparer: mlebench.competitions.leaf-classification.prepare:prepare

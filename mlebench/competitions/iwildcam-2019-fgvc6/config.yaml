@@ -1,0 +1,16 @@
+id: iwildcam-2019-fgvc6
+name: iWildCam 2019 - FGVC6
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/iwildcam-2019-fgvc6/description.md
+
+dataset:
+  answers: iwildcam-2019-fgvc6/prepared/private/answers.csv
+  sample_submission: iwildcam-2019-fgvc6/prepared/public/sample_submission.csv
+
+grader:
+  name: macro-f1-score
+  grade_fn: mlebench.competitions.iwildcam-2019-fgvc6.grade:grade
+
+preparer: mlebench.competitions.iwildcam-2019-fgvc6.prepare:prepare

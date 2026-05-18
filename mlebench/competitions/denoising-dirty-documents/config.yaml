@@ -1,0 +1,16 @@
+id: denoising-dirty-documents
+name: Denoising Dirty Documents
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/denoising-dirty-documents/description.md
+
+dataset:
+  answers: denoising-dirty-documents/prepared/private/answers.csv
+  sample_submission: denoising-dirty-documents/prepared/public/sampleSubmission.csv
+
+grader:
+  name: root_mean_squared_error
+  grade_fn: mlebench.competitions.denoising-dirty-documents.grade:grade
+
+preparer: mlebench.competitions.denoising-dirty-documents.prepare:prepare

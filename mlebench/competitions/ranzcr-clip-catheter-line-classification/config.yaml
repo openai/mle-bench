@@ -1,0 +1,31 @@
+id: ranzcr-clip-catheter-line-classification
+name: RANZCR CLiP - Catheter and Line Position Challenge
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 16000
+  - position: 2
+    value: 12000
+  - position: 3
+    value: 6000
+  - position: 4
+    value: 4000
+  - position: 5
+    value: 4000
+  - position: 6
+    value: 4000
+  - position: 7
+    value: 4000
+    
+description: mlebench/competitions/ranzcr-clip-catheter-line-classification/description.md
+
+dataset:
+  answers: ranzcr-clip-catheter-line-classification/prepared/private/test.csv
+  sample_submission: ranzcr-clip-catheter-line-classification/prepared/public/sample_submission.csv
+
+grader:
+  name: auc-roc
+  grade_fn: mlebench.competitions.ranzcr-clip-catheter-line-classification.grade:grade
+
+preparer: mlebench.competitions.ranzcr-clip-catheter-line-classification.prepare:prepare

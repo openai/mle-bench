@@ -1,0 +1,21 @@
+vars:
+  time_limit: &time_limit 86400 # 3600 * 24 hours
+  step_count: &step_count 2000 # empirically, we find that the agent does 500 steps in ~6 hours, so 2000 steps should be about right for 24 hours
+
+mlagentbench:
+  start: mlagentbench/start.sh
+  dockerfile: mlagentbench/Dockerfile
+  kwargs_type: argparse
+  kwargs: # Args for MLAgentBench.runner
+    llm-name: gpt-4o-2024-08-06
+    edit-script-llm-name: gpt-4o-2024-08-06
+    fast-llm-name: gpt-4o-2024-08-06
+    max-steps: *step_count
+    agent-max-steps: *step_count # Some MLAB agents have their own max-steps which is separate from the env max-steps; for ResearchAgent, these should be the same
+    max-time: *time_limit
+    max-retries: 10 # retry if the agent doesn't give a valid action response
+    max-tokens: 16384 # max output tokens for gpt-4o-2024-08-06
+  env_vars:
+    OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    TIME_LIMIT_SECS: *time_limit
+    STEP_LIMIT: *step_count

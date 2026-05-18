@@ -1,0 +1,22 @@
+id: tweet-sentiment-extraction
+name: Tweet Sentiment Extraction
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 7000
+  - position: 2
+    value: 5000
+  - position: 3
+    value: 3000
+description: mlebench/competitions/tweet-sentiment-extraction/description.md
+
+dataset:
+  answers: tweet-sentiment-extraction/prepared/private/test.csv
+  sample_submission: tweet-sentiment-extraction/prepared/public/sample_submission.csv
+
+grader:
+  name: jaccard-similarity
+  grade_fn: mlebench.competitions.tweet-sentiment-extraction.grade:grade
+
+preparer: mlebench.competitions.tweet-sentiment-extraction.prepare:prepare

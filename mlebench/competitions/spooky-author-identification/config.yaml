@@ -1,0 +1,16 @@
+id: spooky-author-identification
+name: Spooky Author Identification
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/spooky-author-identification/description.md
+
+dataset:
+  answers: spooky-author-identification/prepared/private/test.csv
+  sample_submission: spooky-author-identification/prepared/public/sample_submission.csv
+
+grader:
+  name: multi-class-log-loss
+  grade_fn: mlebench.competitions.spooky-author-identification.grade:grade
+
+preparer: mlebench.competitions.spooky-author-identification.prepare:prepare

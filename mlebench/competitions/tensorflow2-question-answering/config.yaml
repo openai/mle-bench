@@ -1,0 +1,29 @@
+id: tensorflow2-question-answering
+name: TensorFlow 2.0 Question Answering
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 12000
+  - position: 2
+    value: 8000
+  - position: 3
+    value: 5000
+  - position: TensorFlow 2.0 Prize 1
+    value: 12000
+  - position: TensorFlow 2.0 Prize 2
+    value: 8000
+  - position: TensorFlow 2.0 Prize 3
+    value: 5000
+description: mlebench/competitions/tensorflow2-question-answering/description.md
+
+dataset:
+  answers: tensorflow2-question-answering/prepared/private/test.jsonl
+  gold_submission: tensorflow2-question-answering/prepared/private/gold_submission.csv
+  sample_submission: tensorflow2-question-answering/prepared/public/sample_submission.csv
+
+grader:
+  name: micro-f1-score
+  grade_fn: mlebench.competitions.tensorflow2-question-answering.grade:grade
+
+preparer: mlebench.competitions.tensorflow2-question-answering.prepare:prepare

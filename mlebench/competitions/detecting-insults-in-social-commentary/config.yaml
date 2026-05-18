@@ -1,0 +1,23 @@
+id: detecting-insults-in-social-commentary
+name: Detecting Insults in Social Commentary
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 7000
+  - position: 2
+    value: 2500
+  - position: Visualization Prospect
+    value: 500
+description: mlebench/competitions/detecting-insults-in-social-commentary/description.md
+
+dataset:
+  answers: detecting-insults-in-social-commentary/prepared/private/test.csv
+  gold_submission: detecting-insults-in-social-commentary/prepared/private/gold_submission.csv
+  sample_submission: detecting-insults-in-social-commentary/prepared/public/sample_submission_null.csv
+
+grader:
+  name: auc-roc
+  grade_fn: mlebench.competitions.detecting-insults-in-social-commentary.grade:grade
+
+preparer: mlebench.competitions.detecting-insults-in-social-commentary.prepare:prepare

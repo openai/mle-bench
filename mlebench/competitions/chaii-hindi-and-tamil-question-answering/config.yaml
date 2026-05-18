@@ -1,0 +1,26 @@
+id: chaii-hindi-and-tamil-question-answering
+name: Hindi and Tamil Question Answering
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 2000
+  - position: 2
+    value: 2000
+  - position: 3
+    value: 2000
+  - position: 4
+    value: 2000
+  - position: 5
+    value: 2000
+description: mlebench/competitions/chaii-hindi-and-tamil-question-answering/description.md
+
+dataset:
+  answers: chaii-hindi-and-tamil-question-answering/prepared/private/test.csv
+  sample_submission: chaii-hindi-and-tamil-question-answering/prepared/public/sample_submission.csv
+
+grader:
+  name: word-level-jaccard-score
+  grade_fn: mlebench.competitions.chaii-hindi-and-tamil-question-answering.grade:grade
+
+preparer: mlebench.competitions.chaii-hindi-and-tamil-question-answering.prepare:prepare

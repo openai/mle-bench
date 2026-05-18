@@ -1,0 +1,22 @@
+id: uw-madison-gi-tract-image-segmentation
+name: UW-Madison GI Tract Image Segmentation
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 1200
+  - position: 2
+    value: 8000
+  - position: 3
+    value: 5000
+description: mlebench/competitions/uw-madison-gi-tract-image-segmentation/description.md
+
+dataset:
+  answers: uw-madison-gi-tract-image-segmentation/prepared/private/test.csv
+  sample_submission: uw-madison-gi-tract-image-segmentation/prepared/public/sample_submission.csv
+
+grader:
+  name: dice-hausdorff-combo
+  grade_fn: mlebench.competitions.uw-madison-gi-tract-image-segmentation.grade:grade
+
+preparer: mlebench.competitions.uw-madison-gi-tract-image-segmentation.prepare:prepare

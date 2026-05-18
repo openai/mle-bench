@@ -1,0 +1,34 @@
+id: icecube-neutrinos-in-deep-ice
+name: IceCube - Neutrinos in Deep Ice
+competition_type: code
+awards_medals: true
+prizes:
+  - position: 1
+    value: 18000
+  - position: 2
+    value: 12000
+  - position: 3
+    value: 10000
+  - position: Most Interesting Solution Writeup 1
+    value: 1000
+  - position: Most Interesting Solution Writeup 2
+    value: 1000
+  - position: Most Interesting Solution Writeup 3
+    value: 1000
+  - position: Most Interesting Solution Writeup 4
+    value: 1000
+  - position: Most Interesting Solution Writeup 5
+    value: 1000
+  - position: Early Sharing Prize
+    value: 5000
+description: mlebench/competitions/icecube-neutrinos-in-deep-ice/description.md
+
+dataset:
+  answers: icecube-neutrinos-in-deep-ice/prepared/private/test.csv
+  sample_submission: icecube-neutrinos-in-deep-ice/prepared/public/sample_submission.csv
+
+grader:
+  name: mean-angular-error
+  grade_fn: mlebench.competitions.icecube-neutrinos-in-deep-ice.grade:grade
+
+preparer: mlebench.competitions.icecube-neutrinos-in-deep-ice.prepare:prepare

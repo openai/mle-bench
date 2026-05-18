@@ -1,0 +1,22 @@
+id: 3d-object-detection-for-autonomous-vehicles
+name: Lyft 3D Object Detection for Autonomous Vehicles
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 1200
+  - position: 2
+    value: 8000
+  - position: 3
+    value: 5000
+description: mlebench/competitions/3d-object-detection-for-autonomous-vehicles/description.md
+
+dataset:
+  answers: 3d-object-detection-for-autonomous-vehicles/prepared/private/test.csv
+  sample_submission: 3d-object-detection-for-autonomous-vehicles/prepared/public/sample_submission.csv
+
+grader:
+  name: mean-average-precision
+  grade_fn: mlebench.competitions.3d-object-detection-for-autonomous-vehicles.grade:grade
+
+preparer: mlebench.competitions.3d-object-detection-for-autonomous-vehicles.prepare:prepare

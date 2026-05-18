@@ -1,0 +1,8 @@
+private:
+  gold_submission.csv: ba90c5dda42c504e3638af6ee7dc46fb
+  test.csv: 205ee658cf7e8cfd317e7bee6045dffd
+public:
+  sample_submission.csv: 5e8cb4e5956283462cbc704e1f09af4d
+  test.csv: dfe1f087a65ffa7c7341cdcdfc143554
+  train.csv: c82b8b6f36e0a20932c5566957f6eb63
+zip: bbf763e3e95da2e325ab82624462d342

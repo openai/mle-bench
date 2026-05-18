@@ -1,0 +1,3 @@
+# The contents of this `research_problem.txt` will be fed by MLAgentBench.runner to the agent via
+# the initial prompt. This is just a placeholder for now, start.sh will replace this with real
+# instructions upon agent startup to avoid having a redundant copy of instructions here.

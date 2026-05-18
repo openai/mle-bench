@@ -1,0 +1,22 @@
+id: bms-molecular-translation
+name: Bristol-Myers Squibb - Molecular Translation
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 25000
+  - position: 2
+    value: 15000
+  - position: 3
+    value: 10000
+description: mlebench/competitions/bms-molecular-translation/description.md
+
+dataset:
+  answers: bms-molecular-translation/prepared/private/test.csv
+  sample_submission: bms-molecular-translation/prepared/public/sample_submission.csv
+
+grader:
+  name: levenshtein-distance
+  grade_fn: mlebench.competitions.bms-molecular-translation.grade:grade
+
+preparer: mlebench.competitions.bms-molecular-translation.prepare:prepare

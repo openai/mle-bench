@@ -1,0 +1,16 @@
+id: imet-2020-fgvc7
+name: iMet Collection 2020 - FGVC7 
+competition_type: code
+awards_medals: false
+prizes: null
+description: mlebench/competitions/imet-2020-fgvc7/description.md
+
+dataset:
+  answers: imet-2020-fgvc7/prepared/private/answers.csv
+  sample_submission: imet-2020-fgvc7/prepared/public/sample_submission.csv
+
+grader:
+  name: micro-f1-score
+  grade_fn: mlebench.competitions.imet-2020-fgvc7.grade:grade
+
+preparer: mlebench.competitions.imet-2020-fgvc7.prepare:prepare

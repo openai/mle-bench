@@ -1,0 +1,16 @@
+id: invasive-species-monitoring
+name: Invasive Species Monitoring
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/invasive-species-monitoring/description.md
+
+dataset:
+  answers: invasive-species-monitoring/prepared/private/answers.csv
+  sample_submission: invasive-species-monitoring/prepared/private/sample_submission.csv
+
+grader:
+  name: auc-roc
+  grade_fn: mlebench.competitions.invasive-species-monitoring.grade:grade
+
+preparer: mlebench.competitions.invasive-species-monitoring.prepare:prepare

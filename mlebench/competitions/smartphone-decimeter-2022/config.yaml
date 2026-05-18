@@ -1,0 +1,22 @@
+id: smartphone-decimeter-2022
+name: Google Smartphone Decimeter Challenge 2022
+competition_type: simple
+awards_medals: true
+prizes:
+  - position: 1
+    value: 5000
+  - position: 2
+    value: 3000
+  - position: 3
+    value: 2000
+description: mlebench/competitions/smartphone-decimeter-2022/description.md
+
+dataset:
+  answers: smartphone-decimeter-2022/prepared/private/test.csv
+  sample_submission: smartphone-decimeter-2022/prepared/public/sample_submission.csv
+
+grader:
+  name: average-haversine-distance
+  grade_fn: mlebench.competitions.smartphone-decimeter-2022.grade:grade
+
+preparer: mlebench.competitions.smartphone-decimeter-2022.prepare:prepare

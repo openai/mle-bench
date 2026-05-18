@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@dodona/dolos-lib": "^3.3.1"
+  }
+}
