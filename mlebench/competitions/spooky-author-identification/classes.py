@@ -1,1 +1,0 @@
-CLASSES = ["EAP", "HPL", "MWS"]

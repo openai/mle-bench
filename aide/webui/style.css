@@ -1,0 +1,173 @@
+.stVerticalBlock {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+.block-container {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+[data-testid="stVerticalBlock"] {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+.st-emotion-cache-40pabj{
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+/* Make the toolbar transparent */
+.st-emotion-cache-18ni7ap {
+    pointer-events: none;
+    background: rgb(255 255 255 / 0%)
+    }
+
+.stAppHeader {
+    display: none;
+}
+
+header {visibility: hidden;}
+#MainMenu {visibility: hidden;}
+[data-testid="stDecoration"] {
+    display: none;
+}
+#root > div:nth-child(1) > div > div > div > div > section > div {
+    padding-top: 0rem;
+}
+
+section.stMain .block-container {
+    padding-top: 0rem;
+    z-index: 1;
+}
+
+/* Main container */
+.stApp {
+    background-color: var(--background);
+    height: auto;
+    overflow: visible;
+}
+
+/* Widgets */
+.stSelectbox,
+.stTextInput,
+.stNumberInput {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.4rem;
+}
+
+.stMarkdown {
+    color: var(--primary);
+}
+
+/* Code block styling */
+.stCodeBlock {
+    max-height: 400px;
+    overflow-y: auto !important;
+    border: 1px solid var(--border);
+    border-radius: 0.4rem;
+    background-color: var(--background-shaded);
+}
+
+/* Custom scrollbar for code blocks */
+.stCodeBlock::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.stCodeBlock::-webkit-scrollbar-track {
+    background: var(--background-shaded);
+    border-radius: 4px;
+}
+
+.stCodeBlock::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+.stCodeBlock::-webkit-scrollbar-thumb:hover {
+    background: #e13d68;
+}
+
+
+
+.scrollable-code-container {
+    height: 600px;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--background-shaded);
+}
+
+.scrollable-code-container pre {
+    margin: 0;
+    white-space: pre;
+    overflow-x: auto;
+    font-family: monospace;
+}
+
+.scrollable-code-container code {
+    display: block;
+    min-width: 100%;
+    padding: 0;
+    tab-size: 4;
+}
+
+/* Add custom scrollbar styling for code containers */
+.scrollable-code-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.scrollable-code-container::-webkit-scrollbar-track {
+    background: var(--background-shaded);
+    border-radius: 4px;
+}
+
+.scrollable-code-container::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+.scrollable-code-container::-webkit-scrollbar-thumb:hover {
+    background: #e13d68;
+}
+
+/* Style for expander */
+.streamlit-expanderHeader {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.4rem;
+    padding: 0.5rem !important;
+}
+
+.streamlit-expanderHeader:hover {
+    border-color: var(--accent);
+}
+
+/* Style for expander content */
+.streamlit-expanderContent {
+    background-color: var(--background-shaded);
+    border: 1px solid var(--border);
+    border-radius: 0 0 0.4rem 0.4rem;
+    margin-top: -1px;
+    padding: 0.5rem !important;
+}
+
+/* Style for st.code() blocks */
+.stCode {
+    max-height: 600px;
+    overflow-y: auto;
+    background-color: var(--background-shaded) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 5px !important;
+}
+
+.stCode pre {
+    background-color: var(--background-shaded) !important;
+}
+
+div[data-testid="InputInstructions"] {
+    visibility: hidden;
+}

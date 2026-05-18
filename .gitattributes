@@ -1,4 +1,0 @@
-*.csv filter=lfs diff=lfs merge=lfs -text
-mlebench/competitions/*/top_solutions/** filter=lfs diff=lfs merge=lfs -text
-runs/**/*.json filter=lfs diff=lfs merge=lfs -text
-runs/**/*.jsonl filter=lfs diff=lfs merge=lfs -text
