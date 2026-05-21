@@ -1,5 +1,3 @@
-3d-object-detection-for-autonomous-vehicles
-bms-molecular-translation
 google-research-identify-contrails-reduce-global-warming
 hms-harmful-brain-activity-classification
 iwildcam-2019-fgvc6
