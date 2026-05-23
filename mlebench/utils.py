@@ -4,6 +4,7 @@ import json
 import logging
 import os
 import sys
+import tarfile
 import time
 import uuid
 import zipfile
@@ -152,7 +153,21 @@ def create_run_dir(
 def is_compressed(fpath: Path) -> bool:
     """Checks if the file is compressed."""
 
-    return fpath.suffix in [".zip", ".tar", ".gz", ".tgz", ".tar.gz", ".rar", ".7z"]
+    return _compression_suffix(fpath) in {
+        ".zip",
+        ".tar",
+        ".gz",
+        ".tgz",
+        ".tar.gz",
+        ".rar",
+        ".7z",
+    }
+
+
+def _compression_suffix(fpath: Path) -> str:
+    if fpath.suffixes[-2:] == [".tar", ".gz"]:
+        return ".tar.gz"
+    return fpath.suffix
 
 
 def compress(src: Path, compressed: Path, exist_ok: bool = False) -> None:
@@ -177,32 +192,41 @@ def compress(src: Path, compressed: Path, exist_ok: bool = False) -> None:
                 archive.write(file_path, arcname=file_path.relative_to(src))
 
     # Determine the compression format from the destination file suffix
-    if compressed.suffix == ".zip":
+    compression_suffix = _compression_suffix(compressed)
+    if compression_suffix == ".zip":
         zip_compress(src, compressed)
-    elif compressed.suffix == ".7z":
+    elif compression_suffix == ".7z":
         sevenz_compress(src, compressed)
     else:
-        raise NotImplementedError(f"Unsupported compression format: `{compressed.suffix}`.")
+        raise NotImplementedError(f"Unsupported compression format: `{compression_suffix}`.")
 
 
 def extract(
-    compressed: Path, dst: Path, recursive: bool = False, already_extracted: set = set()
+    compressed: Path,
+    dst: Path,
+    recursive: bool = False,
+    already_extracted: Optional[set[Path]] = None,
 ) -> None:
     """Extracts the contents of a compressed file to a destination directory."""
+    already_extracted = already_extracted or set()
 
     # pre-conditions
     assert compressed.exists(), f"File `{compressed}` does not exist."
     assert compressed.is_file(), f"Path `{compressed}` is not a file."
     assert is_compressed(compressed), f"File `{compressed}` is not compressed."
 
-    if compressed.suffix == ".7z":
+    compression_suffix = _compression_suffix(compressed)
+    if compression_suffix == ".7z":
         with py7zr.SevenZipFile(compressed, mode="r") as ref:
             ref.extractall(dst)
-    elif compressed.suffix == ".zip":
+    elif compression_suffix == ".zip":
         with zipfile.ZipFile(compressed, "r") as ref:
             ref.extractall(dst)
+    elif compression_suffix in {".tar", ".tar.gz", ".tgz"}:
+        with tarfile.open(compressed, "r:*") as ref:
+            ref.extractall(dst)
     else:
-        raise NotImplementedError(f"Unsupported compression format: `{compressed.suffix}`.")
+        raise NotImplementedError(f"Unsupported compression format: `{compression_suffix}`.")
 
     already_extracted.add(compressed)
     if recursive:
