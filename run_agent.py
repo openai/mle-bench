@@ -84,6 +84,9 @@ async def worker(
             )
             task_output["success"] = False
         finally:
+            log_file_handler.flush()
+            log_file_handler.close()
+            run_logger.removeHandler(log_file_handler)
             tasks_outputs[task.run_id] = task_output
             queue.task_done()
 
