@@ -43,7 +43,7 @@ def prepare_for_metric(
     submission[target_column] = submission[target_column].astype(str)
     answers[target_column] = answers[target_column].astype(str)
 
-    y_pred = submission[target_column].to_numpy()
-    y_true = answers[target_column].to_numpy()
+    y_pred = submission[target_column].to_numpy(dtype=str)
+    y_true = answers[target_column].to_numpy(dtype=str)
 
     return {"y_true": y_true, "y_pred": y_pred}
