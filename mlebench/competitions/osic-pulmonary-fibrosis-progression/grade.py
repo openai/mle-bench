@@ -34,6 +34,12 @@ def prepare_for_metric(submission: DataFrame, answers: DataFrame) -> dict:
     answers["Week_Number"] = answers["Patient_Week"].apply(lambda x: int(x.split("_")[-1]))
     latest_weeks = answers.sort_values("Week_Number").groupby("Patient").tail(3)
     answers = latest_weeks.drop(columns=["Week_Number"])
+    # Every scored Patient_Week must be predicted, or the mean only covers the rows submitted
+    missing = set(answers["Patient_Week"]) - set(submission["Patient_Week"])
+    if missing:
+        raise InvalidSubmissionError(
+            f"Submission is missing {len(missing)} scored Patient_Week rows, for example {sorted(missing)[0]}"
+        )
     # Make submission match; we only grade the prediction for the 3 latest weeks
     submission = submission[submission["Patient_Week"].isin(answers["Patient_Week"])]
 
