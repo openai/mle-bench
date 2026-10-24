@@ -241,10 +241,6 @@ If you wish to make a submission to v1 in the meantime, please still include
 the following competitions in your overall scores. The known issues are
 catalogued below:
 
-- **tensorflow2-question-answering**:
-  - The `validate_submission` function in `grade.py` fails on this competition 
-    because the answer file is `test.jsonl` instead of `test.csv`.
-    [#134](https://github.com/openai/mle-bench/issues/134)
 - **tensorflow-speech-recognition-challenge**:
   - The prepare.py script incorrectly prepares the test set such that there is a
     much larger range of test labels than there should be.

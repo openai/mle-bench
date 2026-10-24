@@ -114,7 +114,7 @@ def validate_submission(submission: Path, competition: Competition) -> tuple[boo
         )
 
     try:
-        competition.grader.grade_fn(read_csv(submission), read_csv(competition.answers))
+        competition.grader.grade_fn(read_csv(submission), load_answers(competition.answers))
     except Exception as e:
         return (
             False,
