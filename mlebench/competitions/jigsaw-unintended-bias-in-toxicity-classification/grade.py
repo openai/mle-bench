@@ -85,8 +85,7 @@ def prepare_for_metric(
 
     submission.rename(columns={"prediction": "toxicity"}, inplace=True)
 
-    # Convert continuous toxicity scores to binary toxicity labels
-    submission["toxicity"] = submission["toxicity"].apply(lambda x: 1 if x >= 0.5 else 0)
+    # Convert reference toxicity scores to binary labels, preserving prediction rankings.
     answers["toxicity"] = answers["toxicity"].apply(lambda x: 1 if x >= 0.5 else 0)
 
     # Convert continuous identity columns to binary identity columns
