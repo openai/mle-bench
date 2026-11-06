@@ -26,6 +26,8 @@ def prepare_for_grading(submission: DataFrame, answers: DataFrame, target_column
         )
     if "id" not in submission.columns:
         raise InvalidSubmissionError("ID column not found in submission DataFrame.")
+    if not submission["id"].is_unique:
+        raise InvalidSubmissionError("Submission ids are not unique.")
     if not set(submission["id"]) == set(answers["id"]):
         raise InvalidSubmissionError(
             f"Submission is missing the following ids: {set(answers['id']) - set(submission['id'])}"
